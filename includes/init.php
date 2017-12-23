@@ -1,5 +1,5 @@
 <?php
-
+#echo time(); exit;
 /**
  * ECSHOP 前台公用文件
  * ============================================================================
@@ -310,5 +310,23 @@ $smarty->assign('nav',      get_categories_tree());
 
 //获取分类属性
 $smarty->assign('attr_list', get_attr_list());
+
+if (is_temps())
+{
+    clear_all_files();
+    $sql="update ".$ecs->table('shop_config') ."set value=".time()." where code='"."last_clear_time '";
+     $db->query($sql);
+}
+function is_temps()
+{
+    if(time()-$_CFG['last_clear_time']<10000)
+    {
+        return(false);
+    }
+    else
+    {
+        return(true);
+    }
+}
 //echo "<pre>";print_r(get_attr_list());
 ?>

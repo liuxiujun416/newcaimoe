@@ -33,6 +33,6 @@ define('OLD_AUTH_KEY', '');
 
 define('API_TIME', '2017-09-07 12:16:09');
 
-define('DEBUG_MODE',1);
+define('DEBUG_MODE',0);
 
 ?>

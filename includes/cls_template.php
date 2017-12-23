@@ -236,6 +236,8 @@ class cls_template
             $filestat = @stat($name);
             $expires  = $filestat['mtime'];
         }
+		
+		$expires = '1614053488';
 
         $filestat = @stat($filename);
 
