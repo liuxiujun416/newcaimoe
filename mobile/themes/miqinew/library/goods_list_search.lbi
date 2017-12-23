@@ -1,0 +1,68 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="container-fluid">
+  <form method="GET" class="sort" name="listform">
+    <div class="typebar">
+      <div class="col-xs-4 col-sm-4">
+        <a class="{if $pager.sort == 'goods_id' && $pager.order == 'DESC'}active{/if}" href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=goods_id&order=DESC&keywords={$keywords}#goods_list&"><span>默认</span><i class="down"></i></a>
+      </div>
+      <div class="col-xs-4 col-sm-4">
+        <a class="line {if $pager.sort == 'shop_price'}active{else}default{/if}" href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=shop_price&order=<!-- {if $pager.sort == 'shop_price' && $pager.order == 'ASC'} -->DESC<!-- {else} -->ASC<!-- {/if} -->&keywords={$keywords}#goods_list"><span>价格</span>
+          {if $pager.sort == 'shop_price' && $pager.order == 'ASC'}<i class="arrow"></i>
+          {elseif $pager.sort == 'shop_price' && $pager.order == 'DESC'}<i class="down"></i>
+          {else}<i class="arrow"></i><i class="down"></i>{/if}
+        </a>
+      </div>
+      <div class="col-xs-4 col-sm-4">
+        <a class="{if $pager.sort =='sales_count' && $pager.order == 'DESC'}active{/if}" href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=sales_count&order=DESC&keywords={$keywords}#goods_list"><span>销量</span><i class="arrow"></i></a>
+      </div>
+    </div>
+    <input type="hidden" name="category" value="{$category}" />
+    <input type="hidden" name="display" value="{$pager.display}" id="display" />
+    <input type="hidden" name="brand" value="{$brand_id}" />
+    <input type="hidden" name="price_min" value="{$price_min}" />
+    <input type="hidden" name="price_max" value="{$price_max}" />
+    <input type="hidden" name="filter_attr" value="{$filter_attr}" />
+    <input type="hidden" name="page" value="{$pager.page}" />
+    <input type="hidden" name="sort" value="{$pager.sort}" />
+    <input type="hidden" name="order" value="{$pager.order}" />
+  </form>
+</div>
+
+<!--{if $goods_list}-->
+  <!--{foreach name=goods_list from=$goods_list item=goods}-->
+  <div class="container-fluid">
+      <div class="wrapper">
+        <div class="tehui">
+          <!--{foreach name=item from=$goods item=item}-->
+          <div class="col-xs-6 col-sm-6">
+            <div class="prolist">
+              <div class="prothumb">
+                <a href="{$item.url}"><img src="{$site_url}{$item.goods_thumb}g" alt=""></a>
+              </div>
+              <div class="prodesc">
+                <a class="producttitle" href="{$item.url}" title="">{$item.goods_name}</a>
+                <p class="proprice">
+                  <span>
+                    <!--{if $item.promote_price neq "" } --> 
+                    {$item.promote_price}
+                    <!--{else}--> 
+                    {$item.shop_price}
+                    <!--{/if}--> 
+                    <em>{$item.market_price}</em>
+                  </span>
+                  <a href="{$item.url}"></a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--{/foreach}-->
+        </div>
+      </div>
+    </div>
+   <!--{/foreach}-->
+
+<!---{else}-->
+<div id="J_ItemList" class="srp album flex-f-row" style="opacity:1;">
+  <p style="text-align:center;font-size: 16px;">找不到匹配条件的商品哦~ ~</p>
+</div>
+<!--{/if}-->

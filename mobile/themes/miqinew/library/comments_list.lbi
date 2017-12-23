@@ -1,0 +1,159 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+.loadmore{
+  padding: 15px 0;
+}
+.loadmore a{
+  display: inline-table;
+  width: 50%;
+  text-align: center;
+}
+</style>
+<div class="container-fluid">
+  <div class="wrapper comment" style="margin-bottom: 60px;">
+    <h1 class="center">最新评论</h1>
+
+    <!-- {if $comments} -->
+    <div class="container">
+      <!--div class="menu">
+        <span class="active"><i class="icon icon-checked"></i>所有</span>
+        <span><i class="icon icon-checked"></i>只查看晒单</span>
+      </div-->
+
+      <!-- {foreach from=$comments item=comment} -->
+      <div class="commentlist">
+        <p>
+          <!-- {if $comment.avatar} --><img src="./style/images/chart.png" alt="" /><!-- {/if} -->
+          <!-- {if $comment.username} --><font>{$comment.username|escape:html}<!-- {else} -->{$lang.anonymous}</font><!-- {/if} -->
+        </p>
+        <p>{$comment.content}</p>
+      </div>
+      <!--{/foreach}-->
+    </div>
+
+    <!-- {if count($comments) > 2} -->
+    <div class="loadmore">
+      <!--翻页 start-->
+      <form name="selectPageForm" action="{$smarty.server.PHP_SELF}" method="get">
+      <!-- {if $pager.styleid eq 0 } -->
+        <a href="{$pager.page_prev}">{$lang.page_prev}
+        <a href="{$pager.page_next}">{$lang.page_next}</a>  </span>
+        <!--{foreach from=$pager.search key=key item=item}-->
+        <input type="hidden" name="{$key}" value="{$item}" />
+        <!--{/foreach}-->
+      <!--{else}-->
+
+
+      <!-- {/if} -->
+      </form>
+    </div>
+    <!-- {/if} -->
+
+    <script type="text/javascript">
+    <!--
+    {literal}
+    function selectPage(sel)
+    {
+    sel.form.submit();
+    }
+    {/literal}
+    //-->
+    </script>
+    </div>
+    <!--{else}-->
+    <p style="margin: 20px;">暂无数据</p>
+    <!-- {/if} -->
+  </div>
+</div>
+
+<div class="blank2"></div>
+<!--用户评论 END-->
+<script type="text/javascript">
+//<![CDATA[
+{foreach from=$lang.cmt_lang item=item key=key}
+var {$key} = "{$item}";
+{/foreach}
+{literal}
+/**
+ * 提交评论信息
+*/
+function submitComment(frm)
+{
+  var cmt = new Object;
+
+  //cmt.username        = frm.elements['username'].value;
+  cmt.email           = frm.elements['email'].value;
+  cmt.content         = frm.elements['content'].value;
+  cmt.type            = frm.elements['cmt_type'].value;
+  cmt.id              = frm.elements['id'].value;
+  cmt.enabled_captcha = frm.elements['enabled_captcha'] ? frm.elements['enabled_captcha'].value : '0';
+  cmt.captcha         = frm.elements['captcha'] ? frm.elements['captcha'].value : '';
+  cmt.rank            = 0;
+
+  for (i = 0; i < frm.elements['comment_rank'].length; i++)
+  {
+    if (frm.elements['comment_rank'][i].checked)
+    {
+       cmt.rank = frm.elements['comment_rank'][i].value;
+     }
+  }
+
+//  if (cmt.username.length == 0)
+//  {
+//     alert(cmt_empty_username);
+//     return false;
+//  }
+
+  if (cmt.email.length > 0)
+  {
+     if (!(Utils.isEmail(cmt.email)))
+     {
+        alert(cmt_error_email);
+        return false;
+      }
+   }
+   else
+   {
+        alert(cmt_empty_email);
+        return false;
+   }
+
+   if (cmt.content.length == 0)
+   {
+      alert(cmt_empty_content);
+      return false;
+   }
+
+   if (cmt.enabled_captcha > 0 && cmt.captcha.length == 0 )
+   {
+      alert(captcha_not_null);
+      return false;
+   }
+
+   Ajax.call('comment.php', 'cmt=' + cmt.toJSONString(), commentResponse, 'POST', 'JSON');
+   return false;
+}
+
+/**
+ * 处理提交评论的反馈信息
+*/
+  function commentResponse(result)
+  {
+    if (result.message)
+    {
+      alert(result.message);
+    }
+
+    if (result.error == 0)
+    {
+      var layer = document.getElementById('ECS_COMMENT');
+
+      if (layer)
+      {
+        layer.innerHTML = result.content;
+      }
+    }
+  }
+{/literal}
+//]]>
+</script>

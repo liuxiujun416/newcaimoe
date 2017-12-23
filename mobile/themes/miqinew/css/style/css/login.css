@@ -1,0 +1,127 @@
+.login-header{
+	width: 100%;
+	height: 240px;
+	overflow: hidden;
+	background: url('./image/loginbg.png') center no-repeat;
+}
+.login-header .logo{
+	width: 100%;
+	height: 240px;
+	background-color: rgba(27, 27, 31, 0.2);
+	text-align: center;
+	padding-top: 60px;
+}
+.login-header .logo img{
+	border: 2px solid #fff;
+	border-radius: 50%;
+	max-width: 90px;
+	max-height: 90px;
+}
+.login-header .logo span{
+	display: block;
+	color: #fff;
+	font-size: 16px;
+}
+
+.login{
+	width: 100%;
+}
+.login .line{
+	margin: 15px auto;
+	text-align: center;
+}
+.login .line span{
+	height: 40px;
+	line-height: 40px;
+	width: 70%;
+	display: block;
+	border: 1px solid #000;
+	text-align: right;
+	padding: 0 10px;
+	margin: 20px auto;
+	background-color: #fff;
+}
+.login .line span input{
+	height: 36px;
+	width: 90%;
+	border: none;
+}
+.login .line span i.icon{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-color: red;
+	float: left;
+	margin-top: 10px;
+}
+
+.login .line span i.icon-user{
+	background: url('./image/people.png') center no-repeat;
+}
+.login .line span i.icon-pwd{
+	background: url('./image/lock.png') center no-repeat;
+}
+
+.login .noline{
+	text-align: left;
+	width: 70%;
+	margin: 0 auto;
+}
+.login .noline .fr{
+	float: right;
+}
+.login a.btn{
+	width: 100%;
+	height: 40px;
+	line-height: 27px;
+	text-align: center;
+	color: #fff;
+	background-color: #000;
+	border-radius: 5px;
+	margin-top: 30px;
+}
+
+
+
+.other{
+	width: 100%;
+	text-align: center;
+	color: #666;
+	margin: 60px 0;
+	position: relative;
+}
+.other span{
+	display: inline-block;
+	padding: 5px;
+}
+.otherline{
+	display: inline-block;
+	height: 1px;
+	width: 60px;
+	border-bottom: 1px solid #666;
+	margin-bottom: 3px;
+}
+.otherstyle{
+	margin-top: 30px;
+}
+.otherstyle a{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	margin: 0 15px;
+}
+.otherstyle a i{
+	display: block;
+	width: 100%;
+	height: 30px;
+}
+i.iconqq{
+	background-image: url('./image/qq.png');
+}
+i.iconweibo{
+	background-image: url('./image/weibo.png');
+}
+i.iconzfb{
+	background-image: url('./image/zfb.png');
+}

@@ -1,0 +1,119 @@
+/**/
+.type{
+	margin-bottom: 15px;
+}
+.type .title{
+	height: 40px;
+	width: 100%;
+	background-color: #000;
+	color: #fff;
+	padding-left: 15px;
+	margin-top: 0;
+	line-height: 40px;
+}
+.typelist{
+	width: 100%;
+	padding: 0 15px;
+	margin-bottom: 15px;
+}
+.typelist .typename{
+	font-size: 16px;
+	border: 1px solid #000;
+	padding: 15px;
+	background: url('./image/typelist001.png') 5px no-repeat;
+	background-size: 40%;
+	padding-left: 41%;
+	position: relative;
+}
+.typelist .typename span{
+	display: inline-block;
+	margin-left: 25px;
+}
+.typelist .typename a{
+	position: absolute;
+	top: 12px;
+	right: 10px;
+	display: block;
+	font-weight: bold;
+	font-size: 18px;
+}
+.typelist .typecontent{
+	text-align: justify;
+	padding: 15px 15px 5px 15px;
+	background-color: #f5f5f5;
+	border: 1px solid #000;
+	border-top: none;
+	text-align: center;
+}
+.typelist .typecontent .row{
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+.typelist .typecontent .row div{
+	padding: 0;
+}
+.typelist .typecontent .row div:first-child{
+	padding-right: 6px;
+}
+.typelist .typecontent .row div:nth-child(2){
+	padding: 0 3px;
+}
+.typelist .typecontent .row div:last-child{
+	padding-left: 6px;
+}
+
+.typelist .typecontent a{
+	width: 100%;
+	padding: 10px;
+	display: inline-block;
+	border: 1px solid #bbb;
+	text-align: center;
+}
+.typelist .typecontent a img{
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.typelist .typelabel{
+	border: 1px solid #000;
+	padding: 15px;
+	text-align: center;
+}
+.typelist .typelabel span{
+	width: 100%;
+	color: #333;
+	font-weight: 500;
+	background: none;
+}
+.typelist .typelabel p{
+	font-size: 14px;
+}
+
+.search .typename{
+	padding-left: 0px;
+	background: none;
+}
+.search .typename span{
+	margin-left: 10px;
+	padding-left: 20px;
+	position: relative;
+}
+.search .typename span i{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-color: #000;
+	position: absolute;
+	left: 0;
+	top: 5px;
+}
+.search .typecontent .row a{
+	border-radius: 30px;
+}
+.attr .typecontent a{
+	border: none;
+}

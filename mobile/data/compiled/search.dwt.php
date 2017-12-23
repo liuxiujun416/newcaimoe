@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="Generator" content="ECSHOP v2.7.3" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title><?php echo $this->_var['page_title']; ?></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <script src="./themes/miqinew/css/style/js/jquery-2.1.1.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link href="./themes/miqinew/css/style/css/common.css" rel="stylesheet" media="screen" />
+  <link href="./themes/miqinew/css/style/css/index.css" rel="stylesheet" media="screen" />
+  <link href="http://www.swiper.com.cn/dist/css/swiper.min.css" rel="stylesheet" />
+   
+  <style>
+    .arrow {
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid #9c9c9c;
+      border-left: 2px solid #9c9c9c;
+      transform: rotate(45deg);
+      position: absolute;
+      top: 22px;
+      right: 35px;
+    }
+    .down {
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-bottom: 2px solid #9c9c9c;
+      border-right: 2px solid #9c9c9c;
+      transform: rotate(45deg);
+      position: absolute;
+      top: 17px;
+      right: 35px;
+    }
+    .default .arrow{
+      top: 18px;
+    }
+    .default .down{
+      top: 22px;
+    }
+    .typebar a.active i{
+      border-color: #ff0101;
+    }
+    .producttitle{
+      font-weight: normal;
+    }
+    .producttitlea:link, .producttitlea:visited, .producttitlea:hover, .producttitlea:active{
+      color: #333;
+    }
+    .proprice a{
+      background: none;
+      border: none;
+      background-image: url('./themes/miqinew/css/style/css/image/m-addCart.png');
+      background-repeat: no-repeat;
+      background-size: 24px;
+      background-position: right;
+    }
+  </style>
+</head>
+<body>
+<?php echo $this->fetch('library/page_header.lbi'); ?>
+
+<?php echo $this->fetch('library/goods_list_search.lbi'); ?>
+
+<?php echo $this->fetch('library/pages.lbi'); ?>
+<?php echo $this->fetch('library/page_footer.lbi'); ?>
+
+<script type="text/javascript" src="<?php echo $this->_var['ectouch_themes']; ?>/js/jquery.more.js"></script>
+<script type="text/javascript" src="<?php echo $this->_var['ectouch_themes']; ?>/js/ectouch.js"></script>
+<script type="text/javascript">
+  $(function(){
+    $('.tehui').last().parent().parent().css('margin-bottom','20px');
+  })
+</script>
+</body>
+</html>

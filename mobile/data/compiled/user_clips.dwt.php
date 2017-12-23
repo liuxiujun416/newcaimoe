@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="Generator" content="ECSHOP v2.7.3" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title><?php echo $this->_var['page_title']; ?></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <?php echo $this->smarty_insert_scripts(array('files'=>'transport.js,common.js,user.js')); ?>
+
+  <script src="http://www.caimoe.com/themes/new/style/js/jquery-2.1.1.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link href="./themes/miqinew/css/style/css/common.css" rel="stylesheet" media="screen" />
+  <link href="./themes/miqinew/css/style/css/profile.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+<?php echo $this->fetch('library/page_header.lbi'); ?>
+
+<style type="text/css">
+  .ordermenu{font-size: 12px;}
+  .ordermenu span{display: inline-block;}
+  .logout{margin-top: 20px; margin-bottom: 85px; text-align: center; padding: 0 20px;}
+  .logout a.btn{width: 100%; height: 40px; line-height: 27px; background-color: #333; color: #fff; display: block;}
+</style>
+<div class="container-fluid">
+  <div class="welcome">
+    <div class="logo">
+      <a><img src="<?php if ($this->_var['info']['avatar']): ?><?php echo $this->_var['info']['avatar']; ?><?php else: ?>./themes/miqinew/css/style/images/logobg.png<?php endif; ?>" alt=""></a>
+      <span><?php echo $this->_var['info']['username']; ?></span>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="wrapper profilemenu">
+    <div class="col-xs-4 col-sm-4"><span class="icon icon-cart2" onclick="javascript:location.href='flow.php?step=cart'"><i><?php echo count($this->_var['goods_list']); ?></i></span><span>购物车</span></div>
+    <div class="col-xs-4 col-sm-4"><span class="icon icon-ding" onclick="javascript:location.href='user.php?act=order_list'"><i><?php echo $this->_var['info']['order_count']; ?></i></span><span>订单</span></div>
+    <div class="col-xs-4 col-sm-4"><span class="icon icon-quan"><i><?php echo $this->_var['info']['bonus']; ?></i></span><span>优惠券</span></div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="wrapper order">
+    <div class="line">
+      <span class="icon-right"><label>全部订单</label><a href="user.php?act=order_list">查看更多订单</a></span>
+    </div>
+    <div class="ordermenu">
+      <div class="col-xs-2 col-sm-2"><span class="icon icon-daifukuan"></span><span>待付款</span></div>
+      <div class="col-xs-2 col-sm-2"><span class="icon icon-daifahuo"></span><span>待发货</span></div>
+      <div class="col-xs-2 col-sm-2"><span class="icon icon-daishouhuo"></span><span>待收货</span></div>
+      <div class="col-xs-2 col-sm-2"><span class="icon icon-daichuli"></span><span>待处理</span></div>
+      <div class="col-xs-2 col-sm-2"><span class="icon icon-pinglun"></span><span>待评论</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="wrapper order" style="margin-top: 0;">
+    <div class="line">
+      <span class="icon-right"><label>账号管理</label><a href="user.php?act=profile">点击查看</a></span>
+    </div>
+    <div class="line" style="border: none;">
+      <span class="icon-right"><label>地址管理</label><a href="user.php?act=address_list">点击查看</a></span>
+    </div>
+  </div>
+  <div class="logout">
+      <a class="btn btnactive" href="user.php?act=logout">注销</a>
+  </div>
+</div>
+
+<?php echo $this->fetch('library/page_footer.lbi'); ?>

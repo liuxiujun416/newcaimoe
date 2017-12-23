@@ -1,0 +1,25 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $index_ad eq 'sys'} -->
+  
+<!-- {elseif $index_ad eq 'cus'} -->
+
+  <!-- {if $ad.ad_type eq 0} -->
+  
+  <!-- {elseif $ad.ad_type eq 1} -->
+  
+  <!-- {elseif $ad.ad_type eq 2} -->
+  
+  <!-- {elseif $ad.ad_type eq 3} -->
+  <!-- {/if} -->
+  
+<!-- {else} -->
+<!-- {/if} -->
+{insert name='ads' id=40 num=3}
+
+
+<div class="ad clearfix">
+  <div class="container">
+  {insert name='ads' id=41 num=1}
+  {insert name='ads' id=42 num=1}
+  </div>
+</div>
