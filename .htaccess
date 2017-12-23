@@ -1,0 +1,3 @@
+rewriteEngine on
+rewriteCond %{http_host} ^uclens.com [NC]
+rewriteRule ^(.*)$ http://www.caimoeye.com/$1 [R=301,L]
