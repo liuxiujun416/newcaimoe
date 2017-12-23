@@ -1,5 +1,6 @@
 <?php
 // database host
+echo 'eee'; exit;
 $db_host   = "localhost:3306";
 
 // database name
