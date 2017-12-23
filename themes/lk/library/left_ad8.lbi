@@ -1,0 +1,5 @@
+
+<style>
+.left_addiv{ margin-top:3px; margin-bottom:2px;}
+</style>
+{insert name='ads' id=18 num=10}

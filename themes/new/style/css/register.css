@@ -1,0 +1,353 @@
+/**/
+input{ border: none;}
+.btn{
+	display: inline-block;
+	border: 1px solid #000;
+	border-radius: 5px;
+}
+.active{
+	display: block;
+}
+a.btnactive{
+	background-color: #000;
+	color: #fff;
+}
+
+.register{
+	min-height: 660px;
+	margin: 50px auto;
+}
+
+.registerform{
+	width: 100%;
+	overflow: hidden;
+}
+.registerlist{
+	margin: 0 auto;
+}
+
+.registerlist div{
+	margin: 32px 285px;
+	height: 42px;
+}
+.registerlist div h1,.findlist h1{
+	font-size: 22px;
+	width: 100%;
+	text-align: center;
+}
+
+.reginput{
+	width: 100%;
+	overflow: hidden;
+}
+.reginput > span{
+	display: inline-block;
+	height: 38px;
+	line-height: 40px;
+}
+.reginput .labeltitle{
+	width: 100px;
+	text-align: right;
+}
+.reginput span.labelinput{
+	width: 350px;
+	margin: 0 20px;
+	border: 1px solid #000;
+}
+.reginput span.labeltip{
+	color: #fd4565;
+}
+.reginput span.labelinput input{
+	height: 34px;
+	width: 100%;
+	padding: 0 10px;
+}
+a.telcode{
+	width: 120px;
+	height: 40px;
+	border: 1px soft #000;
+	background-color: #000;
+	border-radius: 5px;
+	display: inline-block;
+	margin-left: 20px;
+	color: #fff;
+	text-align: center;
+}
+
+.reginput:last-child{
+	margin: 0;
+	padding: 0;
+	height: 30px;
+}
+.labelagree{
+	display: table;
+	margin-left: 120px;
+	overflow: hidden;
+}
+.labelagree input{
+	border: 1px solid #000;
+	width: 18px; 
+	height: 18px;
+	display: table-cell;
+	vertical-align: middle;
+	margin-right: 5px;
+	margin-bottom: 6px;
+}
+.labelagree span{
+	display: inline-block;
+	line-height: 30px;
+}
+
+.registerlist div.labelsubmit{
+	width: 100%;
+	text-align: center;
+	margin: 20px 0;
+}
+.regsubmit{
+	padding: 10px 20px;
+	background-color: #000;
+	color: #fff;
+}
+.leveltitle,.pwdlevel{
+	color: #000;
+}
+.leveltitle{
+	margin: 0 15px;
+}
+.pwdlevel{
+	display: inline-block;
+	width: 150px;
+	height: 40px;
+	vertical-align: middle;
+	line-height: 10px;
+}
+.levellist{
+	display: inline-block;
+	width: 50px;
+	height: 10px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-style: normal;
+	vertical-align: top;
+}
+.pwdlevel label{
+	display: inline-table;
+	height: 10px;
+	padding: 0;
+	overflow: hidden;
+	font-size: 10px;
+	margin-bottom: 5px;
+}
+.pwdlevel label i{
+	display: inline-table;
+	width: 48px;
+	height: 10px;
+	text-align: center;
+	font-style: normal;
+}
+.levellist:first-child{
+	background-color: #f0efef;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+.levellist:nth-child(2){
+	background-color: #6d6c6c;
+}
+.levellist:last-child{
+	background-color: #000;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+font.levelon{
+	width: 0;
+	height: 0;
+	margin: 0 auto;
+	border-style: solid;
+	border-width: 0 5px 8.7px 5px;
+	border-color: transparent transparent #000 transparent;
+	line-height: 0px;
+	_border-color: #000000 #000000 #000 #000000;
+	_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+}
+
+/**/
+.findlist{
+	margin: 30px auto;
+}
+.regform{
+	width: 100%;
+	padding: 15px;
+	overflow: hidden;
+}
+.findstep{
+	width: 1050px;
+	margin: 0 auto;
+	text-align: center;
+}
+.findstep .steplist{
+	display: inline-block;
+	width: 180px;
+	margin-right: 5px;
+	margin-top: 32px;
+}
+.steplist span{
+	display: inline-block;
+	width: 100%;
+	height: 20px;
+	line-height: 35px;
+	text-align: center;
+	position: relative;
+}
+.steplist span i{
+	display: block;
+	width: 100%;
+	height: 10px;
+	background-color: #000;
+	border-radius: 10px;
+}
+.steplist span i font{
+	position: absolute;
+	display: block;
+	width: 36px;
+	height: 36px;
+	left: 72px;
+	top: -13px;
+	border-radius: 50%;
+	background-color: #000;
+	color: #fff;
+	font-style: normal;
+	text-align: center;
+}
+
+.stepon span i{
+	background-color: #bbbbbb;
+}
+.stepon span i font{
+	background-color: #bbb;
+}
+
+.resetpwd{
+	width: 100%;
+	margin: 90px auto;
+	text-align: center;
+}
+
+.resetpwd span{
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	margin: 20px 0;
+}
+.resetpwd span label{
+	display: inline-block:
+	width: 100px;
+	margin-right: 20px;
+	margin: 0;
+}
+.resetpwd span input{
+	width: 350px;
+	height: 38px;
+	margin-left: 20px;
+	padding: 0 10px;
+	border: 1px solid #000;
+}
+.labelsubmit{
+	text-align: center;
+}
+.labelsubmit a.regsubmit{
+	width: 140px;
+}
+.noticetitle{
+	font-size: 18px;
+	color: #8a1e1e;
+}
+
+.step{
+	display: none;
+}
+
+.active{
+	display:block;
+}
+#stepsuccess{
+	font-size: 28px;
+	height: auto;
+	background: url('./image/success.png') no-repeat center;
+	background-position: 420px;
+	background-size: 72px;
+}
+
+/*error404*/
+.error404{
+	margin: 50px auto;
+	text-align: center;
+}
+.sorry{
+	width: 100%;
+	height: 338px;
+	background: url('./image/404.png') no-repeat center;
+	
+}
+.error404 .button{
+	display: inline-block;
+	margin: 105px 15px;
+	width: 253px;
+	height: 48px;
+	border: 1px solid #000;
+	text-align: center;
+	line-height: 48px;
+	cursor: pointer;
+}
+.error404 .back{
+	background-color: #000;
+	color: #fff;
+	position: relative;
+}
+.error404 .back i{
+	background-color: #fff;
+	background: url('./image/back.png') no-repeat center;
+	width: 23px;
+	height: 22px;
+	position: absolute;
+	top: 10px;
+	left: 56px;
+}
+
+
+/*oauth login*/
+.otherstyle a{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	margin-right: 15px;
+}
+.otherstyle a i{
+	display: block;
+	width: 100%;
+	height: 30px;
+}
+i.iconqq{
+	background-image: url('./image/qq.png');
+}
+i.iconweibo{
+	background-image: url('./image/weibo.png');
+}
+i.iconzfb{
+	background-image: url('./image/zfb.png');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

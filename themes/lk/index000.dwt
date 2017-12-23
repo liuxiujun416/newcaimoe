@@ -1,0 +1,522 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link href="warp.css" rel="stylesheet" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,index.js'}
+<script type="text/javascript" src="js/site.js"></script>
+<script type="text/javascript" src="js/scrollpic.js"></script>
+<?php 
+    require_once("themes/".$GLOBALS['_CFG']['template']."/diyfile.php");
+    $this->assign('TemplatePath','themes/'.$GLOBALS['_CFG']['template']);
+?>
+<meta property="qc:admins" content="152113420157515677471016375" />
+<meta property="wb:webmaster" content="8532e4e07989aecc" />
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class="mallTopScreen" style="height: 409px;">
+<div class="fl" style="width:240px;height: 419px;">
+<div class="mtsCategory">
+<div class="mtsCategory-con">
+<div class="mallCategory" id="mallCategory">
+<h2 class="mc_head">全部分类</h2>
+<div class="mc_content">
+<ul class="mc_items">
+    <!--{foreach from=$categories item=cat name=top_goods}-->
+	<li onMouseOver="this.className='hover item'" onMouseOut="this.className='item'" class="item" {if $smarty.foreach.top_goods.iteration==1}style="border-top:none;" {/if} >
+    <span class="icon i{$smarty.foreach.top_goods.iteration}"></span>
+    <h3>
+     <a href="{$cat.url}" target="_blank">{$cat.name|escape:html}</a>
+    </h3>
+    <p>
+ <!--{foreach from=$cat.cat_id item=child}-->
+  <a href="{$child.url}"  target="_blank">{$child.name|escape:html}</a>
+     
+     <!--{/foreach}-->
+       </p>
+   
+</li>
+    <!--{/foreach}-->   
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="left_shadow" style="margin-bottom: 7px;"></div></div>
+<div class="fr" style="width:720px;height: 421px;">
+<link rel="stylesheet" type="text/css" href="../../css/lrtk.css" />
+<script type="text/javascript" src="../../js/pptBox.js"></script>
+
+<div id="xxx"  >
+     <script>
+     var box =new PPTBox();
+     box.width = 730 //宽度
+     box.height = 419;//高度
+     box.autoplayer = 4;//自动播放间隔时间
+
+     //box.add({"url":"图片地址","title":"悬浮标题","href":"链接地址"})
+     box.add({"url":"images/tu3.jpg","href":"http://www.caimoeye.com/category.php?id=192","title":"新品COCO小姐高端品牌"})
+     box.add({"url":"images/tu1.jpg","href":"http://www.caimoeye.com/category.php?id=151","title":"经典NEO巧克力系列"})
+     box.add({"url":"images/tu2.jpg","href":"http://www.caimoeye.com/category.php?id=91","title":"™眸敦7Modern系列"})
+
+     box.show();
+    </script>
+</div>
+
+ 
+
+<div class="clear"></div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="is_home">
+<div class="blank5"></div>
+<div id="hometop" class="clearfix">
+	<div id="lmhtl" class="homeL fl" style="width:710px;">
+		<div class="AD_x1y2zL clearfix">
+			<div class="lmad fl">
+<!-- TemplateBeginEditable name="首页_播放器下图1" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable --></div>
+			
+			<div class="lmad fr">
+<!-- TemplateBeginEditable name="首页_播放器下图2" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable --></div>
+		</div>
+	</div>
+	
+	<div id="lmhtr" class="homeR fr" style="width:250px;">
+         <ul class="ads6" style="margin-top: 5px;">
+<!-- TemplateBeginEditable name="导航下广告图下3" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+         </ul>
+	</div>
+</div>
+
+<div class="mt-f-main">
+    <div class="mt-tit"><span class="sp-03"></span><a href="#" target="_blank" style="display:none">更多&gt;&gt;</a></div>
+    <div class="mt-chpic">
+        <div id="scrollDotList_1"></div>
+        <div class="bot lbot"><a href="javascript:;" id="scrollArrLeft_1" class="arrow_left"></a></div>
+        <div class="bot rbot"><a href="javascript:;" id="scrollArrRight_1" class="arrow_right"></a></div>
+        <div class="mcpic-m">
+            <ul id="scrollCont_1">
+<!-- TemplateBeginEditable name="首页滚动广告" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var scrollPic_1 = new ScrollPic();
+    scrollPic_1.scrollContId   = "scrollCont_1";
+    scrollPic_1.arrLeftId      = "scrollArrLeft_1";
+    scrollPic_1.arrRightId     = "scrollArrRight_1"; 
+    scrollPic_1.dotListId      = "scrollDotList_1";
+    scrollPic_1.frameWidth     = 864;
+    scrollPic_1.pageWidth      = 216;
+    scrollPic_1.speed          = 10; 
+    scrollPic_1.space          = 10; 
+    scrollPic_1.autoPlay       = true; 
+    scrollPic_1.autoPlayTime   = 5; 
+    scrollPic_1.initialize();
+</script>
+
+<!-- #BeginLibraryItem "/library/recommend_new.lbi" --><!-- #EndLibraryItem -->  
+<div id="mid-topics" class="clearfix">
+
+<!--
+	<div id="real-voice" class="h3box fl">
+		<h3>彩眸眼镜网公告</h3>
+		<div class="content">
+			<div class="channel-portal clearfix">
+				<ul class="arclst">
+           <?php $this->assign('articles',get_article_new(array(14),'art_cat',8,0));?>
+            <!--{foreach from=$articles item=article name=cur}-->
+            <li>{$article.addtime} <a href="{$article.url}" target="_blank">{$article.title|truncate:16:"":true}</a></li>
+            <!--{/foreach}-->
+            </ul>
+	
+			</div>
+		</div>
+      </div>
+	
+	<div id="fashion-expr" class="h3box fr">
+		<h3>美美会员真人秀</h3>
+		<div class="content">
+			<div class="channel-portal clearfix">
+				<ul class="arclst">
+           <?php $this->assign('articles',get_article_new(array(13),'art_cat',8,0));?>
+            <!--{foreach from=$articles item=article name=cur}-->
+            <li>{$article.addtime} <a href="{$article.url}" target="_blank">{$article.title|truncate:16:"":true}</a></li>
+            <!--{/foreach}-->
+            </ul>
+	
+			</div>
+		</div>
+	</div>
+-->  
+
+</div>
+<div id="chnl-bra" class="h2box chnl-sc">
+	<div class="h2-wrap">
+		<h2>彩眸网推荐关注款</h2> 
+		<div class="more"><a href="category?id=1" title="Beauty Eyes彩眸推荐">点击查看更多</a></div>
+		<div class="h2-r"></div>
+	</div>
+	<div class="content">
+		<div class="clearfix">
+			<div class="homeL fl">
+				<div class="AD_x1y3zL">
+				<!-- TemplateBeginEditable name="首页_第一分类广告大图" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+				</div>
+			</div>
+			
+			<div class="homeR fr">
+				<div class="AD_x1y2zR">
+					
+<!-- TemplateBeginEditable name="首页_第一分类广告小图" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+
+				</div>
+			</div>
+		</div>
+		
+		<div class="lm-showcase">
+			<ul class="lm-showlst clearfix">
+              <!-- TemplateBeginEditable name="第一分类" -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+<!--{foreach from=$cat_goods item=goods}-->
+	<li>
+		<div class="pic"><a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a></div>
+		<div class="gname"><a href="{$goods.url}" target="_blank">{$goods.short_name|escape:html}</a></div>
+		<div class="gprice"><!-- {if $goods.promote_price neq ""} -->{$goods.promote_price}<!-- {else}-->{$goods.shop_price}<!--{/if}--></div>
+	</li>
+<!--{/foreach}-->
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+</ul>		</div>
+	</div>
+</div>
+<div id="chnl-clothing" class="h2box chnl-sc">
+	<div class="h2-wrap">
+		<h2>彩眸网经典热销款</h2> 
+		<div class="more"><a href="category.php?id=6" title="Beauty Eyes彩眸人气热卖">点击查看更多</a></div>
+		<div class="h2-r"></div>
+	</div>
+	<div class="content">
+		<div class="clearfix">
+			<div class="homeL fl">
+				<div class="AD_x1y3zL">
+				<!-- TemplateBeginEditable name="首页_第二分类广告大图" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+				</div>
+			</div>
+			
+			<div class="homeR fr">
+				<div class="AD_x1y2zR">
+<!-- TemplateBeginEditable name="首页_第二分类广告小图" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+				</div>
+			</div>
+		</div>
+		
+		<div class="lm-showcase">
+			<ul class="lm-showlst clearfix">
+	       <!-- TemplateBeginEditable name="第二分类" -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+<!--{foreach from=$cat_goods item=goods}-->
+	<li>
+		<div class="pic"><a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a></div>
+		<div class="gname"><a href="{$goods.url}" target="_blank">{$goods.short_name|escape:html}</a></div>
+		<div class="gprice"><!-- {if $goods.promote_price neq ""} -->{$goods.promote_price}<!-- {else}-->{$goods.shop_price}<!--{/if}--></div>
+	</li>
+<!--{/foreach}-->
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+</ul>		</div>
+	</div>
+</div>
+<div id="chnl-homewear" class="h2box chnl-sc">
+	<div class="h2-wrap">
+		<h2>彩眸网日常热卖款</h2>
+		<div class="more"><a href="category.php?id=12" title="Beauty Eyes彩眸混血热卖款">点击查看更多</a></div>
+		<div class="h2-r"></div>
+	</div>
+	
+	<div class="content">
+		<div class="clearfix">
+			<div class="homeL fl">
+				<div class="AD_x1y3zL">
+				<!-- TemplateBeginEditable name="首页_第三分类广告大图" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+				</div>
+			</div>
+			
+			<div class="homeR fr">
+				<div class="AD_x1y2zR">
+<!-- TemplateBeginEditable name="首页_第三分类广告小图" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+
+				</div>
+			</div>
+		</div>
+		
+		<div class="lm-showcase">
+			<ul class="lm-showlst clearfix">
+		       <!-- TemplateBeginEditable name="第三分类" -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+<!--{foreach from=$cat_goods item=goods}-->
+	<li>
+		<div class="pic"><a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a></div>
+		<div class="gname"><a href="{$goods.url}" target="_blank">{$goods.short_name|escape:html}</a></div>
+		<div class="gprice"><!-- {if $goods.promote_price neq ""} -->{$goods.promote_price}<!-- {else}-->{$goods.shop_price}<!--{/if}--></div>
+	</li>
+<!--{/foreach}-->
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+</ul>		</div>
+	</div>
+</div>
+<div id="chnl-accessories" class="h2box chnl-sc">
+	<div class="h2-wrap">
+		<h2>彩眸网时尚高端热销款</h2>
+		<div class="more"><a href="category.php?id=23" title="Beauty Eyes彩眸日常热卖推荐款">点击查看更多</a></div>
+		<div class="h2-r"></div>
+	</div>
+	
+	<div class="content">
+		<div class="clearfix">
+			<div class="homeL fl">
+				<div class="AD_x1y3zL">
+<!-- TemplateBeginEditable name="首页_第四分类广告大图" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+				</div>
+			</div>
+			
+			<div class="homeR fr">
+				<div class="AD_x1y2zR">
+					
+<!-- TemplateBeginEditable name="首页_第四分类广告小图" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+
+{insert name='ads' id=$ads_id num=$ads_num}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+
+				</div>
+			</div>
+		</div>
+		
+		<div class="lm-showcase">
+			<ul class="lm-showlst clearfix">
+		       <!-- TemplateBeginEditable name="第四分类" -->
+<!-- #BeginLibraryItem "/library/cat_goods.lbi" -->
+
+<!--{foreach from=$cat_goods item=goods}-->
+	<li>
+		<div class="pic"><a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a></div>
+		<div class="gname"><a href="{$goods.url}" target="_blank">{$goods.short_name|escape:html}</a></div>
+		<div class="gprice"><!-- {if $goods.promote_price neq ""} -->{$goods.promote_price}<!-- {else}-->{$goods.shop_price}<!--{/if}--></div>
+	</li>
+<!--{/foreach}-->
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+         </ul>		</div>
+	</div>
+</div>
+<div class="clearfix">
+	<div id="salelst" class="h2box fl">
+	<div class="h2-wrap">
+		<h2>彩眸网其它官网品牌</h2>
+		<div class="more"><a href="search.php?intro=best" title="周边护理办理配件">点击查看更多</a></div>
+		<div class="h2-r"></div>
+	</div>
+	<div class="content">
+	<div class="lm-showcase">
+	<ul class="lm-showlst clearfix">
+    <!-- #BeginLibraryItem "/library/recommend_hot.lbi" --><!-- #EndLibraryItem -->	
+	</ul>
+	</div>
+	</div>
+</div>	
+	<div id="saledock" class="fr">
+
+
+<div id="fashion-expr" class="h3box fr" style="padding-top:0px">
+		<img src="themes/lk/images/star.gif">
+		<div class="content">
+			<div class="channel-portal clearfix">
+				<ul class="arclst">
+           <?php $this->assign('articles',get_article_new(array(11),'art_cat',10,0));?>
+            <!--{foreach from=$articles item=article name=cur}-->
+            <li>{$article.addtime} <a href="{$article.url}" target="_blank">{$article.title|truncate:16:"":true}</a></li>
+            <!--{/foreach}-->
+            </ul>
+	
+			</div>
+		</div>
+	</div>
+
+	<div id="fashion-expr" class="h3box fr">
+		<img src="themes/lk/images/show.gif">
+		<div class="content">
+			<div class="channel-portal clearfix">
+				<ul class="arclst">
+           <?php $this->assign('articles',get_article_new(array(21),'art_cat',10,0));?>
+            <!--{foreach from=$articles item=article name=cur}-->
+            <li>{$article.addtime} <a href="{$article.url}" target="_blank">{$article.title|truncate:16:"":true}</a></li>
+            <!--{/foreach}-->
+            </ul>
+	
+			</div>
+		</div>
+	</div>
+
+	<div id="fashion-expr" class="h3box fr">
+		<img src="themes/lk/images/nursing.gif">
+		<div class="content">
+			<div class="channel-portal clearfix">
+				<ul class="arclst">
+           <?php $this->assign('articles',get_article_new(array(13),'art_cat',10,0));?>
+            <!--{foreach from=$articles item=article name=cur}-->
+            <li>{$article.addtime} <a href="{$article.url}" target="_blank">{$article.title|truncate:16:"":true}</a></li>
+            <!--{/foreach}-->
+            </ul>
+	
+			</div>
+		</div>
+	</div>
+
+
+	</div>
+</div>
+<div class="clearfix"></div>
+<div id="btmpads" class="clearfix">
+	<ul>
+		<li class="shipping-free tg" onclick="location.href='/#';">单笔订单满200元<em>免运费</em></li>
+		<li class="cod tg" onclick="location.href='/#';">全国主要城市可<em>货到付款</em></li>
+		<li class="max-care tg" onclick="location.href='/#';">Max Care<em>120天退换货服务</em></li>
+		<li class="cc-enjoy tg last" onclick="location.href='/#';">接受<em>信用卡网上支付</em></li>
+	</ul>
+</div>
+<div id="most-popular">
+	<h3><img src="images/tmp_lm_pop.gif" /></h3>
+	<div class="content">
+	<ul>
+    <!--{foreach from=$categories item=cat name=cur}-->
+		<li><a class="top" href="{$cat.url}">{$cat.name|escape:html}</a>   
+      <!--{if $cat.cat_id}-->	
+	<?php $this->assign('catchild', get_child_tree($GLOBALS['smarty']->_var['nav']['cid']));?> 
+	<!--{foreach from=$cat.cat_id item=child name=cat}-->
+     <a href="{$child.url}">{$child.name|escape:html}</a>	
+         <!-- {if !$smarty.foreach.cat.last} -->
+              |
+        <!-- {/if} -->
+      <!--{/foreach}-->  		
+     <!--{/if}--></li>
+<!-- {/foreach} -->  
+	</ul>
+	</div>
+</div>
+
+</div></div></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

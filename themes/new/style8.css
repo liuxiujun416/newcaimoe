@@ -1,0 +1,173 @@
+﻿/*
+Template Name: 兰缪内衣模板
+Template URI: http://0769web.taobao.com
+Description: 兰缪内衣模板ECSHOP模板-青蜂网络
+Version: 2.7.3
+Author: QQ782869779
+Author URI: http://www.zuimoban.com
+Logo filename: logo.gif
+Template Type: type_0
+
+*/
+body{background:url(images/body_bg.gif) repeat-y center #fff; font-size:12px; font-family:"宋体",Verdana, Arial; line-height:150%; margin:0px 0 0 0; padding:0; color:#404040;}
+div{padding:0;}
+h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd,form,img,p{
+margin:0; padding:0; border:none; list-style-type:none;
+}
+.block{
+  width:970px; margin:0 auto;height:auto; 
+}
+.f_l{float:left;}
+.f_r{float:right;}
+.tl{ text-align:left;}
+.tc{ text-align:center;}
+.tr{ text-align:right;}
+.dis{display:block;}
+.inline{display:inline;}
+.none{display:none;}
+.dashed{background:url(images/lineBg.gif) repeat-x left top; color:#3f3f3f;  padding:2px 0 3px 12px;}
+
+.clearfix:after{
+content:"."; display:block; height:0; clear:both;
+visibility:hidden;
+}
+*html .clearfix{
+ height:1%;
+}
+*+html .clearfix{
+ height:1%;
+}
+/*英文强制换行*/
+.word{word-break:break-all;}
+
+.f_l{float:left;}
+.f_r{float:right;}
+.tl{ text-align:left;}
+.tc{ text-align:center;}
+.tr{ text-align:right;}
+/*英文强制换行*/
+.word{word-break:break-all;}
+a:link,a:visited {text-decoration:none; color:#666;}
+a:hover {text-decoration:underline;}
+
+/* ====================
+     公共样式
+==================== */
+
+/*边框*/
+.B_blue{border:1px solid #DBDBDB;}
+.B_input{border:1px solid #DBDBDB;}
+.inputBg{border:1px solid #DBDBDB; background:url(images/inputbg.gif) repeat-x left top; height:18px;}
+.inputBgW{width:150px;}
+/*字体颜色*/
+.f1{color:#ff6666;}
+.f2{color:#006bd0; font-weight:bold; margin-right:15px;}
+.f3{color:#9e9e9e;}
+.f4{color:#FF0080;}
+.f4_b{color:#fe596a; font-weight:bold;}
+.f5{ font-size:14px; font-weight:bold;}
+.f6{color:#333;}
+.f7{ font-weight:bold; color:#FF2492;}
+.f8{ font-weight:normal;}
+.market{ font-size:14px; text-decoration:line-through;}
+.shop{color:#fe596a; font-size:14px; font-weight:600;}
+.market_s{text-decoration:line-through;}
+.shop_s{color:#fe596a;}
+/*按钮部分*/
+.bnt_blue{
+background:url(images/bg.gif) no-repeat 0px 0px; width:52px; height:21px;
+text-align:center; line-height:21px; color:#fff; border:none; cursor:pointer;
+}
+.bnt_blue_1{
+background:url(images/bg.gif) no-repeat 0px -663px; width:77px; height:21px;
+text-align:center; line-height:21px; color:#fff; border:none; cursor:pointer;
+}
+.bnt_blue_2{
+background:url(images/bg.gif) no-repeat 0px -696px; width:139px; height:21px;
+text-align:center; line-height:21px; color:#fff; border:none; cursor:pointer;
+}
+.bnt_bonus{
+background:url(images/bg.gif) no-repeat -56px 0px; width:52px; height:21px;
+text-align:center; line-height:21px; color:#fff; border:none; cursor:pointer;
+}
+.bnt_blue_gm{
+background:url(images/lgb_goods.gif) no-repeat; width:150px; height:24px;
+text-align:center; line-height:24px; color:#fff; border:none; cursor:pointer;
+}
+.bnt_blue_reg{
+background:url(images/regzc.gif) no-repeat; width:96px; height:22px;
+text-align:center; line-height:22px; color:#fff; border:none; cursor:pointer;
+}
+.bnt_blue_add{
+background:url(images/add_goods.gif) no-repeat; width:150px; height:24px;
+text-align:center; line-height:24px; color:#fff; border:none; cursor:pointer;
+}
+/*模块容器*/
+.box{padding-bottom:2px; overflow:hidden;}
+.box_1{ border:1px solid #FFE2E2;}
+.box_2{ background:url(images/box_2Bg.gif) repeat-x top left;
+background-color:#edf8fe;  overflow:hidden;
+}
+.box_1top{background:url(images/bg_deco_line.gif) repeat-x;height:12px;}
+.boxCenterList{padding:8px;}
+/*GEO*/
+.title h3{height:33px; line-height:33px; font-size:12px;  text-align:right;
+padding:0 2px; font-weight:100;
+}
+.title h3.border{border:1px solid #c5e4ff; border-bottom:none;}
+.title h3 img{position:relative; top:7px;}
+.title h3 span{float:left; background:url(images/bg.gif) no-repeat 0px -570px;width:auto; height:33px; line-height:33px; text-align:left;
+font-weight:bold; color:#333; padding-left:12px;}
+h5{height:26px; line-height:26px; text-align:right; font-size:14px;
+color:#FF0080; padding:0 10px 0 0;font-weight:bold;
+}
+h5 span{float:left; font-weight:bold; }
+h6{height:23px; line-height:23px; text-align:right; font-size:12px; background:#FEDCE2; color:#F65CA0;
+border:1px solid #fff; padding-right:10px;
+}
+h6 span{float:left; padding-left:15px;}
+
+/*页面留白*/
+.blank{height:8px; line-height:8px; clear:both; visibility:hidden;}
+.blank5{height:5px; line-height:5px;/* _margin:-3px 0;*/ clear:both; visibility:hidden;}
+.clear{clear:both;}
+/*布局*/
+.AreaL{width:200px; float:left;display:inline;}
+.AreaR{width:760px; float:right;}
+
+.box h3{color:#333;height:32px; line-height:32px; font-size:12px; background-color:#FEF1F6;text-align:right;padding:0 6px;border-left:1px solid #FFF;border-right:1px solid #FFF;border-bottom:1px solid #FFBCDB;}
+.box h3 img{ position:relative; top:7px;}
+.box h3 span{float:left;width:auto;  text-align:left;padding-left:5px; }
+
+
+.mt-f-main{ width: 980px; height: auto; margin: 0px auto 20px; }
+.mt-tit,
+.mt-tit span										{ display: block; height: 39px; background: url("images/ct-fenleiyk.gif"); margin-bottom: 10px; }
+.mt-tit												{ background-position: 0px -40px; }
+.mt-tit span										{ width: 260px; float: left; }
+.mt-tit .sp-01										{ background-position: 0px 0px; }
+.mt-tit .sp-02										{ background-position: 0px -120px; }
+.mt-tit .sp-03										{ background-position: 0px -160px; }
+.mt-tit .sp-04										{ background-position: 0px -200px; }
+.mt-tit .sp-05										{ background-position: 0px -240px; }
+.mt-tit .sp-06										{ background-position: 0px -280px; }
+.mt-tit .sp-07										{ background-position: 0px -320px; }
+.mt-tit a                                           { display: block; height: 39px; line-height: 50px; float: right;}
+.mt-chpic											{ width: 978px; height: 324px; border: 1px solid #EEE; position: relative; }
+
+
+.mt-chpic .lbot										{position: absolute; left: 10px; top: 130px; }
+.mt-chpic .rbot										{position: absolute; right: 10px; top: 130px; }
+.mt-chpic .mcpic-m									{position: absolute; left: 61px; top: 27px; }
+
+.mt-chpic .bot a									{ display: block; width: 40px; height: 65px; background: url("images/mt-chpic-bot-bg.jpg"); }
+.mt-chpic .lbot a									{ background-position: left top; }
+.mt-chpic .lbot a:hover								{ background-position: left bottom; }
+.mt-chpic .rbot a									{ background-position: right top; }
+.mt-chpic .rbot a:hover								{ background-position: right bottom; }
+
+.mt-chpic .mcpic-m									{ display: block; width: 856px; height: 270px; }
+.mt-chpic .mcpic-m ul								{ width: 2582px; height: 270px; }
+.mt-chpic .mcpic-m li								{ float: left; margin-right: 10px; }
+.mt-chpic .mcpic-m li a								{ display: block; width: 204px; height: 268px; border: 1px solid #E5E5E5; }
+.mt-chpic .mcpic-m li a img							{ width: 202px; height: 266px; margin: 1px; }

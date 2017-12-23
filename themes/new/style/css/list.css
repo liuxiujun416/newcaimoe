@@ -1,0 +1,119 @@
+/**/
+a{
+	color: #333333;
+	font-weight: normal;
+}
+.ad1 img{
+	width: 100%;
+	height: 230px;
+	margin-bottom: 32px;
+}
+li.producttype{
+	padding: 0;
+	width: 100%;
+	height: 50px;
+	border-left: 1px solid #dddddd;
+	border-right: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+	overflow: hidden;
+}
+.producttype:first-child{
+	border-top: 1px solid #dddddd;
+}
+
+.producttype .typetitle{
+	display: inline-block;
+	width: 100px;
+	height: 50px;
+	margin-bottom: 0;
+	padding-left: 12px;
+	font-weight: normal;
+	background-color: #eaeceb;
+}
+li.active{
+	display: block;
+	height: auto;
+	overflow: auto;
+}
+
+.typelabel{
+	padding: 0;
+	line-height: 48px;
+}
+.typelabel a{
+	display: inline-block;
+	margin: 0 20px;
+}
+.typelabel a.active{
+	color: #8a1e1e;
+	font-weight: 700;
+}
+.typelabel a.typecolor{
+	display: inline-block;
+	border-radius: 10px;
+	background-color: #ccc;
+	width: 100px;
+	height: 25px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	line-height: 22px;
+	text-align: center;
+}
+.typelabel a.typezk{
+	position: relative;
+}
+.typezk i{
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	position: absolute;
+	background: url('./image/zhankai.png') no-repeat center;
+	top: 14px;
+	right: -22px;
+}
+.typezk i.close{
+	background: url('./image/shouqi.png') no-repeat center;
+}
+
+.product{
+	margin: 30px 0;
+}
+.prorow{
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+.prothumb{
+	width: 100%;
+	overflow: hidden;
+}
+.productlist a img{
+	width: 100%;
+	height: 376px;
+}
+.prodesc{
+	width: 100%;
+	text-align: center;
+}
+
+.prodesc span{
+	display: block;
+	line-height: 32px;
+}
+
+.prodesc span.produshu{
+	color: #999999;
+	font-size: 12px;
+}
+
+.pages{
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.pages a{
+	display: inline-block;
+	border: 1px solid #999;
+	border-radius: 3px;
+	padding: 5px 10px;
+	margin: 5px;
+}

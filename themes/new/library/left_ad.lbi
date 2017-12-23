@@ -1,0 +1,14 @@
+
+<style>
+.left_addiv{ margin-top:3px; margin-bottom:2px;}
+</style>
+{insert name='ads' id=18 num=1}
+{insert name='ads' id=26 num=1}
+{insert name='ads' id=27 num=1}
+{insert name='ads' id=28 num=1}
+{insert name='ads' id=29 num=1}
+{insert name='ads' id=30 num=1}
+{insert name='ads' id=31 num=1}
+{insert name='ads' id=32 num=1}
+{insert name='ads' id=33 num=1}
+{insert name='ads' id=34 num=1}

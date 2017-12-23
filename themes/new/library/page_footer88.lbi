@@ -1,0 +1,20 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div id="footer-wrap">
+	<div id="footer">
+		<ul id="footer-links" class="clearfix">
+       <!-- {if $navigator_list.bottom} -->
+   <!-- {foreach name=nav_bottom_list from=$navigator_list.bottom item=nav} -->
+        <li <!-- {if $smarty.foreach.nav_bottom_list.last} -->class="last"<!-- {/if} -->><a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a></li>
+      <!-- {/foreach} -->
+  <!-- {/if} -->
+		</ul>
+		
+		<p id="copyright">
+			{$copyright}<!-- ICP 证书{if $icp_number} -->{$lang.icp_number}:<a href="http://www.miibeian.gov.cn/" target="_blank">{$icp_number}</a>
+  <!-- 结束ICP 证书{/if} --><br /><br />             <a href="article.php?id=63" target='_blank'><img src="images/itrust_logo.jpg" ></a>
+			<a href="article.php?id=63" target='_blank'><img src="images/redlogo.gif" ></a>
+            <a href="#" target='_blank'><img src="images/seallog.png" ></a>
+            <a href="#" target='_blank'><img src="images/ylqx-banner.jpg" ></a>
+		</p>
+	</div>
+</div>

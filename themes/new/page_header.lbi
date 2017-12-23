@@ -1,0 +1,77 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+var back_url = '';
+</script>
+<div id="header_wrap">
+
+<div class="top">
+    <div class="top_login">
+        <p><a href="/myhome">我的窝居</a>|<a href="/help/help5.html">如何购物</a>|<a href="javascript:Favorite('http://www.9wow.com.cn/','氿窝网');">收藏本站</a>|<a class="cart" id="ECS_CARTINFO">{insert name='cart_info'}</a>|<em><a href="flow.php" class="buy red">去结算</a></em></p>
+            <span>
+
+您好，欢迎来氿窝网！<font id="ECS_MEMBERZONE">{* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'} </font><font style="color:#F11C4E">免费订购热线:{$service_phone}</font><span>
+                     {insert_scripts files='transport.js,utils.js'}
+                   				</span>
+				
+   </span>  
+    </div>
+</div>
+
+	<div id="header" style="height:74px">
+	<div class="hwz100" style="width:420px;float: left; ">
+		<span style="float:left;width:120px;height:60px"><a id="weblogo" href="index.php"><img src="images/logo.png"></a></span>
+		<span style="float:right;width:285px;height:50px;padding-top:10px"><a href="article.php?id=63"><img src="images/3zn_bnr.png"></a></span></div>
+		<div id="topbar" style="height: 66px;">
+			<div class="tel clear yahei"><!-- 客服电话{if $service_phone} -->客服热线: <font style="font-size:22px;">{$service_phone}</font><!-- 结束客服电话{/if} --></div>
+			<div class="shop1 clear font14px yahei" style="width: 470px; text-align:left; padding-left:40px; color:#FFFFFF">
+				<span class="login gray">
+                     {insert_scripts files='transport.js,utils.js'}
+                   <font id="ECS_MEMBERZONE">{* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'} </font>
+				</span>
+				<span class="cart" id="ECS_CARTINFO">{insert name='cart_info'}</span>
+				<a href="flow.php" class="buy red">去结算</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="topnav" class="font14px">
+		<ul class="menuCont">
+			<li class="no-pop"><a href="../index.php" class="nav linkWhite no">{$lang.home}</a></li>
+<!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
+			<li ><a href="{$nav.url}" class="nav linkWhite" id="a1">{$nav.name}</a>
+			<div class='sub_nav'>
+            <a href="{$nav.url}" target="_blank"><b>* 查看所有{$nav.name} *</b></a><br>
+           <?php $this->assign('catchild', get_child_tree($GLOBALS['smarty']->_var['nav']['cid']));?>
+                <!--{if $catchild}-->	
+                <!--{foreach from=$catchild item=cat name=cat}-->
+                <a href="{$cat.url}">* {$cat.name|escape:html}</a>
+                <div class="pinkdash"></div>
+                <!--{/foreach}-->
+                <!--{/if}--> 
+            </div>
+</li>
+<!-- {/foreach} -->	
+          <li class="kissmiu"><a class="nav" href="article.php?id=49"><img src="images/kissmiu_logo.gif" /></a>			
+		</ul>
+		<a class="minLogo" href="#?"></a>
+	</div>
+	<div class="search yahei">
+		<div class="searchCont">
+		<form id="searchForm" name="searchForm" method="get" action="search.php" onsubmit="return checkSearchText(this);">
+			<input style="color: rgb(0, 0, 0);" name="keyword" id="keyword" class="text yahei gray" value="商品名称/关键词" onfocus="if (this.value.indexOf('商品名称/关键词')!=-1) this.style.color='#000000'; this.value=''" onmouseover="this.focus();" type="text">
+			<a href="#" onclick="document.getElementById('searchForm').submit();" class="searchBtn linkWhite linkNone">搜&nbsp;索</a>
+			<span class="keyword gray">			
+           {foreach from=$searchkeywords item=val name=curn}
+           <a href="search.php?keywords={$val|escape:url}" class="red" style="color:#666">{$val}</a> {if !$smarty.foreach.curn.last}|{/if}
+           {/foreach}
+            </span>
+		</form>
+		</div>
+	</div>
+</div>
+<div id="mainbox-wrap" class="dw">
+<div id="mainbox">
+
+{insert name='ads' id=22 num=1}

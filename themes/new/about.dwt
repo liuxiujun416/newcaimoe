@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+
+<link rel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
+
+<script src="themes/new//style/js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link href="themes/new//style/css/common.css" rel="stylesheet" media="screen" />
+<link href="themes/new/style/css/help.css" rel="stylesheet" media="screen" />
+
+<style type="text/css">
+.helpmenu a{padding: 0;}
+.helpcontent span{line-height: 32px;}
+.helpcontent >div{margin-bottom: 50px;border-bottom: 1px dashed #ccc;}
+.helpmenu{padding-bottom: 50px;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->	
+<div class="container"><div class="col-xs-12 col-md-12 ad1"><img src="themes/new/style/images/about_ad.jpg" alt="" /></div></div>
+<div class="help clearfix">
+	<div class="container">
+		<div class="col-md-2">
+			<div class="helpmenu">
+				<h1>关于彩眸网</h1>
+				<div class="active" data-url="company">
+					<h3><i></i><a href="javascript:;">公司介绍</a></h3>
+				</div>
+				<div data-url="ceo">
+					<h3><i></i><a href="javascript:;">CEO简介</a></h3>
+				</div>
+				<div data-url="funder">
+					<h3><i></i><a href="javascript:;">创始人说</a></h3>
+				</div>
+				<div data-url="culture">
+					<h3><i></i><a href="javascript:;">公司理念</a></h3>
+				</div>
+				<div data-url="about">
+					<h3><i></i><a href="javascript:;">联系我们</a></h3>
+				</div>
+				<div data-url="xieyi">
+					<h3><i></i><a href="javascript:;">用户协议</a></h3>
+				</div>
+				<div data-url="protect">
+					<h3><i></i><a href="javascript:;">隐私保护</a></h3>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-10">
+			<div class="helpcontent">
+				<div id="company">
+					<h3><i></i>公司简介</h3>
+					<p style="position:relative;height:200px;overflow:hidden;">
+						<span style="position: absolute;display: inline-block;width: 60%;left:0;">彩眸网（www.caimoe.com）创立于2010年11月、是由互联网行业资深人士所创办的一家专注于韩国原装进口美瞳隐形眼镜的垂直B2C电商平台。我们致力于推动改善中国进口美瞳隐形眼镜假货层出不穷的市场安全健康现状。来创造简单、有趣、值得信赖放心的美瞳购物体验。 从创立伊始，彩眸网便坚持以用户体验为最高诉求，承诺“100%正品”、“100%服务”政策，竭力为每个女孩带来独一无二的美丽惊喜。
+						</span><img src="themes/new/style/images/gs001.png" alt="" style="position: absolute;right:0;max-width:320px;"/>
+					</p>
+					<p style="position:relative;height:200px;margin-top: 30px;overflow: hidden;">
+						<span style="position: absolute;display: inline-block;width: 60%;right:0;">成立至今，凭借口碑传播，已经拥有来自全球各地的用户消费者、 超过数万注册用户、我们致力于与推动国内进口美瞳隐形眼镜市场的安全健康现状，成为中国高品质进口美瞳隐形眼镜提供者。 而最初那小小的梦想，也已成为我们的信念。
+						</br>我们相信互联网平等而开放的力量，我们相信用户的信任是最大的依靠，我们相信一群充满梦想的人，可以凭借着爱与执着，让你的眼部美丽更简单！
+						</span><img src="themes/new/style/images/gs002.png" alt="" style="position: absolute;left:0;max-width:320px;"/>
+					</p>
+				</div>
+				
+				<div id="ceo">
+					<h3><i></i>CEO简介 </h3>
+					<p style="position:relative;height:200px;overflow:hidden;">
+						<span style="position: absolute;display: inline-block;width: 60%;left:0;">韩尚逸，彩眸网创始人CEO，1993年出生于重庆开州、连续创业者、90后退学创业党；历任特购社总裁助理、52校园COO首席运营官等多家公司高管及顾问职务；韩尚逸拥有丰富的电商运营管理及互联网公司的团队组建和重组的经验；同时对B2B2C、O2O商业模式市场有着深刻的理解。也具有丰富的校园市场推广经验，对校园客户群体的需求和体验有着深刻的认识和见解。
+						其中在2016年4月创办国内首家高校O2O生活服务平台"购懒"并融获100万风险投资；</span><img src="themes/new/style/images/gs003.png" alt="" style="position: absolute;right:0;max-width:320px;"/>
+					</p>
+				</div>
+				
+				<div id="funder">
+					<h3><i></i>创始人说</h3>
+					<p>你好，我是彩眸网创始人Leo Yu，韩尚逸。</p>
+					<p>	如果按照年龄来介绍自己的话，把我从小到大的人生是这样的：</p>
+					<p>	15岁第一笔生意是从广州批发市场进货回来在淘宝店卖女装，</p>
+					<p>	17岁第一桶金是做了自己第一家美瞳电商网站，</p>
+					<p>	19岁实现了大多数人的梦想，开了自己的第一家公司，</p>
+					<p>	22岁做了职业经理人，最年轻的首席运营官COO管理近百人的团队。月收入过22K，</p>
+					<p>	23岁成立自己的第二家公司，获得了初次融资，</p>
+					<p>	不是富二代，父母也不是高学历，在校的时候以为要N年后才会做到的事情，在之后的岁月里一一实现了。</p>
+					<p>	当我决定要重做美瞳事业时，周围有一些朋友表示了不理解，从我这些年从业互联网的经验，到重启美瞳所要投入的时间精力包括资金，都是别人不能理解的点。</p>
+					<p>	这些年经历过互联网风口的崛起，更是经历了韩流袭进中国的时代，从最初的所谓洗剪吹，再到服饰用品、潮流、包括具有美妆效果的医用隐形眼镜受到了国内爱美时尚女性用户的追捧。经历了GEO水凝这个可以称之为最经典、也是第一个韩国品牌进入中国市场的迅速火热。</p>
+					<p>	从我进入美瞳行业，做了自己第一家美瞳电商网站，再到搁置这个项目去追寻自己其他的梦想，到现在，已经是第七年。</p>
+					<p>	这些年来不管我行走在什么地方，做不同公司的负责人，老顾客们都依然会找我推荐和购买美瞳，以及会把我的美瞳介绍给身边的闺密朋友。更听过太多的老用户说希望我能继续做美瞳，说是老用户，其实我觉得用老朋友形容更为贴切。除了这些年和用户积攒成友情，更多的，还是作为消费者对于我的信任以及认可吧！</p>
+					<p>	美瞳隐形眼镜行业是一个需要有良心的行业，赚钱是小，健康是大。在法律监管触及不到的地方要有基本底线。</p>
+					<p>	如果，要问我身上最明显的标签，或许不是90后创业者；而是做美瞳的一个特性标签。我算是比较幸运的进入了一个同龄阶段，在这个互联网行业里、还是美瞳行业里，拥有了不一样的高度视角。</p>
+					<p>	这几年国内假货繁多，仿品参差不齐，作为一个行业已经有7年经验的人士，更最作为一个对美瞳用户负责任的良心商家。决定，将重新给正品美瞳提供一个进入通道，希望，能以专业视角给用户带去正品美瞳隐形眼镜。我们想给顾客们带去的都是适合自己的花色长青款，花纹回购率都是非常高，而不是一阵风的款式。</p>
+				</div>
+				<div id="culture">
+					<h3><i></i>经营理念</h3>
+					<p>彩眸网一直秉用户至上，注重顾客的购物体，给顾客提供简捷的购物体。认真听取每一位用户的建议和投诉，永远保持创业的激情与动力，追求完美极致。</p>
+					<p><img src="themes/new/style/images/gs004.png" alt="" width="100%"/></p>
+					
+					<h3 style="padding: 0;"><a>与老会员一起，了解彩眸网</a></h3>
+					<p>看看粉丝们是如何评价我们的产品、服务、物流的。</br>也欢迎你晒出你的评价。</p>
+					<p><img src="themes/new/style/images/gs005.png" alt="" width="100%" /></p>
+					<p><img src="themes/new/style/images/gs006.png" alt="" width="100%" /></p>
+				</div>
+				
+				<div id="about">
+					<h3><i></i>联系我们</h3>
+					<p>彩眸网以顾客至上的服务理念，期待您的关注与反馈。</p>
+					<p>如您在彩眸网购物过程中遇到任何问题，可通过如下方式联系客服，我们将以最优质的服务帮您解决问题。</p>
+					<p>彩眸网，为特别的你提供最合适的美瞳产品而努力！</p>
+					 
+					<p>工作时间：7×11小时为您服务</p>
+					<p>服务时间：周一至周日( 09：00——20：00)</p>
+					<p>公司总部电话：<a style="display:inline;">023-52011256</a></p>
+					<p>客服QQ：625854820</p>
+					<p>客服邮箱：service@caimoe.com</p>
+					<p>投诉邮箱：ceo@caimoeye.com</p>
+					<p>（1）线下实体店加盟</p>
+					<p>（2）人力资源部</p>
+					<p>（3）PR市场合作</p>
+
+					<p>如有以上了解和咨询“请发送至客服邮箱”我们会尽快与您取得联系</p>
+					<p>公司地址：重庆市开州区驷马街道（中）37-402号</p>
+					<p>邮编：405400</p>
+				</div>
+				<div id="xieyi">
+					<h3><i></i>用户协议</h3>
+					<p><a href="/article.php?type=2">关于我们请点此处</a></p>
+				</div>
+				<div id="protect">
+					<h3><i></i>隐私保护</h3>
+					<p><a href="/article.php?type=2#protect">关于我们请点此处</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	$('.helpmenu a').on('click', function(){
+		$(this).parent().parent().addClass('active').siblings().removeClass('active');
+		var url = $(this).parent().parent().data('url');
+		$("html,body").animate({scrollTop: $("#" + url).offset().top}, 1000);
+	});
+})
+</script>
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

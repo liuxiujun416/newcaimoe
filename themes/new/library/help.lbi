@@ -1,0 +1,20 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<?php $this->assign('helps', get_shop_help()); ?>
+<!--{if $helps}-->
+<div class="server">
+    <ul>
+        <!-- {foreach from=$helps item=help_cat name=help_cat} -->
+        <li {if $smarty.foreach.help_cat.last}class="last"{/if}>
+            
+            <p>
+                <strong>{$help_cat.cat_name}</strong>
+                <!-- {foreach from=$help_cat.article item=item} -->
+               -<a href="{$item.url}" title="{$item.title|escape:html}">{$item.short_title}</a><br>
+                <!-- {/foreach} -->    
+            </p>
+
+        </li>
+        <!-- {/foreach} -->
+    </ul>
+</div>
+<!--{/if}-->    

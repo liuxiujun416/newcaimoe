@@ -1,0 +1,60 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $fittings} -->
+ <script type="text/javascript" charset="utf-8">
+  function fittings_to_flow(goodsId,parentId)
+  {
+    var goods        = new Object();
+    var spec_arr     = new Array();
+    var number       = 1;
+    goods.spec     = spec_arr;
+    goods.goods_id = goodsId;
+    goods.number   = number;
+    goods.parent   = parentId;
+    Ajax.call('flow.php?step=add_to_cart', 'goods=' + goods.toJSONString(), fittings_to_flow_response, 'POST', 'JSON');
+  }
+  function fittings_to_flow_response(result)
+  {
+    if (result.error > 0)
+    {
+      // 如果需要缺货登记，跳转
+      if (result.error == 2)
+      {
+        if (confirm(result.message))
+        {
+          location.href = 'user.php?act=add_booking&id=' + result.goods_id;
+        }
+      }
+      else if (result.error == 6)
+      {
+        openSpeDiv(result.message, result.goods_id, result.parent);
+      }
+      else
+      {
+        alert(result.message);
+      }
+    }
+    else
+    {
+      location.href = 'flow.php';
+    }
+  }
+  </script>
+  <div class="boxCenterListp clearfix"> 
+    <ul style="border:none;">
+	<!--{foreach from=$fittings item=goods}-->
+      <li class="goodsimg">
+      <a href="{$goods.url}" target="_blank"><img src="{$goods.goods_thumb}" alt="{$goods.name|escape:html}" /></a>
+      </li>
+      <li style="padding-top:5px;">
+      <a href="{$goods.url}" target="_blank" title="{$goods.goods_name|escape:html}">{$goods.short_name|escape:html}</a><br />
+      {$lang.fittings_price}<font class="f1">{$goods.fittings_price}</font><br>
+      <a href="javascript:fittings_to_flow({$goods.goods_id},{$goods.parent_id})">[购买配件]</a>
+      </li>
+	  <!--{/foreach}-->
+    </ul>  
+  </div>
+<!-- {/if} -->
+
+
+
+

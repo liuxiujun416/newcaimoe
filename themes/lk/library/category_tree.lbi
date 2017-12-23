@@ -1,0 +1,17 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="box_1">
+<div id="box-lips" >
+         <div class="content lips">
+          <div class="clearfix"><h2></h2></div>
+            <!--{foreach from=$categories item=cat}-->
+            <dl class="clearfix">                                        
+             <dt>系列</dt>  
+             <dd><a href="{$cat.url}" class="a-visited">{$cat.name|escape:html}</a></dd> 
+             <!--{foreach from=$cat.cat_id item=child}-->
+             <dd style="clear:both"><a href="{$child.url}">{$child.name|escape:html}</a></dd>
+             <!--{/foreach}-->  
+	        </dl>
+            <!--{/foreach}--> 	  
+	</div>
+</div>       
+</div>

@@ -1,0 +1,131 @@
+/**/
+a:hover{
+	color: #8a1e1e;
+}
+.ad1{
+/*	height: 190px;*/
+}
+.help{
+	margin: 22px 0;
+}
+.helpmenu{
+	width: 220px;
+	overflow: hidden;
+	border: 1px solid #bbb;
+	padding: 10px 40px;
+	margin: 10px 0;
+	 
+	border: 1px solid #bbbbbb;
+	-moz-box-shadow: 0px 0px 10px #bbb; /* Firefox */ 
+	-webkit-box-shadow: 0px 0px 10px #bbb; /* Safari and Chrome */ 
+	box-shadow: 0px 0px 10px #bbb; /* Opera 10.5+、IE6+*/ 	
+}
+.helpmenu, .helpmenu h1, .helpmenu h3, .helpmenu a{
+	display: block;
+	padding-left: 30px;
+}
+.helpmenu >div,.helpcontent >div{
+	margin-bottom: 15px;
+}
+.helpmenu h1{
+	font-size: 20px;
+	margin-bottom: 32px;
+}
+
+.helpmenu h3{
+	font-size: 16px;
+	height: 32px;
+	line-height: 32px;
+	position: relative;
+}
+.helpmenu h3 i{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	left: 0;
+	top: 11px;
+	background-color: #999;
+	border-radius: 50%;
+}
+
+.helpmenu >div.active h3 i{
+	background-color: #000;
+}
+.helpmenu a{
+	font-size: 14px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.helpcontent{
+	padding: 10px 40px;
+}
+.helpcontent h1{
+	font-size: 28px;
+	text-align: center;
+}
+.helpcontent h3{
+	font-size: 18px;
+	height: 40px;
+	line-height: 40px;
+	position: relative;
+	padding-left: 30px;
+}
+.helpcontent h3 i{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: 0;
+	top: 10px;
+	background-color: #000;
+}
+.helpcontent a{
+	color: #8a1e1e;
+	display: block;
+	line-height:40px;
+	font-size: 14px;
+	position: relative;
+	padding-left: 20px;
+	font-size: 16px;
+}
+.helpcontent a i{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	left: 0;
+	top: 10px;
+	background-color: #8a1e1e;
+	border-radius: 50%;	
+}
+.helpcontent p{
+	padding-left: 20px;
+	font-size: 14px;
+	line-height: 24px;
+	margin-bottom: 15px;
+}
+.helpcontent p a{
+	font-size: 14px;
+	padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

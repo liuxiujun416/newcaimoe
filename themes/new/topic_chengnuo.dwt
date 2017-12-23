@@ -1,0 +1,191 @@
+﻿{* TitlePicWidth: 2 *}
+{* TitlePicHeight: 38 *}
+
+{* 说明：$title_pic，分类标题图片地址； *}
+{* 说明：$base_style，基本风格样式颜色； *}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$topic.title}_{$page_title}</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link href="warp.css" rel="stylesheet" type="text/css" />
+<link href="ecstyle.css" rel="stylesheet" type="text/css" />
+{if $topic.css neq ''}
+<style type="text/css">
+  {$topic.css}
+</style>
+{/if}
+<style type="text/css">
+h6{
+font-family:"黑体";
+background:url({$title_pic}) repeat-x 0 0;
+text-align:left;
+height:38px;
+line-height:38px;
+padding-left:20px;
+font-weight:200;
+font-size:18px;
+color:#fff;
+}
+.goodsbox{
+margin:5px;
+background:#fff;
+border:1px solid {$base_style};
+width:170px;
+min-height:1px;
+display: -moz-inline-stack;
+display: inline-block;
+text-align:center;
+vertical-align: top;
+zoom:1;
+*display:inline;
+_height:1px;
+}
+  .goodsbox .imgbox{
+	width:170px;
+	margin:0 0 5px 0;
+	overflow:hidden;
+	} 
+.sort_box{
+border:1px solid #ccc;
+background:#f5f5f5;
+padding:10px 0 10px 10px;
+}	
+.sort_box a{
+color:#222;
+}
+</style>
+{* 包含脚本文件 *}
+{insert_scripts files='common.js'}
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header_chengnuo.lbi" --><!-- #EndLibraryItem -->
+<div style=" width:auto; margin:0 auto;">
+  
+   <div style=" background-color:#e6237f;">
+<div style="background:url(images/chengnuo/13734403921886.png) no-repeat center top ; height:311px;">&nbsp;</div>
+<div style="background:url(images/chengnuo/13734403924543.jpg) no-repeat center top ; height:124px;">&nbsp;</div>
+<div style="background:url(images/chengnuo/13734403932175.png) no-repeat center top ; height:125px;">
+<ul class="pngImg" style="margin:0 auto; width:1003px; list-style:none;">
+    <li style="float:left;margin-right:14px; cursor:pointer;"><a href="#zpbz"><img alt="" class="pngImg" onmouseover="this.src='images/chengnuo/13735964758308.jpg'" onmouseout="this.src='images/chengnuo/137351131309.jpg'" src="images/chengnuo/137351131309.jpg" original="images/chengnuo/137351131309.jpg" style="display: inline;"></a></li>
+    <li style="float:left; margin-right:14px; cursor:pointer;"><a href="#ppzg"><img alt="" onmouseover="this.src='images/chengnuo/1373617349366.jpg'" onmouseout="this.src='images/chengnuo/13735113131548.jpg'" src="images/chengnuo/13735113131548.jpg" original="images/chengnuo/13735113131548.jpg" style="display: inline;"></a></li>
+    <li style="float:left; margin-right:14px; cursor:pointer;"><a href="#zjbg"><img alt="" onmouseover="this.src='images/chengnuo/13736173497825.jpg'" onmouseout="this.src='images/chengnuo/13735113132143.jpg'" src="images/chengnuo/13735113132143.jpg" original="images/chengnuo/13735113132143.jpg" style="display: inline;"></a></li>
+    <li style="float:left; margin-right:14px; cursor:pointer;"><a href="#tth"><img alt="" onmouseover="this.src='images/chengnuo/13736173488316.jpg'" onmouseout="this.src='images/chengnuo/13735113132802.jpg'" src="images/chengnuo/13735113132802.jpg" original="images/chengnuo/13735113132802.jpg" style="display: inline;"></a></li>
+    <li style="float:left; margin-right:14px; cursor:pointer;"><a href="#xsdd"><img alt="" onmouseover="this.src='images/chengnuo/13736173496877.jpg'" onmouseout="this.src='images/chengnuo/13735113133397.jpg'" src="images/chengnuo/13735113133397.jpg" original="images/chengnuo/13735113133397.jpg" style="display: inline;"></a></li>
+    <li style="float:left; margin-right:14px; cursor:pointer;"><a href="#smfw"><img alt="" onmouseover="this.src='images/chengnuo/13736173495052.jpg'" onmouseout="this.src='images/chengnuo/13735113134199.jpg'" src="images/chengnuo/13735113134199.jpg" original="images/chengnuo/13735113134199.jpg" style="display: inline;"></a></li>
+    <li style="float:left; margin-right:14px; cursor:pointer;"><a href="#jzsh"><img alt="" onmouseover="this.src='images/chengnuo/13736173489216.jpg'" onmouseout="this.src='images/chengnuo/13735113134974.jpg'" src="images/chengnuo/13735113134974.jpg" original="images/chengnuo/13735113134974.jpg" style="display: inline;"></a></li>
+    <li style="float:left; margin-right:14px; cursor:pointer;"><a href="#mxhr"><img alt="" onmouseover="this.src='images/chengnuo/1373617349091.jpg'" onmouseout="this.src='images/chengnuo/13735113135599.jpg'" src="images/chengnuo/13735113135599.jpg" original="images/chengnuo/13735113135599.jpg" style="display: inline;"></a></li>
+    <li style="float:left; margin-right:14px; cursor:pointer;"><a href="#mbxt"><img alt="" onmouseover="this.src='images/chengnuo/13736173490167.jpg'" onmouseout="this.src='images/chengnuo/13735113129226.jpg'" src="images/chengnuo/13735113129226.jpg" original="images/chengnuo/13735113129226.jpg" style="display: inline;"></a></li>
+    <li style="float:left; cursor:pointer;"><a href="#txkf"><img alt="" onmouseover="this.src='images/chengnuo/13736173495989.jpg'" onmouseout="this.src='images/chengnuo/13735113130147.jpg'" src="images/chengnuo/13735113130147.jpg" original="images/chengnuo/13735113130147.jpg" style="display: inline;"></a></li>
+</ul>
+</div>
+<div style=" width:1003px; overflow:hidden; margin: 0 auto; background-color:#FFF;">
+<div style=" width:1003px; overflow:hidden; margin: 0 auto;">
+<div style=" width:825px; overflow:hidden;margin: 100px auto 0;">
+<div style=" border-bottom: 1px solid #F577A6; height:52px;"><a name="zpbz" id="zpbz"></a><img alt="" src="images/chengnuo/13734403933849.png" original="images/chengnuo/13734403933849.png" style="display: inline;"></div>
+<p style="height:40px; line-height:40px; font-family:微软雅黑; font-size:16px;">1、百万消费者真实好评，最具严格的采购渠道管理，确保100%正品保证，敢于承诺，源自信心保证。</p>
+<div style="clear:both;display: block;font-size: 1px; height:25px;overflow:hidden;">&nbsp;</div>
+<span><img alt="" src="images/chengnuo/13734403935306.png" original="images/chengnuo/13734403935306.png" style="display: inline;"></span> <span style="margin-left:14px;"><img alt="" src="images/chengnuo/13734403936566.png" original="images/chengnuo/13734403936566.png" style="display: inline;"></span> <span style="margin-left:14px;"><img alt="" src="images/chengnuo/13734403938508.png" original="images/chengnuo/13734403938508.png" style="display: inline;"></span> <span style="margin-left:14px;"><img alt="" src="images/chengnuo/13734403940247.png" original="images/chengnuo/13734403940247.png" style="display: inline;"></span> <span style="margin-left:14px;"><img alt="" src="images/chengnuo/13734403941452.png" original="images/chengnuo/13734403941452.png" style="display: inline;"></span>
+<div class="blank">&nbsp;</div>
+<span><img alt="" src="images/chengnuo/13734403945489.png" original="images/chengnuo/13734403945489.png" style="display: inline;"></span> <span><img alt="" src="images/chengnuo/13734403953323.png" original="images/chengnuo/13734403953323.png" style="display: inline;"></span> <span><img alt="" src="images/chengnuo/13734403958688.png" original="images/chengnuo/13734403958688.png" style="display: inline;"></span>
+<div style="clear:both;display: block;font-size: 1px; height:55px;overflow:hidden;">&nbsp;</div>
+<div style=" border-bottom: 1px solid #F577A6; height:52px;"><a name="ppzg" id="ppzg"></a><img alt="" src="images/chengnuo/13734403963649.png" original="images/chengnuo/13734403963649.png" style="display: inline;"></div>
+<p style="height:40px; line-height:40px; font-family:微软雅黑; font-size:16px;">2、坚持只从品牌厂家正规可信的聚到采购商品，确保商品既有品质保证，真实低价。</p>
+<div style="clear:both;display: block;font-size: 1px; height:25px;overflow:hidden;">&nbsp;</div>
+<div align="center"><img alt="" src="images/chengnuo/13734403977689.png" original="images/chengnuo/13734403977689.png" style="display: inline;"></div>
+<div style="clear:both;display: block;font-size: 1px; height:55px;overflow:hidden;">&nbsp;</div>
+<div style=" border-bottom: 1px solid #F577A6; height:52px;"><a name="zjbg" id="zjbg"></a><img alt="" src="images/chengnuo/13734403980838.png" original="images/chengnuo/13734403980838.png" style="display: inline;"></div>
+<p style="height:40px; line-height:40px; font-family:微软雅黑; font-size:16px;">3、以质量为优先考量，严苛的审查每一天！包括采购、审样、入库、出库、配送所有环节 。</p>
+<div style="clear:both;display: block;font-size: 1px; height:25px;overflow:hidden;">&nbsp;</div>
+<div align="center"><img alt="" src="images/chengnuo/13734404001617.png" original="images/chengnuo/13734404001617.png" style="display: inline;"></div>
+<div style="clear:both;display: block;font-size: 1px; height:25px;overflow:hidden;">&nbsp;</div>
+<div align="center"><img alt="" src="images/chengnuo/13734404006092.png" original="images/chengnuo/13734404006092.png" style="display: inline;"></div>
+<div style="clear:both;display: block;font-size: 1px; height:55px;overflow:hidden;">&nbsp;</div>
+<div style=" border-bottom: 1px solid #F577A6; height:52px;"><a name="tth" id="tth"></a><img alt="" src="images/chengnuo/13734404009358.png" original="images/chengnuo/13734404009358.png" style="display: inline;"></div>
+<p style="height:40px; line-height:40px; font-family:微软雅黑; font-size:16px;">4、以质量为优先考量，严苛的审查每一天！包括采购、审样、入库、出库、配送所有环节 。</p>
+<div style="clear:both;display: block;font-size: 1px; height:25px;overflow:hidden;">&nbsp;</div>
+<div align="center"><img alt="" src="images/chengnuo/13734404013408.png" original="images/chengnuo/13734404013408.png" style="display: inline;"></div>
+<p style="height:40px; line-height:20px; font-family:微软雅黑; font-size:16px; width:530px; margin-top:20px;">全场商品任何质量问题均可在收到货30天内进行换货，产品拆封状态下仍可换货。质量问题换货所产生的配送费用均由我们承担。退换货只针对同款同种颜色、同度数进行换。</p>
+<div style="clear:both;display: block;font-size: 1px; height:55px;overflow:hidden;">&nbsp;</div>
+<div style=" border-bottom: 1px solid #F577A6; height:52px; margin-top:30px;"><a name="xsdd" id="xsdd"></a><img alt="" src="images/chengnuo/13734404015052.png" original="images/chengnuo/13734404015052.png" style="display: inline;"></div>
+<p style="line-height:25px; font-family:微软雅黑; font-size:16px;">5、在规定时间内，严格要求仓库发货，并全程跟踪商品路径，确保商品的安全及到货时间。 <br>
+并附加了保养眼镜盒佩戴隐形眼镜的教程和注意事项，做到100%的人性化贴心服务。</p>
+<p style=" line-height:25px; font-family:微软雅黑; font-size:16px; font-weight:bold; margin:25px 0;">彩眸眼镜网核心城市配送实效对照表：（默认圆通快递）</p>
+<div align="center"><img alt="" src="images/chengnuo/13734495565442.jpg" original="images/chengnuo/13734495565442.jpg" style="display: inline;"></div>
+<div style="clear:both;display: block;font-size: 1px; height:55px;overflow:hidden;">&nbsp;</div>
+<div style=" border-bottom: 1px solid #F577A6; height:52px;"><a name="smfw" id="smfw"></a><img alt="" src="images/chengnuo/13734404016289.png" original="images/chengnuo/13734404016289.png" style="display: inline;"></div>
+<p style="height:40px; line-height:40px; font-family:微软雅黑; font-size:16px;">最具严格的采购渠道管理，确保100%正品品质。敢于承诺，源自信心保证。</p>
+<div style="clear:both;display: block;font-size: 1px; height:25px;overflow:hidden;">&nbsp;</div>
+<span style=" float:left;"><img alt="" src="images/chengnuo/13734404017447.png" original="images/chengnuo/13734404017447.png" style="display: inline;"></span> <span style="width:240px; float:left; margin-top:150px; margin-left:20px;">
+<p style="color:#F577A6; font-size:16px;">货到付款</p>
+<ul style="font-size:15px;">
+    <li style=" list-style-type:disc;">货到付款件72小时内发出。承运快递：           宅急送快递；<br>
+    （货到付款快递速度较慢，建议着急的亲，           请选择网上支付方式）</li>
+    <li style=" list-style-type:disc;">顾客选择货到付款后，请保持联系电话           的畅通，彩眸眼镜网客服会在24小时内与您取得           联系，确定收货信息及订购商品；如果未能           与您取得联系，您的订单将无法确定发货，           敬请谅解；</li>
+</ul>
+</span>
+<div style="clear:both;display: block;font-size: 1px; height:55px;overflow:hidden;">&nbsp;</div>
+<div style=" border-bottom: 1px solid #F577A6; height:52px; "><a name="jzsh" id="jzsh"></a><img alt="" src="images/chengnuo/13734404019995.png" original="images/chengnuo/13734404019995.png" style="display: inline;"></div>
+<p style="line-height:25px; font-family:微软雅黑; font-size:16px;">6、彩眸眼镜网为您量身定做的精美售后教程卡，为您退换货省心省力。 <br>
+并附加了保养眼镜盒佩戴隐形眼镜的教程和注意事项，做到100%的人性化贴心服务。</p>
+<div style="clear:both;display: block;font-size: 1px; height:25px;overflow:hidden;">&nbsp;</div>
+<span style=" margin-left:20px;"><img alt="" src="images/chengnuo/13734404020798.png" original="images/chengnuo/13734404020798.png" style="display: inline;"></span> <span style="margin-left:15px;"><img alt="" src="images/chengnuo/13734404022197.png" original="images/chengnuo/13734404022197.png" style="display: inline;"></span> <span style="margin-left:15px;"><img alt="" src="images/chengnuo/13734404023472.png" original="images/chengnuo/13734404023472.png" style="display: inline;"></span> <span style="margin-left:15px;"><img alt="" src="images/chengnuo/1373440402576.png" original="images/chengnuo/1373440402576.png" style="display: inline;"></span>
+<div style="clear:both;display: block;font-size: 1px; height:55px;overflow:hidden;">&nbsp;</div>
+<div style=" border-bottom: 1px solid #F577A6; height:52px; "><a name="mxhr" id="mxhr"></a><img alt="" src="images/chengnuo/1373440402672.png" original="images/chengnuo/1373440402672.png" style="display: inline;"></div>
+<p style="line-height:25px; font-family:微软雅黑; font-size:16px;">7、彩眸眼镜网成立以来，收到众多知名网络红人倾力推荐， 汇集百位美妆达人为我们一起见证， <br>
+我们值得您信任与选择。</p>
+<div style="clear:both;display: block;font-size: 1px; height:25px;overflow:hidden;">&nbsp;</div>
+<div style="width:270px; float:left; margin-right:5px;">
+<div align="center"><img alt="" src="images/chengnuo/13734404029343.png" original="images/chengnuo/13734404029343.png" style="display: inline;"></div>
+<div align="center" style="margin-top:5px;"><img alt="" src="images/chengnuo/13734404058914.png" original="images/chengnuo/13734404058914.png" style="display: inline;"></div>
+</div>
+<div style="width:546px; float:left;">
+<div align="center"><img alt="" src="images/chengnuo/13734404043931.png" original="images/chengnuo/13734404043931.png" style="display: inline;"></div>
+</div>
+<div style="clear:both;display: block;font-size: 1px; height:5px;overflow:hidden;">&nbsp;</div>
+<span style="margin-right:3px;"><img alt="" src="images/chengnuo/1373440406032.png" original="images/chengnuo/1373440406032.png" style="display: inline;"></span><span style="margin-right:3px;"><img alt="" src="images/chengnuo/1373440406189.png" original="images/chengnuo/1373440406189.png" style="display: inline;"></span><span style="margin-right:3px;"><img alt="" src="images/chengnuo/13734404063168.png" original="images/chengnuo/13734404063168.png" style="display: inline;"></span><span style="margin-right:3px;"><img alt="" src="images/chengnuo/13734404065152.png" original="images/chengnuo/13734404065152.png" style="display: inline;"></span><span style="margin-right:3px;"><img alt="" src="images/chengnuo/13734404069378.png" original="images/chengnuo/13734404069378.png" style="display: inline;"></span><span><img alt="" src="images/chengnuo/13734404071666.png" original="images/chengnuo/13734404071666.png" style="display: inline;"></span>
+<div style="clear:both;display: block;font-size: 1px; height:55px;overflow:hidden;">&nbsp;</div>
+<div style=" border-bottom: 1px solid #F577A6; height:52px; "><a name="mbxt" id="mbxt"></a><img alt="" src="images/chengnuo/13734404072896.png" original="images/chengnuo/13734404072896.png" style="display: inline;"></div>
+<p style="line-height:25px; font-family:微软雅黑; font-size:16px;">8、千万彩妞们的真实买家秀，微博十万粉丝的钟爱之选，被信任是一件快乐的事，我们一直在努力。</p>
+<div style="clear:both;display: block;font-size: 1px; height:25px;overflow:hidden;">&nbsp;</div>
+<div align="center" style=" width:825px;"><img alt="" src="images/chengnuo/13734404101628.png" original="images/chengnuo/13734404101628.png" style="display: inline;"></div>
+<div align="center" style=" width:825px;"><img alt="" src="images/chengnuo/13734404104101.png" original="images/chengnuo/13734404104101.png" style="display: inline;"></div>
+<div style="clear:both;display: block;font-size: 1px; height:55px;overflow:hidden;">&nbsp;</div>
+<div style=" border-bottom: 1px solid #F577A6; height:91px;"><a name="txkf" id="txkf"></a><img alt="" src="images/chengnuo/13734404105215.png" original="images/chengnuo/13734404105215.png" style="display: inline;"></div>
+<p style="line-height:25px; font-family:微软雅黑; font-size:16px;">9、贴心客服每天12小时随时stand by，并承诺任何渠道方式的咨询，15分钟内必定得到答复。</p>
+<div style="clear:both;display: block;font-size: 1px; height:25px;overflow:hidden;">&nbsp;</div>
+<div align="center" style=" width:825px;"><img alt="" src="images/chengnuo/13734404123454.png" original="images/chengnuo/13734404123454.png" style="display: inline;"></div>
+<div style="clear:both;display: block;font-size: 1px; height:25px;overflow:hidden;">&nbsp;</div>
+</div>
+</div>
+</div>
+<div style="clear:both;display: block;font-size: 1px; height:25px;overflow:hidden;">&nbsp;</div>
+<div align="center"><img alt="" src="images/chengnuo/13734403908931.jpg" original="images/chengnuo/13734403908931.jpg" style="display: inline;"></div>
+<div align="center">&nbsp;</div>
+<div align="center">&nbsp;</div>
+<div align="center">&nbsp;</div>
+</div><br><br>
+        
+</div>
+<div class="blank5"></div>
+<div id="mainbox-wrap" class="dw">
+<div id="mainbox">
+<div class="helps clearfix">
+	<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
+    <!-- #BeginLibraryItem "/library/email_list.lbi" --><!-- #EndLibraryItem -->
+</div>
+</div>
+</div>
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

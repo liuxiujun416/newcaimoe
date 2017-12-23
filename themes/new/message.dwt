@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+{if $auto_redirect}
+<meta http-equiv="refresh" content="2;URL={$message.back_url}" />
+{/if}
+<title>{$page_title}</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+{insert_scripts files='transport.js'}
+
+<link rel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
+<script src="themes/new//style/js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link href="themes/new//style/css/common.css" rel="stylesheet" media="screen" />
+<link href="themes/new/style/css/register.css" rel="stylesheet" media="screen" />
+
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class="error404 clearfix">
+  <div class="container">
+    <div style="font-size: 18px;">{$message.content}</div>
+<!--     <a class="button back" href="javascript:;" onclick="javascript:history.back(-1)"><i></i>返回上一页</a> -->
+
+    <!-- {if $message.url_info} -->
+      <!--{foreach from=$message.url_info key=info item=url}-->
+      <!-- {if $info == "返回上一页"} -->
+      <a href="{$url}" class="button back"><i></i>{$info}</a>
+      <!--{else}-->
+      <a href="{$url}" class="button">{$info}</a>
+      <!--{/if}-->
+      <!--{/foreach}-->
+    <!--{/if}-->
+  </div>
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

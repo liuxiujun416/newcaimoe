@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+
+<link rel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
+
+<script src="themes/new/style/js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link href="themes/new/style/css/common.css" rel="stylesheet" media="screen" />
+<link href="themes/new/style/css/help.css" rel="stylesheet" media="screen" />
+
+<style type="text/css">
+.helpcontent >div{border-bottom: 1px dashed #ccc;}
+.ad1{ height: auto;}
+.ad1 img{ margin-bottom: 0;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->	
+<div class="container"><div class="col-xs-12 col-md-12 ad1"><img src="themes/new/style/images/help_ad.jpg" alt="" /></div></div>
+<div class="help clearfix">
+	<div class="container">
+		<div class="col-md-2">
+			<div class="helpmenu">
+				<h1>帮助中心</h1>
+				<div class="active" data-url="guide">
+					<h3><i></i>购物指南</h3>
+					<a href="javascript:;">注册与登录</a>
+					<a href="javascript:;">购物流程</a>
+					<a href="javascript:;">眼镜知识</a>
+					<a href="javascript:;">购物常见问题</a>
+				</div>
+				<div data-url="pay">
+					<h3><i></i>支付方式</h3>
+					<a href="javascript:;">网上支付</a>
+					<a href="javascript:;">银行汇款</a>
+					<a href="javascript:;">余额支付</a>
+					<a href="javascript:;">支付常见问题</a>
+				</div>
+				<div data-url="dispatching">
+					<h3><i></i>配送方式</h3>
+					<a href="javascript:;">发货时间</a>
+					<a href="javascript:;">送达时间</a>
+					<a href="javascript:;">验货与拒收</a>
+					<a href="javascript:;">配送常见问题</a>
+				</div>
+				<div data-url="service">
+					<h3><i></i>售后服务</h3>
+					<a href="javascript:;">品质说明</a>
+					<a href="javascript:;">退换货政策</a>
+					<a href="javascript:;">退换货处理</a>
+					<a href="javascript:;">注意事项</a>
+				</div>
+				<div data-url="center">
+					<h3><i></i>彩眸中心</h3>
+					<a href="javascript:;">密码问题</a>
+					<a href="javascript:;">积分规则</a>
+					<a href="javascript:;">红包使用</a>
+					<a href="javascript:;">投诉建议</a>
+				</div>
+				<div data-url="about">
+					<h3><i></i>关于我们</h3>
+					<a href="javascript:;">公司介绍</a>
+					<a href="javascript:;">CEO简介</a>
+					<a href="javascript:;">创始人说</a>
+					<a href="javascript:;">公司理念</a>
+					<a href="javascript:;">联系我们</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-10">
+			<div class="helpcontent">
+				<h1>Help(帮助中心)</h1>
+				<div id="guide">
+					<h3><i></i>购物指南</h3>
+					<a><i></i>注册与登录</a>
+					<a><i></i>购物流程</a>
+					<a><i></i>眼镜知识</a>
+					<a><i></i>购物常见问题</a>
+				</div>
+				<div id="pay">
+					<h3><i></i>支付方式</h3>
+					<a>Q.支付方式有哪些？</a>
+					<p>A.支付方式：为了保证大家的利益，本网站推荐使用网上支付，银行汇款和余额支付。</p>
+					<a>Q.网上支付</a>
+					<p>A.支付宝诚信商家，信誉保证。</p>
+					<a>Q.银行汇款</a>
+					<p>A.支付宝诚信商家，信誉保证。</p>
+					<a>Q.余额支付</a>
+					<p>A.支付宝诚信商家，信誉保证。</p>
+					<p>【常见支付问题】</p>
+					<a>Q.支付宝显示已扣款，但交易状态仍显示"未付款"?</a>
+					<p>A.请您查询网上收支明细，如果已经扣款，请您不要担心，由于网上支付网络传输发生故障或延时，未能及时将您的扣款信息反馈到彩眸网，造成订单状
+态未改变，请您联系客服，彩眸网会在２个工作日之内确认订单状态，请耐心等待。</p>
+					<a>Q.点击"立即使用网上支付"时，有时会出现一些链接速度慢或根本无法链接、重复支付、不能输入银行卡密码等问题，这是什么原因？</a>
+					<p>A.当点击"立即使用网上支付"后，您已离开了彩眸网的网站。出现上述问题的原因可能与支付平台或其支持的发卡银行网络有关，或与您计算机所在的网
+络或您的计算机自身设置有关。建议您与所选的网上支付平台的客服联系。</p>
+					<a>Q.我的订单为什么无法正确生成？</a>
+					<p>A.下单过程中在您未登录到网上支付页面时，请不要关闭窗口，否则订单将无法成功生成！</p>
+					<a>Q.登录网上支付页面时总是提示密码不正确？</a>
+					<p>A.登录网上支付页面用的是登录密码而不是支付密码。请辨别清楚登录密码与支付密码。</p>
+					<a>Q.网上支付的登录密码忘记了怎么办？</a>
+					<p>A.请点击[忘记登录密码]。</p>
+				</div>
+				<div id="dispatching">
+					<h3><i></i>配送方式</h3>
+					<a><i></i>订单派送</a>
+					<p><img src="themes/new/style/images/psfs.png" alt="" style="max-width: 100%;"/></p>
+					<a>Q.付款订单什么时候配送发出</a>
+					<p>A.已审核的订单处理时间截止至每日下午17：00，17：00以后的订单次日处理（法定节假日除外，具体参考官网放假公告）。只订购护理液，不享受免
+运费规则，对于特殊超重的订单可能会另外加收运费，发货前我们会电话与您联系。</p>
+					<a>Q.大陆地区配送方式</a>
+					<p>A.仅供参考：江浙沪 1-2天。     其它省市 3-5天。    偏远地区（乡镇） 4-6天。具体到货时间根据当季的气候，网购高低峰期，以及快递公司内在的不
+确定因素而受波动。</p>
+					<a>Q.到货时间预测</a>
+					<p>A.下单过程中在您未登录到网上支付页面时，请不要关闭窗口，否则订单将无法成功生成！</p>
+					<a>Q.快递查件</a>
+					<p>A.a、支付宝付款客户，登录支付宝官网，在买入交易里可查看物流单号;</br>&nbsp;&nbsp;
+b、银行汇款，网银转账的客户，可将您的收件名或会员账号报与在线客服，让其帮助查物流单号。</p>
+					<a><i></i>配送问题</a>
+					<a>Q.超重的标准是什么？收费标准如何？</a>
+					<p>A.重量超过1公斤，主要体现在护理液，1000ml相当于1公斤，超重费计算公式：基准费率*(实际重量-1000g)/1000，总费用=基准费率+超重费用。对
+于超重的符合免运费政策的订单，只需用户支付超重费用即可。</p>
+					<a>Q.我可以指定在具体日期具体时间前送到吗？</a>
+					<p>A.彩眸网的订单是由第三方快递公司派送，所以不能完全掌控具体的送货时间。</p>
+					<a>Q.我可以在收货的时候开箱验货吗？</a>
+					<p>A.彩眸网支持所有快递先验货后签收，货到付款的订单在您未付款前是不能试戴(用)。如果快递员要求先签收再验货，您可以在验货之后再将签字的回执
+单交给快递员。</p>
+					<a>Q.我在快递公司网站查到我的订单已经被签收，但我本人并没有收到，怎么回事？</a>
+					<p>A.一般极少情况下发生此类事情。可能是您的家人，同事，或门卫保安帮您签收了。您可以登陆快递官方网站查询具体的签收人姓名，也可以在工作时间
+联系我们的客服。（彩眸网亦不赞同快递公司的此类做法）。</p>
+					<a>Q.我的收货地址你们快递公司送不到怎么办？</a>
+					<p>A.彩眸网与包括EMS等多家快递公司签订了合作协议，地区覆盖了全国的所有省、市、区以及乡镇，如发现有快递不到达的情况，您可以在线联系我们
+的客服。</p>
+					<a>Q.送货时间可以指定吗？送货前可以先打电话通知再送来吗？</a>
+					<p>A.彩眸网的订单是由第三方快递公司派送，由于各个快递点情况不一样，并且具体送货途中也会有交通、天气等原因影响，所以我们只能尽可能配合用户
+的要求。通常情况下快递人员在按照地址找不到您的情况下会电话联系您。如您有特殊需求请于工作时间联系我们的客服，我们会及时向派送人员传达
+您的要求。</p>
+					<a>Q.我可以指定快递公司吗？我可以选择运费到付吗？</a>
+					<p>A.我们的普通快递包括申通、中通、圆通、EMS，系统会根据您的地址自动分配送货快递公司，当然，如果您有特殊的要求，也可以直接在订单留言中备
+注，我们会尽量按照您的要求安排。但是我们目前还不支持运费到付的方式，建议您可以关注我们的免运费政策。</p>
+					<a>Q.我在国外可以定购吗？</a>
+					<p>A.目前，港澳台，以及海外部分国家及地区（爱尔兰、澳大利亚、菲律宾、加拿大、马来西亚、美国、新加坡、新西兰、英国）可以邮寄。</p>
+					<a>Q.如果我收到的货物和我的订单中实际货物有短少情况，怎么办？</a>
+					<p>A.彩眸网发货前都会经过3轮的复核才能发货，所以请您签收前务必注意外包装完整，特别是外包装连接处是否有其他胶带连接情况， 如果有破损或其他
+胶带（特别注意有无透明胶带黏贴），请务必检查后再签收，如因包装破损但用户已经签收，视客网将不承诺补偿，敬请谅解！</p>
+				</div>
+				<div id="service">
+					<h3><i></i>售后服务</h3>
+					<a><i></i>品质说明</a>
+					<a>Q.如何确定产品的质量问题？</a>
+					<p>A.（1）由生产厂家经专业仪器检测后做出认定。</br>&nbsp;&nbsp;（2）国家相关权威质量检测部门出具检测报告。</p>
+					<a><i></i>退换货政策</a>
+					<a>Q.隐形眼镜拆封了，还可以换货、退货吗？</a>
+					<p>A.隐形眼镜拆封配戴后如无质量问题，不接受退换货。 如未拆封使用，可享有30天的退换货期。</p>
+					<a>Q.退货换货的运费怎么算？ </a>
+					<p>A.（1）购买商品30天内(商品未拆封使用)，由于顾客自身原因退、换等值或超值的商品时，由顾客承担退回货物至彩眸网时所需的运费和彩眸网发送的运费。</br>&nbsp;&nbsp;
+						（2）购买商品30天内且由于商品的质量问题退换货时，由彩眸网承担顾客退回货物的寄送费用（存入网站您帐户）及彩眸网再次发送的运费。</p>
+					<a>Q.没有了商品外包装还可以退换货吗？</a>
+					<p>A.不可以。彩眸网不受理没有商品外包装的退换货要求。</p>
+					<a>Q.隐形眼镜的度数买错了可以换吗？ </a>
+					<p>A.可以。购买商品30天内，由于顾客自身原因退、换等值或超值的商品时，由顾客承担退回货物至彩眸网时所需的运费和彩眸网配送的运费。（未拆封使用）</p>
+					<a><i></i>退换货处理</a>
+					<a><i></i>注意事项</a>
+				</div>
+				<div id="center">
+					<h3><i></i>彩眸中心</h3>
+					<a><i></i>密码问题</a>
+					<a><i></i>积分规则</a>
+					<p>会员积分，是指用户在彩眸网注册会员后成功购物即可累计金额获得的积分。消费1元积1分。成功购物，是指用户在彩眸网创建并完成交易—即买家已
+确认收货、支付宝交易状态为“交易成功”的交易。</p>
+					<p>如何获得会员积分</br>
+					1. 注册会员即可获赠50积分</br>
+					2. 成功购买商品，将获得与商品价格相应数量的会员积分；如：购买产品价格145.00，将获得145会员积分。</br>
+					3. 收到货物后，可对彩眸网的商品及服务发表评论、贴图都将获得积分奖励；发表评论获100积分奖励。贴图获赠500积分
+					</p>
+					<p>
+					会员积分使用：</br>
+					1. 会员拥有的会员积分后可在下订单的时候直接以现金方式抵扣，100积分=1元。</br>
+					2. 会员累计的积分可以到“积分商城”中兑换积分礼品。
+					</p>
+					<a><i></i>红包使用</a>
+					<a><i></i>投诉建议</a>
+				</div>
+				<div id="about">
+					<h3><i></i>关于我们</h3>
+					<p><a href="/article.php?type=1">关于我们请点此处</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	$('.helpmenu a').on('click', function(){
+		$(this).parent().addClass('active').siblings().removeClass('active');
+		var url = $(this).parent().data('url');
+		$("html,body").animate({scrollTop: $("#" + url).offset().top}, 1000);
+	});
+})
+</script>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->	
+</body>
+</html>

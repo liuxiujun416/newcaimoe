@@ -1,0 +1,343 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+
+<link rel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,index.js'}
+<script type="text/javascript" src="js/site.js"></script>
+<script type="text/javascript" src="js/scrollpic.js"></script>
+<?php 
+    require_once("themes/".$GLOBALS['_CFG']['template']."/diyfile.php");
+    $this->assign('TemplatePath','themes/'.$GLOBALS['_CFG']['template']);
+?>
+
+<script src="themes/new//style/js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link href="themes/new//style/css/common.css" rel="stylesheet" media="screen" />
+<link href="themes/new/style/css/detail.css" rel="stylesheet" media="screen" />
+
+<style type="text/css">
+code{
+	background-color: #fff;
+	color: #333;
+}
+.select_color a{
+	position: relative;
+}
+.icon-topright{
+	position: absolute;
+	top: -1px;
+	right: -1px;  
+	width: 0;
+    height: 0;
+    border-top: 25px solid red;
+    border-left: 25px solid transparent;
+    z-index: 9;
+}
+.icon.巧克力色{
+    border-top-color: #af7641;
+}
+.icon.棕色{
+    border-top-color: #b8b8b8;
+}
+.icon.紫色{
+    border-top-color: #371305;
+}
+.icon.绿色{
+    border-top-color: #371305;
+}
+.icon.蓝色{
+    border-top-color: #371305;
+}
+.icon.酒红色{
+    border-top-color: #371305;
+}
+.icon.黑色{
+    border-top-color: #000;
+}
+.color{
+	width: 100%;
+}
+.color .select_color a.active{
+	border: 1px solid #999;
+}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->	
+<div class="topnav clearfix">
+	<div class="container">
+		<div class="col-md-12">
+		<!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->
+		</div>
+	</div>
+</div>
+
+<div class="detail clearfix">
+	<div class="container">
+		<form action="javascript:addToCart({$goods.goods_id})" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY" >
+		<div class="col-md-12 detaildesc">
+			<div class="col-md-5 left">
+				<div class="thumb"><img src="{$goods.goods_thumb}" alt="" /></div>
+				<div class="thumblist">
+					<!--{foreach item=item from=$pictures}-->
+					<a class="col-md-3" data-img="{$item.img_url}"><img src="{$item.thumb_url}" alt="" /></a>
+					<!--{/foreach}-->
+				</div>
+			</div>
+			<div class="col-md-7 right">
+				<h1>{$goods.goods_name}</h1>
+				<p style="border-bottom: 1px dashed #bbb;padding-bottom: 5px;">{$goods.goods_style_name}</p>	
+				<div class="attribition">
+			        <!-- {foreach from=$properties item=property_group key=key} -->
+			        <!-- {foreach from=$property_group item=property} -->
+					<span class="attrlist">{$property.name|escape:html}：{$property.value}</span>
+			        <!-- {/foreach}-->
+			        <!-- {/foreach}-->
+				</div>
+				
+				<div class="price">
+					<div><i></i><span>市场价格：<font class="scjg">{$goods.market_price_f}</font></span></div>
+					<div><i></i><span>售价：<font class="sj" id="ECS_GOODS_AMOUNT">{$goods.shop_price_f}</font></span></div>
+					<div><i></i><span>节省：<font class="js">{$goods.js_price}</font></span></div>
+				</div>
+				<!--{if $specification}-->
+				<div class="attribition color">
+					<div>颜色选择：</div>
+					<div class="select_color">
+						<!--{foreach item=spe from=$specification key=spec_key}-->
+						<!--{if $spe.name eq '颜色'}-->
+		                    <!-- {foreach from=$spe.values item=item key=key} -->
+							<a title="{$item.label}" data-val="{$item.label}" onclick="changePrice(this)" {if $key eq 0}class="active"{/if} >
+								<i class="icon icon-topright {$item.label}"></i>
+								<input type="radio" name="spec_{$spec_key}" value="{$item.id}" id="spec_value_{$item.id}" {if $key eq 0}checked{/if} style="position: absolute;left: 50%;z-index: -10;"/>
+								<img src="themes/new/style/images/{$item.label}.png" alt="" style="z-index: 1" />
+							</a>
+							<!--{/foreach}-->
+						<!--{/if}-->
+						<!--{/foreach}-->
+					</div>
+				</div>
+				<!--{/if}-->
+
+				<!--{if $specification}-->
+				<div class="dushu">
+					<div>请选择：眼镜度数</div>
+					<div class="select_dushu">
+					<!--{foreach item=spe from=$specification key=spec_key}-->
+						<!--{if $spe.name neq '颜色'}-->
+						<label>{$spe.name}</label>
+						<span>
+							<select name="spec_{$spec_key}" onchange="changePrice()">
+							<option value="">选择度数</option>
+							<!--{foreach item=item from=$spe.values}-->
+							<option value="{$item.id}">{$item.label}</option>
+							<!--{/foreach}-->
+							</select>
+						</span>
+						<!--{/if}-->
+					<!--{/foreach}-->
+					</div>
+				</div>
+				<!--{/if}-->
+
+				<div class="dushu">
+					<div class="select_dushu">
+						<label>商品数量</label>
+						<span class="productnum">
+				            <!-- {if $goods.goods_id gt 0 && $goods.is_gift eq 0 && $goods.parent_id eq 0} 普通商品可修改数量 -->
+							<div class="jian"><a href="javascript:;" onclick="changenum(- 1)">-</a></div>
+							<div class="shownum" style="width: auto;">
+				            	<input class="num" name="number" id="goods_number" autocomplete="off" value="1" min="1" max="{$goods.goods_number}" type="number" />
+				            </div>
+							<div class="jia"><a href="javascript:;" onclick="changenum(1)">+</a></div>
+							<!-- {else} --> 
+				            {$goods.goods_number} 
+				            <!-- {/if} --> 
+						</span>
+					</div>
+				</div>
+				<div class="ordercart">
+					<a class="btnorder" href="javascript:addToCart({$goods.goods_id})">立即购买</a>
+					<a class="btncart black" href="javascript:addToCart({$goods.goods_id})">加入购物车</a>
+				</div>
+			</div>
+		</div></form>
+		<script type="text/javascript">
+
+		function changenum(diff) {
+			var num = parseInt(document.getElementById('goods_number').value);
+			var goods_number = num + Number(diff);
+			if( goods_number >= 1){
+				document.getElementById('goods_number').value = goods_number;//更新数量
+				changePrice();
+			}
+		}
+		$(function(){
+			$('.thumblist a').on('click', function(){
+				var img = $(this).data('img');
+				$(this).parent().prev().find('img').attr('src', img);
+			});
+			// $('.productnum a').on('click', function(){
+			// 	var num,cla = $(this).parent().attr('class'),
+			// 		goodsnum = $('#goods_number').val();
+			// 		shownum = $(this).parent().siblings('.shownum').children('input');
+			// 	if(cla == 'jia'){
+			// 		num = shownum.val()*1 + 1;
+			// 	}else if(cla == 'jian'){
+			// 		num = shownum.val()*1 - 1;
+			// 	}
+			// 	num = num < 0 ? 0 : (num > goodsnum ? goodsnum : num); 
+			// 	shownum.val(num);
+			// });
+		})
+		</script>
+		<div class="col-md-12 detailcontent">
+			<h3>商品描述</h3>
+			<div>{$goods.goods_desc}</div>
+		</div>
+		
+		
+		<!--div class="col-md-12 detailcontent">
+			<h3 style="margin-bottom: 0;">达人使用报告</h3>
+			<div class="usereport">
+				<div class="col-md-9 reportlist">
+					<a class="prev"></a>
+					<ul>
+						<li>
+							<img src="themes/new/style/images/chart.png" alt="" />
+							<div>彩眸达人：COCO</div>
+							<div>彩眸达人：COCO</div>
+							<div>彩眸达人：COCO</div>
+							<p>我佩戴的是棕色的，直径 还是蛮大的，而且有点混 血的感觉，但是被我带成 萌萌的感觉啦。</p>
+						</li>
+						<li>
+							<img src="themes/new/style/images/chart.png" alt="" />
+							<div>彩眸达人：COCO</div>
+							<div>彩眸达人：COCO</div>
+							<div>彩眸达人：COCO</div>
+							<p>我佩戴的是棕色的，直径 还是蛮大的，而且有点混 血的感觉，但是被我带成 萌萌的感觉啦。</p>
+						</li>
+						<li>
+							<img src="themes/new/style/images/chart.png" alt="" />
+							<div>彩眸达人：COCO</div>
+							<div>彩眸达人：COCO</div>
+							<div>彩眸达人：COCO</div>
+							<p>我佩戴的是棕色的，直径 还是蛮大的，而且有点混 血的感觉，但是被我带成 萌萌的感觉啦。</p>
+						</li>
+						<li>
+							<img src="themes/new/style/images/chart.png" alt="" />
+							<div>彩眸达人：COCO</div>
+							<div>彩眸达人：COCO</div>
+							<div>彩眸达人：COCO</div>
+							<p>我佩戴的是棕色的，直径 还是蛮大的，而且有点混 血的感觉，但是被我带成 萌萌的感觉啦。</p>
+						</li>
+					</ul>
+					<a class="next"></a>
+				</div>
+				<div class="col-md-3 squse">
+					<h3>NEXT</h3><h3>YOU</h3>
+					<p>如果你觉得自己擅长配妆且热爱镜头，对产品有独特见解且乐于分享，那么，快点来申请成为小美家的产品评测员吧。你将有机会获得免费试用机会哦~</p>
+					<a class="btnsy">申请试用</a>
+				</div>
+			</div>
+		</div-->
+		
+		<!-- #BeginLibraryItem "/library/comments.lbi" -->
+		{insert name='comments' type=$type id=$id}
+		<!-- #EndLibraryItem -->
+		
+	</div>
+</div>
+
+{insert_scripts files='transport.js,utils.js'}
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+
+<script type="text/javascript">
+var goods_id = {$goods_id};
+var goodsattr_style = {$cfg.goodsattr_style|default:1};
+var gmt_end_time = {$promote_end_time|default:0};
+{foreach from=$lang.goods_js item=item key=key}
+var {$key} = "{$item}";
+{/foreach}
+var goodsId = {$goods_id};
+var now_time = {$now_time};
+
+<!-- {literal} -->
+onload = function(){
+  //changePrice();
+  fixpng();
+  try { onload_leftTime(); }
+  catch (e) {}
+}
+
+/**
+ * 点选可选属性或改变数量时修改商品价格的函数
+ */
+function changePrice(obj)
+{
+	if(obj){
+		//$(obj).children('input').val($(obj).data('val')).attr('checked',true);
+		$(obj).addClass('active').siblings().removeClass('active');
+	}
+  var attr = getSelectedAttributes(document.forms['ECS_FORMBUY']);
+  var qty = document.forms['ECS_FORMBUY'].elements['goods_number'].value;
+
+  Ajax.call('goods.php', 'act=price&id=' + goodsId + '&attr=' + attr + '&number=' + qty, changePriceResponse, 'GET', 'JSON');
+}
+
+/**
+ * 接收返回的信息
+ */
+function changePriceResponse(res)
+{
+  if (res.err_msg.length > 0)
+  {
+    alert(res.err_msg);
+  }
+  else
+  {
+    document.forms['ECS_FORMBUY'].elements['goods_number'].value = res.qty;
+
+    if (document.getElementById('ECS_GOODS_AMOUNT')){
+    	console.log(1111)
+      document.getElementById('ECS_GOODS_AMOUNT').innerHTML = res.result;
+    }
+  }
+}
+<!-- {/literal} -->
+/*
+*选择信息处理
+*/
+function changeP(b, c) {
+	var frm=document.forms['ECS_FORMBUY'];
+	var cur_id="";
+    document.getElementById('spec_value_' + c).checked=true;
+	document.getElementById('url_' + c).className="selected";
+	for (var i = 0; i < frm.elements[b].length; i++) {
+		cur_id=frm.elements[b][i].id.substr(11);
+        document.getElementById('url_' + cur_id).className="";
+		if (frm.elements[b][i].checked)
+		{
+		   document.getElementById('url_' + c).className="selected";
+		}
+    }
+	changePrice();
+}
+//
+var btn_buy = "购买";
+var is_cancel = "取消";
+var select_spe = "请选择商品属性";
+
+</script>
+</body>
+</html>

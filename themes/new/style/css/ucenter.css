@@ -1,0 +1,370 @@
+/**/
+.helpmenu{width: 200px;}
+.helpmenu a{padding: 0;}
+/*.helpcontent span{line-height: 32px;}*/
+.helpcontent p{padding-left: 0;}
+.helpcontent h3{font-size: 16px; margin-top: 20px;margin-bottom: 20px;}
+.helpcontent h3 a{ display: inline-block; font-size: 14px;}
+
+.helpcontent p.weltips{
+	width: 100%;
+	color: #666;
+	border: 1px dashed #666;
+	background-color: #f1f1f1;
+	padding: 15px;
+	line-height: 27px;
+}
+.helpcontent h1{
+	height: 40px;
+	width: 100%;
+	line-height: 40px;
+	background-color: #000;
+	color: #fff;
+	text-align: left;
+	font-size: 16px;
+	padding-left: 20px;
+}
+.helpcontent label{
+	display: inline-block;
+	width: 100%;
+	text-align: right;
+	font-weight: normal;
+}
+#welcome h2{
+	font-size: 16px;
+}
+#welcome h2 font{
+	font-size: 28px;
+	color: #8a1e1e;
+}
+#welcome p{
+	margin: 20px 0;
+}
+
+
+#welcome p a{
+	display: inline;
+}
+#welcome p.individual{
+	margin: 0;
+}
+.userform{
+	width: 100%;
+	border: 1px solid #666;
+	text-align: center;
+	margin: 30px 0;
+	overflow: hidden;
+	padding: 15px;
+}
+
+.userform >div >div{
+	height: 60px;
+	line-height: 60px;
+}
+.userform >div >div:last-child{
+	text-align: left;
+}
+.userform .txtinput input{
+	display: inline-block;
+	width: 350px;
+	height: 40px; 
+	line-height: 40px;
+	border: 1px solid #666;
+	padding-left: 10px;
+	padding-top: 6px;
+	color: #666;
+}
+.userform .txtinput span{
+	color: #fd4565;
+	margin-left: 32px;
+}
+.userform a.editbtn{
+	width: 140px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #000;
+	color: #fff;
+	border-radius: 5px;
+	text-align: center;
+	display: block;
+	margin: 20px auto;
+	padding: 0;
+	position: inherit;
+}
+
+.ordermenu{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid #bbb;
+	margin: 30px 0;
+}
+.ordermenu a{
+	display: inline-block;
+	width: 220px;
+	height: 20px;
+	line-height: 20px;
+	color: #000;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	border-right: 1px solid #999;
+	margin-left: 2px;
+}
+.ordermenu a:last-child{
+	border: none;
+}
+.ordermenu a i{
+	background: none;
+	border: none;
+	font-style: normal;
+	color: #fd4565;
+	position: initial;
+}
+.orderlist{
+	width: 100%;
+	overflow: hidden;
+	border: 1px solid #999;
+}
+.cartlistmenu,.cartlistitem{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background-color: #bbb;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+.cartlistitem{
+	background-color: #f5f5f5;
+	min-height: 100px;
+}
+.cartlistmenu >div,.cartlistitem >div{
+	display: inline-block;
+	width: 148px;
+	text-align: center;
+}
+.cartlistitem >div, .cartlistitem a{
+	height: 80px;
+	line-height: 80px;
+	overflow: hidden;
+}
+.orderlist .empty{
+	width: 100%;
+	height: 300px;
+	text-align: center;
+	line-height: 100px;
+	color: #bbb;
+	font-size: 28px;
+	background-color: #f5f5f5;
+}
+.collect .collectcount{
+	padding-left: 30px;
+	font-size: 12px;
+}
+.collect .cartlistmenu >div,
+.collect .cartlistitem >div{
+	width: 179px;
+}
+.collect .cartlistitem img{
+	width: 72px;
+	height: 72px;
+	border: 1px solid #bbb;
+	padding: 5px;    
+	margin-top: 5px;
+}
+.collect .cartlistitem a.btn{
+	width: 80px;
+	height: 32px;
+	text-align: center;
+	line-height: 32px;
+	background-color: #000;
+	border: 1px solid #333;
+	border-radius: 5px;
+	color: #fff;
+	display: inline-block;
+	padding: 0;
+	font-size: 12px;
+	margin-top: 20px;
+}
+
+.collect .cartlistitem a.del{
+	width: 60px;
+	background-color: #fff;
+	color: #666;
+	margin-right: 10px;
+}
+
+.collect .cartlistitem,.collect .cartlistitem a{
+	color: #666;
+}
+.collect .more a{
+	text-align: center;
+	color: #000;
+}
+
+
+#messageform{
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+#messageform >div >div{
+	padding: 0;
+}
+#messageform label{
+	text-align: left;
+}
+#messageform .txtinput{
+	height: auto;
+	overflow: hidden;
+}
+#messageform .txtinput .editcontent{
+	width: 450px;
+	height: 100px;
+	padding: 10px;
+	border: 1px solid #999;
+}
+#upfile{
+	margin-top: 10px;
+}
+
+#mytags .cartlistmenu >div,
+#mytags .cartlistitem >div,
+#oos .cartlistmenu >div,
+#oos .cartlistitem >div,
+#packet .cartlistmenu >div,
+#packet .cartlistitem >div,
+#xinyong .cartlistitem >div,
+#xinyong .cartlistmenu >div{
+	width: 148px;
+}
+#oos .cartlistitem a.btn{
+	width: 60px;
+	margin-right: 5px;
+}
+
+#addpacket{
+	width: 100%;
+	text-align: right;
+	margin-bottom: 20px;
+	font-size: 16px;
+}
+#addpacket input{
+	display: inline-block;
+	width: 210px;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid #000;
+	padding-left: 20px;
+	border-radius: 5px;
+	margin: 0 20px;
+}
+#addpacket a{
+	display: inline-block;
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #000;
+	border-radius: 5px;
+	text-align: center;
+	color: #fff;
+	padding: 0;
+}
+
+#referee .cartlistmenu >div,
+#referee .cartlistitem >div{
+	width: 220px;
+}
+
+#referee .orderlist:nth-child(2) .cartlistmenu >div{
+	width: 148px;
+}
+
+#fcrule .cartlistmenu >div,
+#fcrule .cartlistitem >div{
+	width: 178px;
+}
+#xinyong{ margin-bottom: 20px;}
+#amount .cartlistitem >div,
+#amount .cartlistmenu >div{
+	width: 126px;
+}
+#amount .amounttotal{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background-color: #ddd;
+	text-align: right;
+	padding-right: 20px;
+	color: #9e9e9e;
+}
+#amount .chongzhi{
+	width: 100%;
+	height: 40px;
+	margin: 20px 0;
+	text-align: right;
+}
+#amount .chongzhi a{
+	min-width: 100px;
+	display: inline;
+	height: 40px;
+	padding: 10px 20px;
+	background-color: #000;
+	color: #fff;
+	border-radius: 5px;
+	margin-left: 15px;
+}
+
+
+#logprocess{
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	text-align: center;
+}
+#logprocess a{
+	width: 220px;
+	height: 85px;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+#logprocess a >i{
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	border: 1px solid #bbb;
+	background: url("./image/wl001.png") no-repeat center;
+	border-radius: 50%;
+	padding: 12px;
+	line-height: 64px;
+	margin: 0 50px;
+}
+#logprocess a >span{
+	position: absolute;
+	left: 120px;
+	top: 30px;
+	margin: 0 10px;
+}
+#logprocess a >span i{
+	position: initial;
+	width: 10px;
+	height: 10px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+

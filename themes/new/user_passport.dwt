@@ -1,0 +1,505 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+{insert_scripts files='transport.js'}
+
+<link rel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
+<script src="themes/new//style/js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link href="themes/new//style/css/common.css" rel="stylesheet" media="screen" />
+<link href="themes/new/style/css/register.css" rel="stylesheet" media="screen" />
+
+{insert_scripts files='common.js,user.js'}
+<style type="text/css">
+.regsubmit:hover,.btnactive:hover,a.regsubmit:hover,a.btnactive:hover{color:#fff;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<!--{if $action eq 'register'}-->
+<style type="text/css">
+	input.telcode{
+	    width: 120px;
+	    height: 40px;
+	    border: 1px soft #000;
+	    background-color: #000;
+	    border-radius: 5px;
+	    display: inline-block;
+	    margin-left: 20px;
+	    color: #fff;
+	    text-align: center;
+	}
+	input:visited{color: #fff;}
+	.registerlist{border-right: 1px solid #ccc;padding-left: 36px;}
+	.registerlist div{margin: 32px 20px;}
+	.registerlist div h1{text-align: left;padding-left: 250px;}
+	.registerlist div.labelsubmit{text-align: left;padding-left: 270px;}
+	.regform .formDiv{
+		width: 100%;
+		 /************圆角***************/
+		-moz-border-radius: 10px; /*Firefox*/
+		-webkit-border-radius: 10px; /*Safari、Chrome*/
+		border-radius: 10px; /*Opera 10.5+、IE 6+*/
+		behavior: url(pie.htc); /*引用文件 调用脚本添加圆角效果 */ 
+		 
+		 /**********阴影**/
+		border: 1px solid #bbbbbb;
+		-moz-box-shadow: 0px 0px 10px #bbb; /* Firefox */
+		-webkit-box-shadow: 0px 0px 10px #bbb; /* Safari and Chrome */
+		box-shadow: 0px 0px 10px #bbb; /* Opera 10.5+、IE6+*/
+		overflow: hidden;
+	}
+	.loginform{
+		min-height: 660px;
+		display: table;
+		padding-left: 52px;
+	}
+
+	.loginform >div{
+		display: table-cell;
+		vertical-align: middle;
+	}
+	.loginform >div span{
+		display: block;
+		margin-bottom: 20px;
+		color: #666;
+	}
+
+</style>
+<!-- {if $shop_reg_closed eq 1} -->
+<div class="usBox">
+  <div class="usBox_2 clearfix">
+	<div class="f1 f5" align="center">{$lang.shop_register_closed}</div>
+  </div>
+</div>
+<!-- {else} -->
+{insert_scripts files='utils.js'}
+<div class="register">
+	<div class="container">
+		<div class="col-xs-12 col-md-12 regform">
+			<div class="formDiv">
+				<div class="col-xs-8 col-md-8">
+					<form action="user.php" method="post" name="formUser" onsubmit="return register();" autocomplete="off" class="registerform userform">
+						<div class="registerlist">
+							<div><h1>注册彩眸网</h1></div>
+							<div class="reginput">
+								<span class="labeltitle">用户名</span>
+								<span class="labelinput"><input type="text" placeholder="用户名／昵称" name="username" type="text" size="25" id="username" onblur="is_registered(this.value);" class="inputBg" /></span>
+								<span class="labeltip" id="username_notice">*</span>
+							</div>
+							
+							<div class="reginput">
+								<span class="labeltitle">密　码</span>
+								<span class="labelinput"><input type="password" name="password" placeholder="密码" id="password1" onblur="check_password(this.value);" onkeydown="javascript:checkIntensity(this.value)"/></span>
+								<span class="labeltip"> 
+									<font id="password_notice">* </font>
+								</span>
+							</div>
+							<div class="reginput">
+								<span class="labeltitle">密码强度</span>
+								<span>
+									<span class="pwdlevel" style="margin-left: 20px;">
+										<label><i class="">弱</i><i class="">中</i><i class="">强</i></label>
+										<label><i class="levellist"></i><i class="levellist"></i><i class="levellist"></i></label>
+										<label><i><font class="levelon active"></font></i><i><font class="levelon"></font></i><i><font class="levelon"></font></i></label>
+									</span>
+								</span>
+							</div>
+							
+							<div class="reginput">
+								<span class="labeltitle">确认密码</span>
+								<span class="labelinput"><input name="confirm_password" type="password" id="conform_password" onblur="check_conform_password(this.value);" placeholder="确认密码" /></span>
+								<span class="labeltip" id="conform_password_notice">*</span>
+							</div>
+							
+							<div class="reginput">
+								<span class="labeltitle">手机号</span>
+								<span class="labelinput"><input name="mobile_phone" type="text" placeholder="手机号" id="mobile_phone" onblur="checkMobile(this.value);" size="30"/></span>
+								<span class="labeltip" id="mobile_notice">*</span>
+							</div>
+
+							<div class="reginput">
+								<span class="labeltitle">验证码</span>
+								<span class="labelinput"><input type="text" id="mobile_code" name="smscode" placeholder="验证码" /></span>
+								<span class="labeltip" id="smscode_notice">*
+									<input type="button" class="telcode" id="zphone" onclick="sendSms();" value="获取验证码" />
+								</span>
+							</div>
+							
+							<div class="">
+								<span class="labelagree"><input type="checkbox" name="agreement" /><span><a href="/article.php?type=2">我已看过并接受《<font style="color:#006cff;">用户协议</font>》</a></span></span>
+								<span class="labeltip"></span>
+							</div>
+							<div class="labelsubmit">
+								<input name="act" type="hidden" value="act_register" >
+								<input type="hidden" name="back_act" value="{$back_act}" />
+								<span class=""><input type="Submit" name="Submit" class="btn regsubmit btnactive" id="submit" value="立即注册" /></span>
+								<span class="labeltip"></span>
+							</div>
+						</div>
+					</form>	
+				</div>
+				<div class="col-xs-4 col-md-4">
+					<div class="loginform">
+						<div>
+							<span>已有彩眸网账号?</span>
+							<span><a class="btn btnactive" href="/user.php?act=login">立即登录</a></span>
+
+							<span style="margin-top: 50px;">也可以使用以下账号登录:</span>
+							<span class="otherstyle">
+								<a href="/user.php?act=oath&type=qq"><i class="iconqq"></i></a>
+<!-- 								<a href="/user.php?act=oath&type=weibo"><i class="iconweibo"></i></a>
+								<a href="/user.php?act=oath&type=alipay"><i class="iconzfb"></i></a> -->
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	function sendSms(){
+		var mobile = $('#mobile_phone').val();
+		var reg = /^[\d|\-|\s]+$/;
+	    
+		if(mobile.length > 0 && reg.test(mobile)){
+			$.post("user.php?act=send", { "mobile": mobile },function(result){
+				if (result.code==2){
+					RemainTime();
+					alert('手机验证码已经成功发送到您的手机');
+				}else{
+					if(result.msg){
+						alert(result.msg);
+					}else{
+						alert('手机验证码发送失败');
+					}
+				}
+			}, "json");
+		}else{
+			alert('请填写手机号码');
+			return false;
+		}
+	}
+
+	var iTime = 59;
+	var Account;
+	function RemainTime(){
+	  document.getElementById('zphone').disabled = true;
+	  var iSecond,sSecond="",sTime="";
+	  if (iTime >= 0){
+	    iSecond = parseInt(iTime%60);
+	    if (iSecond >= 0){
+	      sSecond = iSecond + "秒";
+	    }
+	    sTime=sSecond;
+	    if(iTime==0){
+	      clearTimeout(Account);
+	      sTime='获取验证码';
+	      iTime = 59;
+	      document.getElementById('zphone').disabled = false;
+	    }else{
+	      Account = setTimeout("RemainTime()",1000);
+	      iTime=iTime-1;
+	    }
+	  }else{
+	    sTime='没有倒计时';
+	  }
+	  document.getElementById('zphone').value = sTime;
+	}
+
+</script>
+<!-- {/if} -->
+<!-- {/if} -->
+
+<!--{if $action eq 'login'}-->
+<link href="themes/new/style/css/login.css" rel="stylesheet" media="screen" />
+<style type="text/css">
+	.footer .other{margin-bottom: 0;}
+</style>
+<div class="login">
+	<div class="container">
+		<div class="col-xs-12 col-sm-6 col-md-8 loginbn">
+			<img src="themes/new/style/images/loginbg.jpg" alt="" />
+		</div>
+		<div class="col-xs-6 col-md-4 formdiv">
+			<form name="formLogin" action="user.php" method="post" onSubmit="return userLogin()" autocomplete="off" class="loginform userform">
+				<div>
+					<div><h1>登录彩眸网</h1></div>
+					<div class="logininput"><i class="iconuser"></i><input type="text" name="username" value="" placeholder="昵称/手机号" /></div>
+					<div class="logininput"><i class="iconpwd"></i><input type="password" name="password" value="" placeholder="密码" /></div>
+					<div class="logincheckbox">
+						<span><input type="checkbox" name="remember" value="1" /> 自动登录</span>
+						<a href="/user.php?act=get_password">忘记密码？</a>
+					</div>
+					<div class="loginbtn">
+						<a class="btn btnactive" id="submit">登录</a>
+			            <input type="hidden" name="act" value="act_login" />
+			            <input type="hidden" name="back_act" value="{$back_act}" />
+						<a class="btn" href="/user.php?act=register">注册</a>
+					</div>
+					<div class="other">
+						<span><em class="otherline"></em> 使用第三方合作平台登录 <em class="otherline"></em></span>
+						<div class="otherstyle">
+							<a href="/user.php?act=oath&type=qq"><i class="iconqq"></i></a>
+<!-- 							<a href="/user.php?act=oath&type=weibo"><i class="iconweibo"></i></a>
+							<a href="/user.php?act=oath&type=alipay"><i class="iconzfb"></i></a> -->
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(function() {
+	window.__Object_toJSONString = Object.prototype.toJSONString;
+	delete Object.prototype.toJSONString;
+	$('#submit').on('click', function(){
+		$('.userform').submit();
+	});
+});
+</script>
+<!--{/if}-->
+
+
+<!--*找回密码界面 -->
+<!--{if $action eq 'get_password'} -->
+<style type="text/css">
+	.register{min-height: auto;}
+	.resetpwd{margin: 90px auto 30px;}
+	.labelsubmit span{display: block;margin-bottom: 15px;}
+	.labeltip{color: #fd4565;}
+	.topmenu a,.topmenu a:hover,.topmenu a:visited,.topmenu a:active{ color: #333;}
+	input:visited,a:link, a:visited, a:hover, a:active{color: #fff;}
+</style>
+{insert_scripts files='utils.js'}
+<script type="text/javascript">
+{foreach from=$lang.password_js item=item key=key}
+  var {$key} = "{$item}";
+{/foreach}
+</script>
+
+<div class="register">
+	<div class="container">
+		<div class="col-xs-12 col-md-12 regform">
+			<form method="POST" autocomplete="off" class="registerform">
+				<div class="findlist">
+					<div><h1>找回密码</h1></div>
+					<div class="findstep">
+						<div class="steplist">
+							<span><i><font>1</font></i></span>
+							<span>第一步：账号／手机号</span>
+						</div>
+						<div class="steplist stepon">
+							<span><i><font>2</font></i></span>
+							<span>第二步：验证身份</span>
+						</div>
+						<div class="steplist stepon">
+							<span><i><font>3</font></i></span>
+							<span>第三步：设置密码</span>
+						</div>
+						<div class="steplist stepon">
+							<span><i><font>4</font></i></span>
+							<span>第四步：重置成功</span>
+						</div>
+					</div>
+					<div class="step1 step active">
+						<div class="resetpwd">
+							<span>
+								<label>账号／手机号</label>
+								<input type="text" name="mobile_phone" id="mobile_phone" onblur="checkMobileExist(this.value);" placeholder="请输入注册手机号" />
+							</span>
+						</div>
+						<div class="labelsubmit">
+							<span class="labeltip" id="mobile_notice"></span>
+							<span class=""><input type="button" class="btn regsubmit" id="step1" onclick="findPwd(1);" value="下一步" /></span>
+						</div>
+					</div>
+					<div class="step2 step">
+						<div class="resetpwd">
+							<span class="noticetitle">验证码已发送到注册手机号（<font id="findTel"></font>)，请注意查收！</span>
+							<span>
+								<label>验证码</label>
+								<input type="text" name="smscode" id="smscode" placeholder="请输入短信验证码" />
+							</span>
+						</div>
+						
+						<div class="labelsubmit">
+							<span class="labeltip" id="mobile_code_notice"></span>
+							<span class=""><input type="button" class="btn regsubmit" id="step2" onclick="findPwd(2);" value="下一步" /></span>
+						</div>
+					</div>
+					<div class="step3 step">
+						<div class="resetpwd">
+							<span>
+								<label>输入新密码</label>
+								<input type="password" name="new_password" id="new_password" placeholder="请输入新密码" />
+							</span>
+							<span>
+								<label>确认新密码</label>
+								<input type="password" name="confirm_password" id="confirm_password" placeholder="确认新密码" />
+							</span>
+						</div>
+						
+						<div class="labelsubmit">
+							<span class="labeltip"></span>
+            				<input type="hidden" name="" id="sms_mobile_phone" value="" />
+            				<input type="hidden" name="" id="uid" value="" />
+							<span class=""><input type="button" class="btn regsubmit" id="step3" onclick="findPwd(3);" value="下一步" /></span>
+						</div>
+					</div>
+					<div class="step4 step">
+						<div class="resetpwd">
+							<span id="stepsuccess">
+								<label>密码修改成功!</label>
+								<font style="display:block;font-size: 14px;margin: 0;">下次登录时请使用新密码登录</font>
+							</span>
+						</div>
+						
+						<div class="labelsubmit">
+							<span class="labeltip"></span>
+							<span class=""><a class="btn regsubmit" href="user.php?act=logout">返回登录</a></span>
+						</div>
+					</div>
+					
+				</div>
+			</form>	
+		</div>
+		
+	</div>
+</div>
+<script type="text/javascript">
+	function checkMobileExist(mobile){
+		var mobile_phone = $('#mobile_phone').val();
+		var reg = /^[\d|\-|\s]+$/;
+	    if (reg.test(mobile_phone))
+	    {
+  			Ajax.call( 'user.php?act=check_mobile', 'mobile=' + mobile, function(result){
+
+  				if(result == 'false'){
+        			document.getElementById('mobile_notice').innerHTML = '';
+  				}else{
+        			document.getElementById('mobile_notice').innerHTML = '* 手机号不存在';
+  				}
+  			} , 'GET', 'TEXT', true, true );
+		}else{
+        	document.getElementById('mobile_notice').innerHTML = '* 手机号格式不正确';
+		}
+	}
+	function findPwd(step){
+		msg = '';
+		if(step == 1){
+			var mobile_phone = $('#mobile_phone').val();
+			var reg = /^[\d|\-|\s]+$/;
+		    if (!reg.test(mobile_phone))
+		    {
+		      	msg += mobile_phone_invalid + '\n';
+				alert(msg);
+				return false;
+		    }else{
+				document.getElementById('step'+step).disabled = 'disabled';
+		    	Ajax.call( 'user.php?act=getSmsCode', 'mobile=' + mobile_phone, function(result){
+		    		result = eval('('+result+')');
+	  				if(result.code == 2){
+						nextStep(step);
+				    	var phone = mobile_phone.replace(/(\d{3})\d{4}(\d{4})/, "$1****$2")
+				    	$('#findTel').text(phone);
+
+	  				}else{
+	  					alert(result.msg);
+						document.getElementById('step'+step).disabled = '';
+	  					return false;
+	  				}
+	  			} , 'GET', 'TEXT', true, true );
+
+		    }
+		}else if(step == 2){
+			var smscode = $('#smscode').val();
+			if(smscode == ''){
+				$('#mobile_code_notice').html('* 验证码不能为空');
+				return false;
+			}
+			document.getElementById('step'+step).disabled = 'disabled';
+			Ajax.call( 'user.php?act=checkSmsCode', 'smscode=' + smscode, function(result){
+	    		result = eval('('+result+')');
+  				if(result.code == 2){
+					nextStep(step);
+					$('#sms_mobile_phone').val(result.data.mobile_phone);
+					$('#uid').val(result.data.user_id);
+  				}else{
+  					alert(result.msg);
+					document.getElementById('step'+step).disabled = '';
+  					return false;
+  				}
+  			} , 'GET', 'TEXT', true, true );
+		}else if(step == 3){
+
+			var password = document.getElementById('new_password').value;
+			var confirm_password = document.getElementById('confirm_password').value;
+			var sms_mobile_phone = document.getElementById('sms_mobile_phone').value;
+			var uid = document.getElementById('uid').value;
+
+			var errorMsg = '';
+			if (password.length == 0)
+			{
+				errorMsg += new_password_empty + '\n';
+			}
+
+			if (confirm_password.length == 0)
+			{
+				errorMsg += confirm_password_empty + '\n';
+			}
+
+			if (confirm_password != password)
+			{
+				errorMsg += both_password_error + '\n';
+			}
+
+			if (errorMsg.length > 0){
+				alert(errorMsg);
+				return false;
+			}else{
+				document.getElementById('step'+step).disabled = 'disabled';
+				$.post( 'user.php?act=resetPwd', 
+						{"new_password": password,"confirm_password": confirm_password, "sms_mobile_phone": sms_mobile_phone, "uid": uid}, 
+						function(result){
+
+			  				if(result.code == 2){
+								nextStep(step);
+			  				}else{
+			  					alert(result.msg);
+								document.getElementById('step'+step).disabled = '';
+			  					return false;
+			  				}
+	  			} , 'json' );
+
+			}
+		}
+	}
+	function nextStep(step){
+    	$('.steplist').eq(step).removeClass('stepon').siblings().addClass('stepon');
+    	$('.step').eq(step).addClass('active').siblings().removeClass('active');
+	}
+</script>
+
+<!--{/if}-->
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+{foreach from=$lang.passport_js item=item key=key}
+var {$key} = "{$item}";
+{/foreach}
+var username_exist = "{$lang.username_exist}";
+</script>
+</html>

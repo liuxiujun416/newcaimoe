@@ -1,0 +1,599 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+
+<link rel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="themes/new//style/css/common.css" rel="stylesheet" media="screen" />
+<link href="themes/new/style/css/help.css" rel="stylesheet" media="screen" />
+<link href="themes/new/style/css/ucenter.css" rel="stylesheet" media="screen" />
+<script src="themes/new//style/js/jquery-2.1.1.min.js" type="text/javascript"></script>
+
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,user.js'}
+<style type="text/css">
+a.regsubmit:hover,a.btnactive:hover{color:#fff;}
+.helpcontent >div{display: none;}
+.helpcontent >div.active{display: block;}
+.userform select{height: 40px; width: 112px;border: 1px solid #666;}
+.block{margin-top: 10px;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+  <div class="container"><div class="col-xs-12 col-md-12 ad1"><img src="themes/new/style/images/ad.jpg" alt="" /></div></div>
+  <div class="help clearfix">
+    <div class="container">
+      <div class="col-md-2">
+        <div class="helpmenu">
+        <!-- #BeginLibraryItem "/library/user_menu.lbi" --><!-- #EndLibraryItem -->
+        </div>
+      </div>
+      <div class="col-md-10">
+        <div class="helpcontent">
+
+          <!-- *用户中心默认显示页面 start-->
+          <!-- {if $action eq 'default'} -->
+          <div id="welcome" class="active">
+            <h2><font>{$info.username}</font> 欢迎您回到彩眸网!</h2>
+            <p>您的上一次登录时间: {$info.last_time}</p>
+            <!-- <p>您的等级是 QQ用户</p> -->
+            <p class="weltips">欢迎您：彩妞 彩眸网所出售的美瞳彩色隐形眼镜，均为韩国原厂进口正品,支持包装防伪码官网查询防伪 付款后的订单保证在12内小时发出,所以,彩妞们别催促哦。缺货的订单客服会和您取得联系通知的哦。</p>
+            
+            <h3><i></i>个人帐户 </h3>
+            <p class="individual">余额：<a>{$info.surplus}</a></p>
+            <p class="individual">红包：<a>{$info.bonus}</a></p>
+            <p class="individual">积分：<a>{$info.integral}</a></p>
+            <h3><i></i>用户提醒：</h3>
+            <p>您最近30天内提交了{$info.order_count}个订单</p>
+          </div>
+          <!--{/if}-->
+
+          <!-- *用户信息start-->
+          <!-- {if $action eq 'profile'} -->
+          <div id="userinfo" class="active">
+            <h1>个人资料</h1>
+            <form name="formEdit" action="user.php" method="post" class="userform" onSubmit="return userEdit()" autocomplete="off">
+              <div>
+                <div class="col-md-4"><label>出生日期</label></div>
+                <div class="col-md-8"> {html_select_date field_order=YMD prefix=birthday start_year=-60 end_year=+1 display_days=true month_format=%m day_value_format=%02d time=$profile.birthday} 
+                </div>
+              </div>
+              <div>
+                <div class="col-md-4"><label>性别</label></div>
+                <div class="col-md-8">
+                    <input type="radio" name="sex" value="0" {if $profile.sex==0}checked="checked"{/if} />
+                    {$lang.secrecy}&nbsp;&nbsp;
+                    <input type="radio" name="sex" value="1" {if $profile.sex==1}checked="checked"{/if} />
+                    {$lang.male}&nbsp;&nbsp;
+                    <input type="radio" name="sex" value="2" {if $profile.sex==2}checked="checked"{/if} />
+                    {$lang.female}
+                </div>
+              </div>
+              <div class="txtinput">
+                <div class="col-md-4"><label>手机号</label></div>
+                <div class="col-md-8">
+                  <input name="telephone" type="text" value="{$profile.telephone}" placeholder=""  size="25" />
+                  <span>*</span>
+                </div>
+              </div>
+              
+              {foreach from=$extend_info_list item=field}
+                  <!-- {if $field.id eq 6} -->
+                  <div class="txtinput">
+                    <div class="col-md-4"><label>{$lang.passwd_question}：</label></div>
+                    <div class="col-md-8">
+                      <select name='sel_question'>
+                      <option value='0'>{$lang.sel_question}</option>
+                      {html_options options=$passwd_questions selected=$profile.passwd_question}
+                      </select>
+                    </div>
+                  </div>
+                  <div class="txtinput">
+                    <div class="col-md-4"><label>{$field.reg_field_name}</label></div>
+                    <div class="col-md-8">
+                      <input name="extend_field{$field.id}" type="text" class="inputBg" value="{$field.content}"/><!-- {if $field.is_need} -->
+                      <span>*</span><!--{/if}-->
+                    </div>
+                  </div>
+                  <!-- {else} -->
+                  <div class="txtinput">
+                    <div class="col-md-4"><label>{$field.reg_field_name}</label></div>
+                    <div class="col-md-8">
+                      <input name="extend_field{$field.id}" type="text" class="inputBg" value="{$field.content}"/><!-- {if $field.is_need} -->
+                      <span>*</span><!--{/if}-->
+                    </div>
+                  </div>
+                  <!-- {/if} -->
+              {/foreach}
+
+              <div class="block col-md-12"></div>
+              <div class="txtinput">
+                <div class="col-md-4"><label style="line-height: 40px;">{$lang.old_password}</label></div>
+                <div class="col-md-8">
+                  <input type="password" name="old_password" value="" placeholder="" />
+                </div>
+              </div>
+              <div class="txtinput">
+                <div class="col-md-4"><label style="line-height: 40px;">{$lang.new_password}</label></div>
+                <div class="col-md-8">
+                  <input type="password" name="new_password" value="" placeholder="" />
+                </div>
+              </div>
+              <div class="txtinput">
+                <div class="col-md-4"><label style="line-height: 40px;">{$lang.confirm_password}</label></div>
+                <div class="col-md-8">
+                  <input type="password" name="comfirm_password" value="" placeholder="" />
+                </div>
+              </div>
+              <div class="col-md-12"><a class="editbtn submit_userform">确认修改</a></div>
+            </form>
+          </div>
+          <!--{/if}-->
+
+          <!-- *用户订单start-->
+          <!-- {if $action eq 'order_list'} -->
+          <div id="myorder" class="active">
+            <h1>我的订单</h1>
+            <div class="ordermenu">
+              <a>未完成订单<i>(0)</i></a>
+              <a>待付款<i>(0)</i></a>
+              <a>待发货<i>(0)</i></a>
+              <a>已成交订单数<i>(0)</i></a>
+            </div>
+            
+            <div class="orderlist">
+              <div class="cartlistmenu">
+                <div>商品名称</div>
+                <div>属性</div>
+                <div>市场价</div>
+                <div>本店价</div>
+                <div>购买数量</div>
+                <div>小计</div>
+              </div>
+              <div class="cartlistitem">
+                <div>
+                  <a class="producttitle">NEO 自然棕</a>
+                </div>
+                <div>
+                  <span class="productattr">左眼度数:-375</span>
+                  <span class="productattr">右眼度数:-325</span>
+                </div>
+                <div>
+                  <span>￥372.00</span>
+                </div>
+                <div>
+                  <span>￥372.00</span>
+                </div>
+                <div>
+                  <div class="productnum">1</div>
+                </div>
+                <div>
+                  <span class="producttotal">￥220.00 </span>
+                </div>
+              </div>
+              <div class="pages"></div>
+              <div class="empty">没有找到相关订单哦!</div>
+            </div>
+          </div>
+          <!--{/if}-->
+          
+          <!-- *收货地址start-->
+          <!-- {if $action eq 'address_list'} -->
+          <div id="address" class="active">
+            {* 包含脚本文件 *}
+            {insert_scripts files='utils.js,transport.js,json2.js,region.js,shopping_flow.js'}
+            <script type="text/javascript">
+              region.isAdmin = false;
+              {foreach from=$lang.flow_js item=item key=key}
+              var {$key} = "{$item}";
+              {/foreach}
+              {literal}
+              onload = function() {
+                if (!document.all)
+                {
+                  document.forms['theForm'].reset();
+                }
+              }
+              {/literal}
+            </script>
+            <h1>收货人信息</h1>
+            <form action="user.php" method="post" name="theForm" class="userform" onsubmit="return checkConsignee(this)">
+              <div>
+                <div class="col-md-4"><label>配送区域</label></div>
+                <div class="col-md-8"><select name="country" id="selCountries_{$sn}" onchange="region.changed(this, 1, 'selProvinces_{$sn}')">
+                      <option value="0">{$lang.please_select}{$name_of_region[0]}</option>
+                      <!-- {foreach from=$country_list item=country} -->
+                      <option value="{$country.region_id}" {if $consignee.country eq $country.region_id}selected{/if}>{$country.region_name}</option>
+                      <!-- {/foreach} -->
+                    </select>
+                    <select name="province" id="selProvinces_{$sn}" onchange="region.changed(this, 2, 'selCities_{$sn}')">
+                      <option value="0">{$lang.please_select}{$name_of_region[1]}</option>
+                      <!-- {foreach from=$province_list.$sn item=province} -->
+                      <option value="{$province.region_id}" {if $consignee.province eq $province.region_id}selected{/if}>{$province.region_name}</option>
+                      <!-- {/foreach} -->
+                    </select>
+                    <select name="city" id="selCities_{$sn}" onchange="region.changed(this, 3, 'selDistricts_{$sn}')">
+                      <option value="0">{$lang.please_select}{$name_of_region[2]}</option>
+                      <!-- {foreach from=$city_list.$sn item=city} -->
+                      <option value="{$city.region_id}" {if $consignee.city eq $city.region_id}selected{/if}>{$city.region_name}</option>
+                      <!-- {/foreach} -->
+                    </select>
+                    <select name="district" id="selDistricts_{$sn}" {if !$district_list.$sn}style="display:none"{/if}>
+                      <option value="0">{$lang.please_select}{$name_of_region[3]}</option>
+                      <!-- {foreach from=$district_list.$sn item=district} -->
+                      <option value="{$district.region_id}" {if $consignee.district eq $district.region_id}selected{/if}>{$district.region_name}</option>
+                      <!-- {/foreach} -->
+                    </select>
+                    <span>*</span>
+                </div>
+              </div>
+              <div class="txtinput">
+                <div class="col-md-4"><label>详细地址</label></div>
+                <div class="col-md-8">
+                  <input type="text" name="address" value="" placeholder="详细地址"  id="address_{$sn}" value="{$consignee.address|escape}"/>
+                  <span>*</span>
+                </div>
+              </div>
+              <div class="txtinput">
+                <div class="col-md-4"><label>收货人姓名</label></div>
+                <div class="col-md-8">
+                  <input type="text" name="consignee" value="" placeholder="收货人姓名" id="consignee_{$sn}" value="{$consignee.consignee|escape}" />
+                  <span>*</span>
+                </div>
+              </div>
+              <div class="txtinput">
+                <div class="col-md-4"><label>手机号</label></div>
+                <div class="col-md-8">
+                  <input type="text" name="tel" value="" placeholder="手机号" id="tel_{$sn}" value="{$consignee.tel|escape}" />
+                  <span>*</span>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <a class="editbtn submit_userform">确认修改</a>
+                <input type="hidden" name="act" value="act_edit_address" />
+                <input name="address_id" type="hidden" value="{$consignee.address_id}" />
+              </div>
+            </form>
+          </div>
+          <!--{/if}-->
+          
+          
+         <!-- *收藏start-->
+         <!-- {if $action eq 'collection_list'} -->
+          <div id="collect" class="collect active">
+            <h1>我的收藏<span class="collectcount">我的收藏：２件</span></h1>
+            <div class="orderlist">
+              <div class="cartlistmenu">
+                <div>商品样式</div>
+                <div>商品名称</div>
+                <div>市场价</div>
+                <div>本店价</div>
+                <div>操作</div>
+              </div>
+              <div class="cartlistitem">
+                <div><img src="themes/new/style/images/eye01.png" alt="" /></div>
+                <div><a class="producttitle">NEO 自然棕</a></div>
+                <div><span>￥372.00</span></div>
+                <div><span>￥372.00</span></div>
+                <div><a class="btn collectbtn del">删除</a><a class="btn collectbtn">加入购物车</a></div>
+              </div>
+              <div class="pages"></div>
+              <div class="empty">没有找到相关订单哦!</div>
+              <div class="more"><a>点击浏览更多</a></div>
+            </div>
+          </div>
+          <!--{/if}-->
+          
+          
+          <!-- *message start-->
+          <!-- {if $action eq 'message_list'} -->
+          <div id="message" class="active">
+            <h1>我的留言</h1>
+            <form action="" method="POST" class="userform" id="messageform">
+              <div>
+                <div class="col-md-2"><label>留言类型：</label></div>
+                <div class="col-md-10">
+                  <input type="radio" name="sex" value="" />留言&nbsp;&nbsp;
+                  <input type="radio" name="sex" value="" />询问&nbsp;&nbsp;
+                  <input type="radio" name="sex" value="" />投诉&nbsp;&nbsp;
+                  <input type="radio" name="sex" value="" />询问&nbsp;&nbsp;
+                  <input type="radio" name="sex" value="" />售后&nbsp;&nbsp;
+                  <input type="radio" name="sex" value="" checked />求购
+                </div>
+              </div>
+              <div class="txtinput">
+                <div class="col-md-2"><label>主题：</label></div>
+                <div class="col-md-10">
+                  <input type="text" name="address" value="" placeholder="请输入主题（最多20个字符）" />
+                </div>
+              </div>
+              <div class="txtinput" style="height: 100px;">
+                <div class="col-md-2"><label>留言内容：</label></div>
+                <div class="col-md-10">
+                  <div type="text" name="content" class="editcontent" value="" contenteditable="true" ></div>
+                </div>
+              </div>
+              <div class="txtinput" id="upfile">
+                <div class="col-md-2"><label>上传文件</label></div>
+                <div class="col-md-10">
+                  <input type="file" name="file" value="" placeholder="上传文件" />
+                </div>
+              </div>
+              <div class="col-md-12">
+                <span style="position:absolute;left:150px;text-align:left;color:#fd4565;">*注上传文件支持以下几种格式：</br>gif、jpg、png、word、excel、txt、zip、ppt、pdf</span>
+                <a class="editbtn" style="margin-top:90px">提交</a></div>
+            </form>
+          </div>
+          <!--{/if}-->
+          
+          <!-- *tag start-->
+          <!-- {if $action eq 'tag_list'} -->
+          <div id="mytags" class="collect active">
+            <h1>我的标签<span class="collectcount">标签数量：２</span></h1>
+            <div class="orderlist">
+              <div class="cartlistmenu">
+                <div>商品名称</div>
+                <div>属性</div>
+                <div>市场价</div>
+                <div>本店价</div>
+                <div>购买数量</div>
+                <div>小计</div>
+              </div>
+              <div class="cartlistitem">
+                <div>
+                  <a class="producttitle">NEO 自然棕</a>
+                </div>
+                <div>
+                  <span class="productattr">左眼度数:-375</span>
+                  <span class="productattr">右眼度数:-325</span>
+                </div>
+                <div>
+                  <span>￥372.00</span>
+                </div>
+                <div>
+                  <span>￥372.00</span>
+                </div>
+                <div>
+                  <div class="productnum">1</div>
+                </div>
+                <div>
+                  <span class="producttotal">￥220.00 </span>
+                </div>
+              </div>
+              <div class="pages"></div>
+              <div class="empty">暂时还没有标签哟!</div>
+            </div>
+          </div>
+          <!--{/if}-->
+          
+          
+          <!-- *缺货 start-->
+          <!-- {if $action eq 'booking_list'} -->
+          <div id="oos" class="collect active">
+            <h1>缺货处理<span class="collectcount">待缺货处理：20件</span></h1>
+            <div class="orderlist">
+              <div class="cartlistmenu">
+                <div>商品样式</div>
+                <div>商品名称</div>
+                <div>订购数量</div>
+                <div>登记时间</div>
+                <div>处理备注</div>
+                <div>操作</div>
+              </div>
+              <div class="cartlistitem">
+                <div><img src="themes/new/style/images/eye01.png" alt="" /></div>
+                <div><a class="producttitle">NEO 自然棕</a></div>
+                <div><span>￥372.00</span></div>
+                <div><span>￥372.00</span></div>
+                <div><span>待处理</span></div>
+                <div><a class="btn collectbtn del">删除</a><a class="btn collectbtn">补货</a></div>
+              </div>
+              <div class="pages"></div>
+              <div class="empty">暂时还没有标签哟!</div>
+            </div>
+          </div>
+          <!--{/if}-->
+          
+         <!-- *红包 start-->
+         <!-- {if $action eq 'bonus'} -->
+          <div id="packet" class="collect active">
+            <div id="addpacket">
+              <span>红包序列号：</span>
+              <input type="text" name="packetcode" value="" placeholder="请输入红包序列号" /><a class="btn">添加</a>
+            </div>
+            <h1>我的红包<span class="collectcount">可用红包：2个</span></h1>
+            <div class="orderlist">
+              <div class="cartlistmenu">
+                <div>红包序号</div>
+                <div>红包名称</div>
+                <div>红包金额</div>
+                <div>最小订单金额</div>
+                <div>截止使用日期</div>
+                <div>红包状态</div>
+              </div>
+              <div class="cartlistitem">
+                <div>23456767</div>
+                <div><a class="producttitle">NEO 自然棕</a></div>
+                <div><span>￥372.00</span></div>
+                <div><span>￥372.00</span></div>
+                <div><span>待处理</span></div>
+                <div><span>已经使用</span></div>
+              </div>
+              <div class="pages"></div>
+              <div class="empty">暂时还没有标签哟!</div>
+            </div>
+          </div>
+          <!--{/if}-->
+          
+          <!-- *推荐 start-->
+          <!-- {if $action eq 'affiliate'} -->
+          <div id="referee" class="collect active">
+            <h1>我的推荐<span class="collectcount">推荐人数3人</span></h1>
+            <h3><i></i>分成明细</h3>
+            <p class="weltips">本网店为鼓励推荐新用户注册，现开展推荐注册分成活动，活动流程如下：</br>
+          　　１、将本站提供给您的推荐代码，发送到论坛、博客上。</br>
+          　　２、访问者点击链接，访问网店。</br>
+          　　３、在访问者点击链接的 24小时 内，若该访问者在本站注册，即认定该用户是您推荐的，您将获得等级积分 2 的奖励 (当您的等级积分超过 60 时，不再获得奖励)。</br>
+          　　４、该用户今后在本站的一切消费，您均能获得一定比例的提成。目前实行的提成总额为订单金额的 1% 、积分的 5% ，分配给您、推荐您的人</br>
+                 等，具体分配规则请参阅 我推荐的会员。</br>
+          　　５、提成由管理员人工审核发放，请您耐心等待。</br>
+　　          ６、您可以通过分成明细来查看您的介绍、分成情况。</br>
+            </p>
+            
+            <h3><i></i>我的推荐会员</h3>
+            <div class="orderlist">
+              <div class="cartlistmenu">
+                <div>等级</div>
+                <div>人数</div>
+                <div>积分分成百分比</div>
+                <div>现金分成百分比</div>
+              </div>
+              <div class="cartlistitem">
+                <div><a class="producttitle">NEO 自然棕</a></div>
+                <div><span>￥372.00</span></div>
+                <div><span>￥372.00</span></div>
+                <div><span>待处理</span></div>
+              </div>
+              <div class="pages"></div>
+              <div class="empty">暂时还没有标签哟!</div>
+            </div>
+            
+            <h3><i></i>分成规则</h3>
+            <div class="orderlist" id="fcrule">
+              <div class="cartlistmenu">
+                <div>订单号</div>
+                <div>现金分成</div>
+                <div>积分分成</div>
+                <div>分成模式</div>
+                <div>分成状态</div>
+              </div>
+              <div class="cartlistitem">
+                <div><a class="producttitle">NEO 自然棕</a></div>
+                <div><span>￥372.00</span></div>
+                <div><span>￥372.00</span></div>
+                <div><span>待处理</span></div>
+                <div><span>待处理</span></div>
+              </div>
+              <div class="pages"></div>
+              <div class="empty">暂时还没有标签哟!</div>
+            </div>
+          </div>
+          <!--{/if}-->
+          
+          <!-- *评论 start-->
+          <!-- {if $action eq 'comment_list'} -->
+          <div id="pinglun" class="collect active">
+            <h1>我的评论<span class="collectcount">待评论：２个</span></h1>
+            <h3><i></i>买家累计信用: <a style="display:inline;padding-left: 10px;">200</a><a style="float:right;">好评率１００％</a></h3>
+            <div class="orderlist" id="xinyong">
+              <div class="cartlistmenu">
+                <div>红包序号</div>
+                <div>红包名称</div>
+                <div>红包金额</div>
+                <div>最小订单金额</div>
+                <div>截止使用日期</div>
+                <div>红包状态</div>
+              </div>
+              <div class="cartlistitem">
+                <div>23456767</div>
+                <div><a class="producttitle">NEO 自然棕</a></div>
+                <div><span>￥372.00</span></div>
+                <div><span>￥372.00</span></div>
+                <div><span>待处理</span></div>
+                <div><span>已经使用</span></div>
+              </div>
+            </div>
+            
+            <h3><i></i>我的评论</h3>
+            <div class="orderlist">
+              <div class="cartlistmenu">
+                <div>商品样式</div>
+                <div>商品名称</div>
+                <div>市场价</div>
+                <div>本店价</div>
+                <div>操作</div>
+              </div>
+              <div class="cartlistitem">
+                <div><img src="themes/new/style/images/eye01.png" alt="" /></div>
+                <div><a class="producttitle">NEO 自然棕</a></div>
+                <div><span>￥372.00</span></div>
+                <div><span>￥372.00</span></div>
+                <div><a class="btn collectbtn del">删除</a><a class="btn collectbtn">评论</a></div>
+              </div>
+              <div class="pages"></div>
+              <div class="empty">没有找到相关订单哦!</div>
+              <div class="more"><a>点击浏览更多</a></div>
+            </div>
+          </div>
+          <!--{/if}-->
+          
+          <!-- *物流 start-->
+          <!-- {if $action eq 'track_packages'} -->
+          <div id="logistics">
+            <h1>包裹跟踪<span class="collectcount">物流单号：HD15425688426</span></h1>
+            <div id="logprocess">
+              <a><i></i><span><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></a>
+              <a><i></i><span><i></i></span></a>
+              <a><i></i><span><i></i></span></a>
+              <a><i></i></a>
+            </div>
+            
+          </div>
+          <!--{/if}-->
+          
+          <!-- *帐户 start-->
+          <!-- {if $action eq 'account_log'} -->
+          <div id="amount" class="collect active">
+            <div class="chongzhi"><a>充值</a><a>提现</a><a>查看帐户明细</a><a>查看申请记录</a></div>
+            <h1>帐户资金<span class="collectcount">余额：￥0.00元</span></h1>
+            <div class="orderlist">
+              <div class="cartlistmenu">
+                <div>商品样式</div>
+                <div>商品名称</div>
+                <div>订购数量</div>
+                <div>登记时间</div>
+                <div>处理备注</div>
+                <div>处理备注</div>
+                <div>操作</div>
+              </div>
+              <div class="cartlistitem">
+                <div><img src="./style/images/eye01.png" alt="" /></div>
+                <div><a class="producttitle">NEO 自然棕</a></div>
+                <div><span>￥372.00</span></div>
+                <div><span>￥372.00</span></div>
+                <div><span>待处理</span></div>
+                <div>处理备注</div>
+                <div><a class="btn collectbtn del">删除</a><a class="btn collectbtn">补货</a></div>
+              </div>
+              <div class="pages"></div>
+              <div class="amounttotal">您当前的可用资金为：￥372.00元</div>
+            </div>
+          </div>
+          <!--{/if}-->
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+  $(function(){
+    $('a.submit_userform').on('click',function(){
+      $('.userform').submit();
+    });
+  })
+  </script>
+</body>
+<script type="text/javascript">
+{foreach from=$lang.clips_js item=item key=key}
+var {$key} = "{$item}";
+{/foreach}
+</script>
+</html>

@@ -1,0 +1,12 @@
+<div id="append_parent"></div>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+您好，欢迎来彩眸网！
+{if $user_info}
+<a href="user.php" class="red">{$lang.user_center}</a> |
+ <a href="user.php?act=logout" class="red">{$lang.user_logout}</a>
+{else}
+<a href="user.php?act=login" class="red" >登录</a> |
+<a href="user.php?act=register" class="red">注册</a> | 	
+<a href="user.php" class="red">我的帐户</a>
+{/if}
+

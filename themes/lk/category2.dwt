@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link href="warp.css" rel="stylesheet" type="text/css" />
+<link href="cstyle.css" rel="stylesheet" type="text/css" />
+<!-- {if $cat_style} -->
+<link href="{$cat_style}" rel="stylesheet" type="text/css" />
+<!-- {/if} -->
+{* 包含脚本文件 *}
+{insert_scripts files='common.js,global.js,compare.js'}
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class="se-main">
+<div class="ur-here box-title"><!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem --></div>
+        <div class="clear"></div>
+		<div class="se-main clearfix">
+            <div class="box-li">
+                <div id="sidebar">
+                     <div id="box-si">
+                        <div class="content box-list">
+                        <h3></h3>
+                        <!--{foreach from=$best_goods item=goods}-->
+                           <div class="cxpic"><a href="{$goods.url}" target="_blank"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" /></a></div>
+                                <ul>
+                                  <li class="name"><a href="{$goods.url}" target="_blank">{$goods.short_style_name}</a></li>
+                                  <li class="price">{$lang.market_prices}：<span>{$goods.market_price}</span></li>
+                                  <li>{$lang.shop_prices}：<!-- {if $goods.promote_price neq ""} -->
+                                                          {$goods.promote_price}
+                                                          <!-- {else}-->
+                                                          {$goods.shop_price}
+                                      <!--{/if}--></li>
+                                  </ul>
+                        <!--{/foreach}-->
+                          </div>
+                       </div>
+                  </div>            
+     
+                  <div class="flash-box">
+						<!-- TemplateBeginEditable name="列表页_中间大图" -->
+						<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+                        
+                        {insert name='ads' id=$ads_id num=$ads_num}
+                         <!-- #EndLibraryItem -->
+                        <!-- TemplateEndEditable -->          
+                  </div>
+               </div>
+           </div>  
+         <div class="clear"></div>
+         <div class="clearfix"> 
+         <div id="sidebar">
+         <div id="lw">
+		 
+         <div id="box-lips" >
+         <div class="content lips">
+          <div class="clearfix"><h2></h2></div>
+            <!--{foreach from=get_categories_tree() item=cat}-->
+            <dl class="clearfix">                                        
+             <dt>系列</dt>  
+             <dd><a href="{$cat.url}" class="a-visited">{$cat.name|escape:html}</a></dd> 
+             <!--{foreach from=$cat.cat_id item=child}-->
+             <dd><a href="{$child.url}">{$child.name|escape:html}</a></dd>
+             <!--{/foreach}-->  
+	        </dl>
+            <!--{/foreach}--> 
+	 <!--组合搜索 开始-->
+	  <!--{if $brands.1 || $price_grade.1 || $filter_attr_list}-->
+            <!--{if $brands.1}-->
+             <dl class="clearfix">
+                    <dt>{$lang.brand}</dt>  
+				    <!--{foreach from=$brands item=brand}-->
+					<!-- {if $brand.selected} -->
+					<dd><a class="a-visited">{$brand.brand_name}</a></dd>
+					<!-- {else} -->
+					<dd><a href="{$brand.url}">{$brand.brand_name}</a></dd>
+					<!-- {/if} -->
+				<!--{/foreach}-->
+             </dl>
+         <!--{/if}-->
+			<!--{if $price_grade.1}-->
+            <dl class="clearfix">
+                    <dt>{$lang.price}</dt>  
+				    <!--{foreach from=$price_grade item=grade}-->
+				   <!-- {if $grade.selected} -->
+					<dd><a class="a-visited">{$grade.price_range}</a></dd>
+					<!-- {else} -->
+					<dd><a href="{$grade.url}">{$grade.price_range}</a></dd>
+					<!-- {/if} -->
+				<!--{/foreach}-->
+             </dl>
+         <!--{/if}-->
+            
+			<!--{foreach from=$filter_attr_list item=filter_attr}-->
+              <dl class="clearfix">
+                    <dt>{$filter_attr.filter_attr_name|escape:html} </dt>  
+				    <!--{foreach from=$filter_attr.attr_list item=attr}-->
+				    <!-- {if $attr.selected} -->
+					<dd><a class="a-visited">{$attr.attr_value}</a></dd>
+					<!-- {else} -->
+					<dd><a href="{$attr.url}">{$attr.attr_value}</a></dd>
+					<!-- {/if} -->
+				<!--{/foreach}-->
+             </dl>
+           <!--{/foreach}-->
+	  <!-- {/if} -->
+	 <!--组合搜索 结束-->
+ 		  
+		   </div>
+         </div>		
+		 		<!-- #BeginLibraryItem "/library/left_ad.lbi" --><!-- #EndLibraryItem -->      
+                 <!-- #BeginLibraryItem "/library/history.lbi" --><!-- #EndLibraryItem -->
+		    </div>
+            </div>
+                  <div id="sidebar_R" class="clearfix">
+                        <div id="lmglst-c" class="champion s-result">
+                           <div class="deco-line"></div>
+                           <div class="s-result-title">
+                              <h4>商品列表</h4>
+                              <div class="page-le">
+                                 <div class="page-t">排列方式      
+                                  <a href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=goods_id&order=<!-- {if $pager.sort == 'goods_id' && $pager.order == 'DESC'} -->ASC<!-- {else} -->DESC<!-- {/if} -->#goods_list"><img src="images/goods_id_<!-- {if $pager.sort == 'goods_id'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->.gif" alt="{$lang.sort.goods_id}"></a>
+                                  <a href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=shop_price&order=<!-- {if $pager.sort == 'shop_price' && $pager.order == 'ASC'} -->DESC<!-- {else} -->ASC<!-- {/if} -->#goods_list"><img src="images/shop_price_<!-- {if $pager.sort == 'shop_price'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->.gif" alt="{$lang.sort.shop_price}"></a>
+                                  <a href="{$script_name}.php?category={$category}&display={$pager.display}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&page={$pager.page}&sort=last_update&order=<!-- {if $pager.sort == 'last_update' && $pager.order == 'DESC'} -->ASC<!-- {else} -->DESC<!-- {/if} -->#goods_list"><img src="images/last_update_<!-- {if $pager.sort == 'last_update'} -->{$pager.order}<!-- {else} -->default<!-- {/if} -->.gif" alt="{$lang.sort.last_update}"></a>
+                                 </div>
+                                <div class="page-r"><!-- {if $pager.page_prev} --><a href="{$pager.page_prev}">{$lang.page_prev}</a> | <!-- {/if} --><!-- {if $pager.page_next} --><a href="{$pager.page_next}">{$lang.page_next}</a><!-- {/if} --></div>
+                              </div>
+                           </div>
+                           
+                           <div class="main">
+                        <!--{foreach from=$goods_list item=goods}-->
+                         <!-- {if $goods.goods_id} -->
+                           <dl>
+                           <dd class="pic"><a href="{$goods.url}" target="_blank"><img src="{$goods.goods_thumb}" alt="{$goods.goods_name}" /></a></dd>
+                           <dd class="tit"><a href="{$goods.url}" target="_blank">{$goods.goods_name}</a></dd>
+                           <dd class="{$goods.watermark_img}" style="height:28px;color:#FF0000;font-size:14px;font-weight:bold;">
+                           <!--{if $goods.promote_price neq "" } -->
+                        {$lang.promote_price}：{$goods.promote_price}<!--{else}-->
+                        {$lang.shop_prices}：{$goods.shop_price}
+                        <!--{/if}--></dd>
+                            </dl>
+                            <!--{/if}-->
+                         <!--{/foreach}-->                                                                                                                                        
+                           </div>
+                    <script type="Text/Javascript" language="JavaScript">
+                    <!--
+                    {literal}
+                    function selectPage(sel)
+                    {
+                      sel.form.submit();
+                    }
+                    {/literal}
+                    //-->
+                    </script>
+                    <script type="text/javascript">
+                    window.onload = function()
+                    {
+                      Compare.init();
+                      fixpng();
+                    }
+                    {foreach from=$lang.compare_js item=item key=key}
+                    {if $key neq 'button_compare'}
+                    var {$key} = "{$item}";
+                    {else}
+                    var button_compare = '';
+                    {/if}
+                    {/foreach}
+                    var compare_no_goods = "{$lang.compare_no_goods}";
+                    var btn_buy = "{$lang.btn_buy}";
+                    var is_cancel = "{$lang.is_cancel}";
+                    var select_spe = "{$lang.select_spe}";
+                    </script>
+                       <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem --> 
+                  </div>
+              </div>
+		  </div>
+	  </div>
+<div class="helps clearfix">
+	<!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
+    <!-- #BeginLibraryItem "/library/email_list.lbi" --><!-- #EndLibraryItem -->
+</div>
+</div></div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

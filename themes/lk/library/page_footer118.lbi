@@ -1,0 +1,64 @@
+﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+
+<link rel="stylesheet" href="http://caimoeye.gotoip1.com/css/hwz100com.css"> 
+<div class="box_os"> 
+<p style="padding-bottom:5px"><a target="_blank" href=""><img src="http://caimoeye.gotoip1.com/images/logo.png" data-bd-imgshare-binded="1"></a></p> 
+
+<p style="padding-bottom:5px"><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=625854820&amp;site=qq&amp;menu=yes">
+<img src="http://caimoeye.gotoip1.com/images/qq.png" data-bd-imgshare-binded="1"></a></p> 
+
+<p style="padding-bottom:5px">
+<a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E9%9F%A9%E5%B0%9A%E9%80%B8&siteid=cntaobao&status=1&charset=utf-8">
+<img border="0" src="http://caimoeye.gotoip1.com/images/ww.png" alt="点击这里给我发消息" /></a></p> 
+
+<p style="padding-bottom:5px">
+<a target="_blank" href="http://caimoeye.com/message.php">
+<img border="0" src="http://caimoeye.gotoip1.com/images/ly.png" alt="我要留言" /></a></p> 
+
+<p style="padding-bottom:5px">
+<img src="http://caimoeye.gotoip1.com/images/wx.png" data-bd-imgshare-binded="1"></p> 
+
+
+<p style="padding-bottom:5px">
+<a target="_blank" href="http://weibo.com/wangyu199364">
+<img border="0" src="http://caimoeye.gotoip1.com/images/wb.png"/></a></p> 
+
+ 
+<div class="acbox"> 
+<a class="ico_gt" href="#" target="_self" title=""><img src="http://caimoeye.gotoip1.com/images/top.jpg" data-bd-imgshare-binded="1"></a> 
+</div> 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div id="footer-wrap">
+	<div id="footer">
+		<ul id="footer-links" class="clearfix">
+       <!-- {if $navigator_list.bottom} -->
+   <!-- {foreach name=nav_bottom_list from=$navigator_list.bottom item=nav} -->
+        <li <!-- {if $smarty.foreach.nav_bottom_list.last} -->class="last"<!-- {/if} -->><a href="{$nav.url}" <!-- {if $nav.opennew eq 1} --> target="_blank" <!-- {/if} -->>{$nav.name}</a></li>
+      <!-- {/foreach} -->
+  <!-- {/if} -->
+		</ul>
+		
+		<p id="copyright">
+			{$copyright}<!-- ICP 证书{if $icp_number} -->{$lang.icp_number}:<a href="http://www.miibeian.gov.cn/" target="_blank">{$icp_number}</a>
+  <!-- 结束ICP 证书{/if} --><br /><br />             <a href="article.php?id=25" target='_blank'><img src="images/itrust_logo.jpg" ></a>
+			<a href="article.php?id=25" target='_blank'><img src="images/redlogo.gif" ></a>
+            <a href="article.php?id=26" target='_blank'><img src="images/seallog.png" ></a>
+            <a href="article.php?id=26" target='_blank'><img src="images/ylqx-banner.jpg" ></a>
+            <a href="article.php?id=25" target='_blank'><img src="images/yinlian.jpg" ></a>		</p>
+	</div>
+</div>
+
+

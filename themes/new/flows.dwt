@@ -1,0 +1,580 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>{$page_title}</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+{insert_scripts files='transport.js'}
+
+<link rel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="themes/new//style/css/common.css" rel="stylesheet" media="screen" />
+<!--  {if $step eq 'checkout'} -->
+<link href="themes/new/style/css/cart.css" rel="stylesheet" media="screen" />
+<!--  {elseif $step eq 'cart'} -->
+<link href="themes/new/style/css/order.css" rel="stylesheet" media="screen" />
+<!--  {elseif $step eq 'done'} -->
+<link href="themes/new/style/css/checkorder.css" rel="stylesheet" media="screen" />
+<!--  {elseif $step eq 'checkout'} -->
+<!--  {elseif $step eq 'checkout'} -->
+<!-- {/if} -->
+
+
+{insert_scripts files='common.js,shopping_flow.js'}
+<style type="text/css">
+#formCart .cartlistitem div{font-size: 12px;overflow: hidden;max-height: 80px;}
+#formCart .cartlistitem .productxj{padding-left: 0px;}
+#formCart .cartlistitem .productxj font{font-size: 12px;color: #666;display: block;}
+#theForm select{height: 40px;width: 100px;border: 1px solid #000;}
+.typelist .adlable{margin-right: 0;}
+.typelist .adlable span{padding-left: 20px;}
+.typelist .adlable input{position: absolute;left: 0;top: 0;}
+.cartlistitem, .cartlistitem a,#cart_amount_desc{font-size: 12px;overflow: hidden;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+  
+  <div class="cart clearfix">
+    <div class="container">
+      <div class="col-xs-12 col-md-12 right">
+        <span class="carttype {if $step eq 'checkout'}active{/if}">
+          <i class="whiteleft"><font></font></i>
+          <span>我的购物车</span>
+          <i class="blackright"><font></font></i>
+        </span>
+        <span class="carttype {if $step eq 'cart'}active{/if}">
+          <i class="whiteleft"><font></font></i>
+          订单确认
+          <i class="blackright"><font></font></i>         
+        </span>
+        <span class="carttype {if $step eq 'done'}active{/if}">
+          <i class="whiteleft"><font></font></i>
+          下单结果
+          <i class="blackright"><font></font></i>         
+        </span>
+        <span class="carttype {if $step eq ''}active{/if}">
+          <i class="whiteleft"><font></font></i>
+          结算结果
+          <i class="blackright"><font></font></i>         
+        </span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- {if $step eq "checkout"} -->
+  {insert_scripts files='showdiv.js'}
+  <script type="text/javascript">
+  var flagChecked = 0;
+  {foreach from=$lang.password_js item=item key=key}
+    var {$key} = "{$item}";
+  {/foreach}
+  </script>
+  {insert_scripts files='region.js,utils.js'}
+  <script type="text/javascript">
+    region.isAdmin = false;
+    {foreach from=$lang.flow_js item=item key=key}
+      var {$key} = "{$item}";
+    {/foreach}
+
+    {literal}
+    onload = function() {
+      if (!document.all)
+      {
+        //document.forms['theForm'].reset();
+      }
+    }
+  {/literal}
+  </script>
+  <script type="text/javascript">
+    var flow_no_payment = "{$lang.flow_no_payment}";
+    var flow_no_shipping = "{$lang.flow_no_shipping}";
+    function formSubmit(fcart)
+    {
+      fcart.submit();
+    }
+  </script>
+  <div class="cartlist clearfix">
+    <div class="container">
+      <div class="col-xs-12">
+        <div class="col-md-12 cartlisttitle"><h1>我的购物车<span>让购物更简单</span></h1></div>
+        <form id="formCart" name="formCart" method="post" action="flows.php" autocomplete="off">
+          <div class="col-md-12 cartlistmenu">
+            <div class="col-md-2">
+              <input type="checkbox" name="" value="" />
+              <span>全选</span>
+            </div>
+            <div class="col-md-2">{$lang.goods_name}</div>
+            <div class="col-md-2">{$lang.goods_attr}</div>
+            <!-- {if $show_marketprice} -->
+            <div class="col-md-1">{$lang.market_prices}</div>
+            <!-- {/if} -->
+            <div class="col-md-1">{if $gb_deposit}{$lang.deposit}{else}{$lang.shop_prices}{/if}</div>
+            <div class="col-md-2">购买数量</div>
+            <div class="col-md-1">{$lang.subtotal}</div>
+            <div class="col-md-1">操作</div>
+          </div>
+          <!--{if $goods_list}-->
+          <!-- {foreach from=$goods_list item=goods} -->
+          <div class="col-md-12 cartlistitem">
+            <div class="col-md-2">
+              <span><input type="checkbox" name="goods[]" value="{$goods.goods_id}" /></span>
+              <a class="thumb"><img src="{$goods.goods_thumb}" alt="{$goods.goods_name}" /></a>
+            </div>
+            <div class="col-md-2">
+            <!-- {if $goods.goods_id gt 0 && $goods.extension_code eq 'package_buy'} -->
+              <a href="javascript:void(0)" onclick="setSuitShow({$goods.goods_id})" class="f6" title="{$goods.goods_name}">{$goods.goods_name}<span style="color:#FF0000;">（{$lang.remark_package}）</span></a>
+              <div id="suit_{$goods.goods_id}" style="display:none">
+                  <!-- {foreach from=$goods.package_goods_list item=package_goods_list} -->
+              <a href="goods.php?id={$package_goods_list.goods_id}" target="_blank" class="f6">{$package_goods_list.goods_name}</a><br />
+                  <!-- {/foreach} -->
+              </div>
+              <!-- { else } -->
+              <a href="goods.php?id={$goods.goods_id}" target="_blank" class="producttitle">{$goods.goods_name}</a>
+                  <!-- {if $goods.parent_id > 0} -->
+                  <span style="color:#FF0000">（{$lang.accessories}）</span>
+                 <!-- {elseif $goods.is_gift} -->
+                  <span style="color:#FF0000">（{$lang.largess}）</span>
+                  <!-- {/if} -->
+            <!-- {/if} -->
+            <!-- {if $goods.is_shipping} -->(<span style="color:#FF0000">{$lang.free_goods}</span>)<!-- {/if} -->
+            </div>
+            <div class="col-md-2" style="line-height: 32px;">{$goods.goods_attr|nl2br}
+<!--               <span class="productattr">左眼度数:-375</span>
+              <span class="productattr">右眼度数:-325</span> -->
+            </div>
+            <!-- {if $show_marketprice} -->
+            <div class="col-md-1">
+              <span>{$goods.formated_market_price}</span>
+            </div>
+            <!-- {/if} -->
+            <div class="col-md-1">
+              <span>{$goods.formated_goods_price}</span>
+            </div>
+            <div class="col-md-2">
+              <div class="productnum">            
+                <div class="jian"><a href="javascript:minus_num(document.getElementById('formCart'), {$goods.rec_id});">-</a></div>
+                <div class="shownum" contenteditable="true" onKeyDown='if(event.keyCode == 13) event.returnValue = false' name="goods_number[{$goods.rec_id}]" id="goods_number_{$goods.rec_id}" value="{$goods.goods_number}" onblur="formSubmit(this.form)">1</div>
+                <div class="jia"><a href="javascript:add_num(document.getElementById('formCart'),{$goods.rec_id})">+</a></div>
+                <input type="hidden" id="hidden_{$goods.rec_id}" value="{$goods.goods_number}">
+
+              </div>
+            </div>
+            <div class="col-md-1">
+              <span class="producttotal" id="subtotal_{$goods.rec_id}" >{$goods.formated_subtotal} </span>
+            </div>
+            <div class="col-md-1">
+              <span class="productdel">
+                <a href="javascript:if (confirm('{$lang.drop_goods_confirm}')) location.href='flows.php?step=drop_goods&amp;id={$goods.rec_id}'; " class="f6">{$lang.drop}</a>
+              </span>
+            </div>
+          </div>
+          <!--{/foreach}-->
+          <div class="col-md-12 cartlistitem cartlistxj">
+            <div class="col-md-2" style="text-align:left; padding-left:50px;">
+              <span><input type="checkbox" name="" value="" />全选</span>
+            </div>
+            <div class="col-md-7"></div>
+            <div class="col-md-3">
+              <!-- {if $discount gt 0} -->{$your_discount}<br /><!-- {/if} -->
+              <span class="productxj" id="cart_amount_desc">{$shopping_money}<!-- {if $show_marketprice} --><font>，{$market_price_desc}<!-- {/if} --></font></span>
+            </div>
+          </div>
+          <div class="col-md-12 cartlistitem cartlistamount">
+            <div class="col-md-12" style="text-align: right;padding-right:29px;">
+              <span class="productamount">总计（不含运费）：<font>{$total_amount}</font></span>
+            </div>
+          </div>
+
+          <div class="col-md-12 checkorder">
+            <a class="tocheck" href="/flows.php?step=cart">立即结算</a>
+          </div>
+          <script>
+          function add_num(f, rec_id){
+            document.getElementById("goods_number_"+rec_id+"").innerHTML++;
+            //document.getElementById("goods_number_"+rec_id+"").value++;
+            var number = document.getElementById("goods_number_"+rec_id+"").value;
+            Ajax.call('flows.php', 'step=update_group_cart&rec_id=' + rec_id +'&number=' + number+'&goods_id=' + rec_id, changePriceResponse, 'GET', 'JSON');
+            //f.submit();
+           }
+
+          function minus_num(f, rec_id){
+            if (document.getElementById("goods_number_"+rec_id+"").innerHTML>1)
+            {
+              document.getElementById("goods_number_"+rec_id+"").innerHTML--;
+            }
+            var number = document.getElementById("goods_number_"+rec_id+"").value;
+            Ajax.call('flows.php', 'step=update_group_cart&rec_id=' + rec_id +'&number=' + number+'&goods_id=' + rec_id, changePriceResponse, 'GET', 'JSON');
+            //f.submit();
+          }
+
+          function change_price(rec_id,goods_id){
+            var r = /^[1-9]+[0-9]*]*$/;
+            var number = document.getElementById("goods_number_"+rec_id+"").value;
+            if (!r.test(number))
+            {
+              alert("您输入的格式不正确！");
+              document.getElementById("goods_number_"+rec_id+"").value=document.getElementById("hidden_"+rec_id+"").value;
+            }
+            else
+            {
+              Ajax.call('flows.php','step=update_group_cart&rec_id=' + rec_id +'&number=' + number+'&goods_id=' + goods_id, changePriceResponse, 'GET', 'JSON');
+            }
+          }
+
+          function changePriceResponse(result){
+            if(result.error == 1)
+            {
+              alert(result.content);
+              document.getElementById("goods_number_"+result.rec_id+"").innerHTML =result.number;
+              document.getElementById("hidden_"+result.rec_id+"").innerHTML =result.number;
+            }
+            else
+            {
+              document.getElementById("hidden_"+result.rec_id+"").innerHTML =result.number;
+              document.getElementById('subtotal_'+result.rec_id).innerHTML = result.subtotal;//商品总价
+              document.getElementById('cart_amount_desc').innerHTML = result.cart_amount_desc;//购物车商品总价说明
+              document.getElementById('market_amount_desc').innerHTML = result.market_amount_desc;//购物车商品总市价说明
+              show_div_text = "恭喜您！ 商品数量修改成功！ ";
+              showdiv(document.getElementById("goods_number_"+result.rec_id));
+            }
+          }
+          </script>
+          <!--{/if}-->
+        </form>
+      </div>
+      
+    </div>
+  </div>
+<!--{/if}-->
+
+<!--确认订单 Start-->
+<!--{if $step eq 'cart'}-->
+{insert_scripts files='showdiv.js,region.js,utils.js'}
+<script type="text/javascript">
+{foreach from=$lang.password_js item=item key=key}
+  var {$key} = "{$item}";
+{/foreach}
+</script>
+{insert_scripts files='region.js,utils.js'}
+<script type="text/javascript">
+  region.isAdmin = false;
+  {foreach from=$lang.flow_js item=item key=key}
+    var {$key} = "{$item}";
+  {/foreach}
+
+  {literal}
+  onload = function() {
+    if (!document.all)
+    {
+      document.forms['theForm'].reset();
+    }
+  }
+{/literal}
+</script>
+<script type="text/javascript">
+  var flow_no_payment = "{$lang.flow_no_payment}";
+  var flow_no_shipping = "{$lang.flow_no_shipping}";
+  function formSubmit(fcart)
+  {
+    fcart.submit();
+  }
+</script>
+<div class="order clearfix">
+  <div class="container">
+  <form action="flows.php" method="post" name="theForm" id="theForm" class="flowsform" onsubmit="return checkOrderForm(this)">
+    <div class="col-xs-12">
+      <div class="col-md-12 cartlisttitle"><h1>选择收货地址<span>保密派送，快递单无任何产品和公司等敏感信息</span></h1></div>
+      <div class="col-md-12 addresslist">
+        <div class="col-md-2 adlable"><span>收货人姓名</span></div>
+        <div class="col-md-10">
+          <span class="adinput">
+            <input type="text" name="consignee" value="{$consignee.consignee|escape}" placeholder="请输入收货人姓名" size=15>&nbsp;&nbsp;{if $smarty.session.user_id gt 0}{else}{/if}
+          </span>
+          <span class="required">*</span>
+        </div>
+      </div>
+      <div class="col-md-12 addresslist">
+        <div class="col-md-2 adlable"><span>联系电话</span></div>
+        <div class="col-md-10">
+          <span class="adinput"><input type="text" name="tel" value="{$consignee.tel}" size=15  placeholder="请输入联系电话" /></span>
+          <span class="required">*</span>
+        </div>
+      </div>
+      <div class="col-md-12 addresslist">
+        <div class="col-md-2 adlable"><span>配送区域</span></div>
+        <div class="col-md-10">
+          <span class="adinput">
+            <input type="hidden" name="consignee_post" value="1">
+            <input name="address_id" type="hidden" value="{$consignee.address_id}" />
+            <select name="country" id="selCountries_0" onchange="region.changed(this, 1, 'selProvinces_0')">
+            <option value="0">请选择国家</option>
+                        <option value="1" selected>中国</option>
+                      </select>
+            <select name="province" id="selProvinces_0" onchange="region.changed(this, 2, 'selCities_0')" onblur="shippingBox_change(document.forms['theForm'])">
+            <option value="0">{$lang.please_select}{$name_of_region[1]}</option>
+            <!-- {foreach from=$shop_province_list item=province} -->
+            <option value="{$province.region_id}" {if $consignee.province eq $province.region_id}selected{/if}>{$province.region_name}</option>
+            <!-- {/foreach} -->
+            </select>
+            <select name="city" id="selCities_0" onchange="region.changed(this, 3, 'selDistricts_0')">
+            <option value="0">{$lang.please_select}{$name_of_region[2]}</option>
+            <!-- {foreach from=$shop_city_list item=city} -->
+            <option value="{$city.region_id}" {if $consignee.city eq $city.region_id}selected{/if}>{$city.region_name}</option>
+            <!-- {/foreach} -->
+            </select>
+            <select name="district" id="selDistricts_0"  {if !$shop_district_list}style="display:none"{/if}>
+            <option value="0">{$lang.please_select}{$name_of_region[3]}</option>
+            <!-- {foreach from=$shop_district_list item=district} -->
+            <option value="{$district.region_id}" {if $consignee.district eq $district.region_id}selected{/if}>{$district.region_name}</option>
+            <!-- {/foreach} -->
+            </select>
+          </span>
+          <span class="required" id="">*</span>
+        </div>
+      </div>
+      <div class="col-md-12 addresslist">
+        <div class="col-md-2 adlable"><span>收货地址</span></div>
+        <div class="col-md-10">
+          <span class="adinput"><input type="text" name="address" value="" placeholder="请输入收货地址" /></span>
+          <span class="required">*</span>
+        </div>
+      </div>
+      <div class="col-md-12 addresslist">
+        <div class="col-md-2 adlable"><span>备注</span></div>
+        <div class="col-md-10">
+          <span class="adinput"><textarea name="postscript"></textarea></span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-xs-12 clear">
+      <div class="col-md-12 cartlisttitle"><h1>快递配送<span>保密派送，快递单无任何产品和公司等敏感信息</span></h1></div>
+      <div class="col-md-12 cartlisttitle">
+        <span style="color: #8c8c8c;font-size: 12px;margin-left: 30px;">注：请先选择配送区域（省市县），再选择配送方式</span>
+        <p id="shippingBox_msg"></p>
+      </div>
+      <!-- {foreach from=$shipping_list name=shipping_list item=shipping} 循环配送方式 -->
+      <div class="col-md-12 typelist">
+        <div class="col-md-2 adlable">
+          <span><input name="shipping" type="radio" value="{$shipping.shipping_id}"  supportCod="{$shipping.support_cod}" insure="{$shipping.insure}" onclick="selectShipping(this)" />{$shipping.shipping_name}</span>
+        </div>
+        <div class="col-md-2 adlable"><span>[{$shipping.format_shipping_fee}]</span></div>
+        <!-- <div class="col-md-2 adlable"><span>{$shipping.shipping_desc}</span></div> -->
+      </div>
+      <!-- {/foreach} 循环配送方式 -->
+
+      <div><label for="ECS_NEEDINSURE" style="display:none;">
+        <input name="need_insure" id="ECS_NEEDINSURE" type="checkbox"  onclick="selectInsure(this.checked)" value="1" {if $order.need_insure}checked="true"{/if} {if $insure_disabled}disabled="true"{/if}  />
+        {$lang.need_insure} </label>&nbsp;</div>
+    </div>
+    
+    <!--{if $is_exchange_goods neq 1 || $total.real_goods_count neq 0}-->
+    <div class="col-xs-12 clear">
+      <div class="col-md-12 cartlisttitle"><h1>支付方式<span>保密派送，快递单无任何产品和公司等敏感信息</span></h1></div>
+      <div class="col-md-12 typelist pay">
+        <!-- {foreach from=$payment_list name="payment_list" item=payment} -->
+        <!-- 循环支付方式 -->
+        <div class="col-md-2 adlable" style="display: block;width: 100%;text-align: left;">
+          <input type="radio" name="payment" value="{$payment.pay_id}"  isCod="{$payment.is_cod}" onclick="selectPayment(this)" {if $cod_disabled and $payment.is_cod eq "1"}disabled="true"{/if} />
+          <span style="line-height: 24px;">{$payment.pay_name}
+          <!--{if $payment.pay_id eq 2}--><font style="margin-left: 20px;display: block;">{$payment.pay_desc}</font><!--{/if}-->
+          </span>
+        </div>
+        <!-- {/foreach} 循环支付方式 -->
+      </div>
+    </div>
+    <!--{else}-->
+        <input name = "payment" type="radio" value = "-1" checked="checked"  style="display:none"/>
+    <!--{/if}-->
+    
+    <div class="col-xs-12 clear"></div>
+    <div class="col-xs-12 clear"></div>
+    <div class="col-xs-12 clear">
+      <div class="col-md-12 cartlisttitle"><h1>我的购物车<span>让购物更简单</span></h1></div>
+      <!--{if $goods_list}-->
+      <div class="col-md-12 cartlistmenu">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">商品名称</div>
+        <div class="col-md-2">属性</div>
+        <div class="col-md-1">市场价</div>
+        <div class="col-md-1">本店价</div>
+        <div class="col-md-2">购买数量</div>
+        <div class="col-md-1">小计</div>
+        <div class="col-md-1"></div>
+      </div>
+      <!-- {foreach from=$goods_list item=goods} -->
+      <div class="col-md-12 cartlistitem">
+        <div class="col-md-2">
+          <a class="thumb"><img src="{$goods.goods_thumb}" alt="{$goods.goods_name}" /></a>
+        </div>
+        <div class="col-md-2">
+          <input type="hidden" name="goods[]" value="{$goods.goods_id}" />
+          <a class="producttitle" style="overflow: hidden;" title="{$goods.goods_name}">{$goods.goods_name}</a>
+        </div>
+        <div class="col-md-2">{$goods.goods_attr|nl2br}</div>
+
+        <!-- {if $show_marketprice} -->
+        <div class="col-md-1">
+          <span>{$goods.formated_market_price}</span>
+        </div>
+        <!-- {/if} -->
+        <div class="col-md-1">
+          <span>{$goods.formated_goods_price}</span>
+        </div>
+
+
+    
+        <div class="col-md-2">
+          <div class="productnum">{$goods.goods_number}</div>
+        </div>
+        <div class="col-md-1">
+            <span class="producttotal" id="subtotal_{$goods.rec_id}" >{$goods.formated_subtotal} </span>
+        </div>
+        <div class="col-md-1">
+        </div>
+      </div>
+      <!--{/foreach}-->
+      
+      <div class="col-md-12 cartlistitem cartlistxj" style="height: auto;padding-right: 20px;text-align: right;">
+        <div class="col-md-2" style="text-align:left; padding-left:50px;">
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-6">
+              <!-- {if $discount gt 0} -->{$your_discount}<br /><!-- {/if} -->
+              <span class="productxj" id="cart_amount_desc">{$shopping_money}<!-- {if $show_marketprice} --><font>，{$market_price_desc}<!-- {/if} --></font><br/>
+              </span>
+        </div>
+      </div>
+      <!-- #BeginLibraryItem "/Library/order_total_flows.lbi" --><!-- #EndLibraryItem --> 
+      
+      <!--{/if}-->
+      <div class="col-md-12 checkorder">
+        <a class="tocheck" id="submitflows">提交订单</a>
+      </div>
+            
+    </div>
+    </form>
+  </div>
+</div>
+<script src="themes/new//style/js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $('#submitflows').on('click', function(){
+    console.log('111');
+    $('.flowsform').submit();
+  })
+</script>
+<!--{/if}-->
+<!--确认订单 End-->
+
+<!-- {if $step eq "done"} -->
+<!-- 订单提交成功 -->
+<style type="text/css">
+  a.btnpay input{
+    background-color: #333;
+    color: #fff;
+    border: none;
+  }
+  .orderinfo{
+    height: auto;
+  }
+</style>
+<div class="cartlist clearfix">
+    <div class="container">
+      <div class="col-xs-12 col-md-12">
+        <form method="POST" autocomplete="off" class="orderform">
+          <div class="successorder">
+            <div id="stepsuccess">
+              <label>恭喜！您的订单已提交成功！!</label>
+              <font style="display:block;font-size: 14px;margin: 0;color:#8a1e1e;">请您在24小时内完成订单，超时后系统会 自动取消订单...</font>
+            </div>
+            
+            <div class="orderinfo">
+              <div><label>订单编号：</label><span>{$order.order_sn}</span></div>
+              <div><label>付款金额：</label><span>{$total.amount_formated}</span></div>
+              <div><label>支付方式：</label><span>{$order.pay_name}</span></div> 
+              <!--{if $order.shipping_name}--><div><label>快递配送：</label><span>{$order.shipping_name}</span></div><!--{/if}-->
+            </div>
+            
+            <div class="endtime">
+              <span>距离订单过期，还剩<font id="hour_show"></font>时<font id="minute_show"></font>分<font id="second_show"></font>秒</span>
+              <p style="font-size:12px;">(请在24小时内为订单付款，否则订单会被系统自动取消)</p>
+            </div>
+            
+            <div class="ordertotal clearfix">
+              <label>订单应付金额：<font>{$total.amount_formated}</font></label>
+              <!-- {if $pay_online} -->
+                  <!-- 如果是线上支付则显示支付按钮 -->
+                  <a class="btnpay">{$pay_online}</a>
+              <!-- {/if} -->
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="themes/new//style/js/jquery-2.1.1.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(function(){ 
+      show_time();
+    }); 
+    function show_time(){ 
+      var time_start = new Date().getTime(); //设定当前时间
+      console.log(time_start);
+
+      var time_end =  new Date('{$finistime}').getTime(); //设定目标时间
+      // 计算时间差 
+      var time_distance = time_end - time_start; 
+      /*判断活动是否结束*/
+      if(time_distance<0){
+
+          int_day=0;
+          int_hour=0;
+          int_minute=0;
+          int_second=0;
+      }else{
+            // 天
+      var int_day = Math.floor(time_distance/86400000) 
+      time_distance -= int_day * 86400000; 
+      // 时
+      var int_hour = Math.floor(time_distance/3600000) 
+      time_distance -= int_hour * 3600000; 
+      // 分
+      var int_minute = Math.floor(time_distance/60000) 
+      time_distance -= int_minute * 60000; 
+      // 秒 
+      var int_second = Math.floor(time_distance/1000) 
+      // 时分秒为单数时、前面加零 
+      if(int_day < 10){ 
+          int_day = "0" + int_day; 
+      } 
+      if(int_hour < 10){ 
+          int_hour = "0" + int_hour; 
+      } 
+      if(int_minute < 10){ 
+          int_minute = "0" + int_minute; 
+      } 
+      if(int_second < 10){
+          int_second = "0" + int_second; 
+      } 
+      }
+
+      // 显示时间 
+      //$("#day_show").html(int_day); 
+      $("#hour_show").html(int_hour); 
+      $("#minute_show").html(int_minute); 
+      $("#second_show").html(int_second); 
+      // 设置定时器
+      setTimeout("show_time()",1000); 
+  }
+  </script>
+<!-- {/if} -->
+
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

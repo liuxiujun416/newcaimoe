@@ -1,0 +1,196 @@
+
+.banner{
+	width: 100%;
+	background-color: #ccc;
+	margin-bottom: 30px;
+}
+.banner ul{
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+}
+.bannerlist a img{
+	width: 100%;
+}
+.adlist{
+	position: relative;
+}
+.adlist:first-child{
+	padding-right: 0;
+}
+.adlist:nth-child(2){
+	padding-left: 0;
+}
+.adlist a img{
+	width: 100%;
+	height: 210px;
+}
+.adlist span{
+	position: absolute;
+	left: 15px;
+	top: 30px;
+	display: block;
+	width: 30px;
+	padding: 5px;
+	text-align: center;
+	color: #fff;
+	background-color: #000;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	z-index: 9;
+}
+
+.bestseller{
+	margin-top: 98px;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 32px;
+}
+.bestseller .protitle h1{
+	display: inline-block;
+	font-size: 28px;
+	font-weight: bold;
+}
+.bestseller .protitle span{
+	display: inline-block;
+	font-size: 20px;
+	margin-left: 15px;
+}
+.bestseller .probtm{
+	display: block;
+	width: 60px;
+	height: 5px;
+	background-color: #000;
+	margin: 40px auto 0;
+}
+.prorow{
+	overflow: hidden;
+	margin-bottom: 60px;
+}
+.prothumb{
+	width: 100%;
+	overflow: hidden;
+}
+.productlist a img{
+	width: 100%;
+	height: 376px;
+}
+.prodesc{
+	width: 100%;
+	text-align: center;
+}
+
+.prodesc span{
+	display: block;
+	line-height: 32px;
+}
+
+.prodesc span.produshu{
+	color: #999999;
+	font-size: 12px;
+}
+
+.ad2 .wrapper>div{
+	margin: 0;
+	padding: 0;
+}
+.ad2list{
+	width: 100%;
+	height: 300px;
+	text-align: center;
+}
+.ad2list a{
+	width: 100%;
+	overflow: hidden;
+	display: inline-block;
+	position: relative;
+}
+
+.ad2list a span.mark{
+	position: absolute;
+	width: 100%;
+	left: 0;
+	height: 300px;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+.ad2list a >img{
+	width: 100%;
+}
+.mark em{
+	display: block;
+	font-style: normal;
+	color: #fff;
+}
+.mark em:first-child{
+	font-size: 20px;
+	margin-top: 25%;
+	margin-bottom: 24px;
+}
+
+.introduced{
+}
+.introduced>div{
+	margin-bottom: 32px;
+}
+.introduced span{
+	display: block;
+	width: 100%;
+	overflow: hidden;
+}
+
+.introduceav img{
+	width: 100%;
+	height: 420px;
+}
+
+.introducestory{
+	font-size: 14px;
+	padding: 76px 17px;
+}
+.introducestory .desc{
+	line-height: 24px;
+	margin: 30px 0;
+}
+
+.introducestory .more{
+	display: block;
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	background-color: #333;
+}
+.introducestory .more a{
+	color: #fff;
+}
+
+.cmw h1{
+	display: inline-block;
+	font-size: 22px;
+	margin-right: 15px;
+}
+.cmw{
+	font-size: 18px;
+	color: #333;
+	line-height: 35px;
+}
+
+.introducelist a{
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	width: 100%;
+	height: 220px;
+}
+.introducelist a i{
+	width: 120px;
+	height: 120px;
+	display: block;
+	position: absolute;
+	left: 125px;
+	top: 50px;
+	background: url('./image/play.png') no-repeat;
+}
+.introducelist a img{
+	width: 100%;
+}

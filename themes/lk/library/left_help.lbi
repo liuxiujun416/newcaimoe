@@ -1,0 +1,47 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--{if $helps}-->
+<div class="user-sidebarNav">
+        <a href="article_cat.php?id=3" style="cursor:pointer"><h1>帮助中心</h1></a>
+        <div id="user_menu">
+        <!-- {foreach from=$helps item=help_cat} -->
+	    <dl style="padding-bottom: 10px;">
+               <dt style="margin-bottom: 5px; background-position: 0px -30px;">{$help_cat.cat_name}<b style="background-position: 0px -120px;"></b></dt>
+               <!-- {foreach from=$help_cat.article item=item} -->
+               <dd>
+			        <a href="{$item.url}" title="{$item.title|escape:html}">{$item.short_title}</a>
+			   </dd>	
+               <!-- {/foreach} --> 
+        </dl>
+        <!-- {/foreach} -->         
+    </div>	
+    </div>
+<script type="text/javascript">
+   $(".user-sidebarNav dt").hover(function(){
+        $(this).css("backgroundPosition","0 0");
+		if($(this).siblings("dd").is(":visible")){
+		    $(this).children("b").css("backgroundPosition","0 -60px"); 
+		}else{
+		    $(this).children("b").css("backgroundPosition","0 -90px"); 
+		};		
+   },function(){
+        $(this).css("backgroundPosition","0 -30px");
+		if($(this).siblings("dd").is(":hidden")){
+		    $(this).children("b").css("backgroundPosition","0 -150px");
+		}else{
+		    $(this).children("b").css("backgroundPosition","0 -120px");
+		};		
+   }).click(function(){
+        if($(this).siblings("dd").is(":visible")){
+		    $(this).siblings("dd").css("display","none");
+			$(this).children("b").css("backgroundPosition","0 -90px");
+			$(this).css("marginBottom","0");
+			$(this).parent().css("paddingBottom","0");
+		}else{
+		    $(this).siblings("dd").css("display","block");
+			$(this).children("b").css("backgroundPosition","0 -60px");
+			$(this).css("marginBottom","5px");
+			$(this).parent().css("paddingBottom","10px");
+		};
+   });
+</script>       
+<!--{/if}-->  

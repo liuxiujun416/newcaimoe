@@ -1,0 +1,44 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<h1>用户中心</h1>
+<div <!--{if $action eq 'default'}-->class="active"<!--{/if}--> data-url="welcome">
+<h3><i></i><a href="/user.php">欢迎页</a></h3>
+</div>
+<div <!--{if $action eq 'profile'}-->class="active"<!--{/if}--> data-url="userinfo">
+<h3><i></i><a href="/user.php?act=profile">用户信息</a></h3>
+</div>
+<div <!--{if $action eq 'order_list'}-->class="active"<!--{/if}--> data-url="myorder">
+<h3><i></i><a href="/user.php?act=order_list">我的订单</a></h3>
+</div>
+<div <!--{if $action eq 'address_list'}-->class="active"<!--{/if}--> data-url="address">
+<h3><i></i><a href="/user.php?act=address_list">收货地址</a></h3>
+</div>
+<div <!--{if $action eq 'collection_list'}-->class="active"<!--{/if}--> data-url="collect">
+<h3><i></i><a href="/user.php?act=collection_list">我的收藏</a></h3>
+</div>
+<div <!--{if $action eq 'message_list'}-->class="active"<!--{/if}--> data-url="message">
+<h3><i></i><a href="/user.php?act=message_list">我的留言</a></h3>
+</div>
+<div <!--{if $action eq 'tag_list'}-->class="active"<!--{/if}--> data-url="mytags">
+<h3><i></i><a href="/user.php?act=tag_list">我的标签</a></h3>
+</div>
+<div <!--{if $action eq 'booking_list'}-->class="active"<!--{/if}--> data-url="oos">
+<h3><i></i><a href="/user.php?act=booking_list">缺货登记</a></h3>
+</div>
+<div <!--{if $action eq 'bonus'}-->class="active"<!--{/if}--> data-url="packet">
+<h3><i></i><a href="/user.php?act=bonus">我的红包</a></h3>
+</div>
+<div <!--{if $action eq 'affiliate'}-->class="active"<!--{/if}--> data-url="referee">
+<h3><i></i><a href="/user.php?act=affiliate">我的推荐</a></h3>
+</div>
+<div <!--{if $action eq 'comment_list'}-->class="active"<!--{/if}--> data-url="pinglun">
+<h3><i></i><a href="/user.php?act=comment_list">我的评论</a></h3>
+</div>
+<div <!--{if $action eq 'track_packages'}-->class="active"<!--{/if}--> data-url="logistics">
+<h3><i></i><a href="/user.php?act=track_packages">跟踪包裹</a></h3>
+</div>
+<div <!--{if $action eq 'account_log'}-->class="active"<!--{/if}--> data-url="amount">
+<h3><i></i><a href="/user.php?act=account_log">资金管理</a></h3>
+</div>
+<div data-url="logout">
+<h3><i></i><a href="/user.php?act=logout">安全退出</a></h3>
+</div>
