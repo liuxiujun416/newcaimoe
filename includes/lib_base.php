@@ -1239,6 +1239,7 @@ function get_file_suffix($file_name, $allow_type = array())
  */
 function read_static_cache($cache_name)
 {
+    print_r($cache_name); exit;
     if ((DEBUG_MODE & 2) == 2)
     {
         return false;

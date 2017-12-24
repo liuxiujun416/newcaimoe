@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a14c9281-1639-4cef-9d77-5e451b30e597" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/init.php" afterPath="$PROJECT_DIR$/includes/init.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/lib_common.php" afterPath="$PROJECT_DIR$/includes/lib_common.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/lib_base.php" afterPath="$PROJECT_DIR$/includes/lib_base.php" />
     </list>
     <ignored path="newcaimoe.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lib_common.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lib_common.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/lib_common.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5216606">
-              <caret line="613" column="25" selection-start-line="613" selection-start-column="25" selection-end-line="613" selection-end-column="25" />
+            <state vertical-scroll-proportion="-9.642858">
+              <caret line="612" column="23" selection-start-line="612" selection-start-column="23" selection-end-line="612" selection-end-column="23" />
               <folding>
                 <marker date="1514088201809" expanded="true" signature="5271:5412" placeholder="SELECT regio... ${$GLOBALS['ecs']-&gt;table('region')}" />
                 <marker date="1514088201809" expanded="true" signature="5652:5757" placeholder="SELECT confi... ${$GLOBALS['ecs']-&gt;table('shipping_area')}" />
@@ -107,6 +106,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="lib_base.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/lib_base.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.34476534">
+              <caret line="1241" column="31" selection-start-line="1241" selection-start-column="31" selection-end-line="1241" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -117,6 +126,7 @@
       <list>
         <option value="$PROJECT_DIR$/includes/init.php" />
         <option value="$PROJECT_DIR$/includes/lib_common.php" />
+        <option value="$PROJECT_DIR$/includes/lib_base.php" />
       </list>
     </option>
   </component>
@@ -324,8 +334,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/lib_common.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5216606">
-          <caret line="613" column="25" selection-start-line="613" selection-start-column="25" selection-end-line="613" selection-end-column="25" />
+        <state vertical-scroll-proportion="-9.642858">
+          <caret line="612" column="23" selection-start-line="612" selection-start-column="23" selection-end-line="612" selection-end-column="23" />
           <folding>
             <marker date="1514088201809" expanded="true" signature="5271:5412" placeholder="SELECT regio... ${$GLOBALS['ecs']-&gt;table('region')}" />
             <marker date="1514088201809" expanded="true" signature="5652:5757" placeholder="SELECT confi... ${$GLOBALS['ecs']-&gt;table('shipping_area')}" />
@@ -352,6 +362,14 @@
             <marker date="1514088201809" expanded="true" signature="79432:79519" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
             <marker date="1514088201809" expanded="true" signature="80927:81200" placeholder="SELECT ga.go... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/lib_base.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34476534">
+          <caret line="1241" column="31" selection-start-line="1241" selection-start-column="31" selection-end-line="1241" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
