@@ -1243,9 +1243,10 @@ function read_static_cache($cache_name)
     {
         return false;
     }
+    print_r('eeee'); exit;
     static $result = array();
     if (!empty($result[$cache_name]))
-    { print_r($result); exit;
+    {
         return $result[$cache_name];
     }
 

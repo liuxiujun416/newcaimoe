@@ -109,8 +109,8 @@
       <file leaf-file-name="lib_base.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/lib_base.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5783784">
-              <caret line="1247" column="29" selection-start-line="1247" selection-start-column="29" selection-end-line="1247" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.5099099">
+              <caret line="1245" column="26" selection-start-line="1245" selection-start-column="26" selection-end-line="1245" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -470,8 +470,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/lib_base.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5783784">
-          <caret line="1247" column="29" selection-start-line="1247" selection-start-column="29" selection-end-line="1247" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.5099099">
+          <caret line="1245" column="26" selection-start-line="1245" selection-start-column="26" selection-end-line="1245" selection-end-column="26" />
           <folding />
         </state>
       </provider>
