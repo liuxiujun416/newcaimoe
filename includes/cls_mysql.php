@@ -280,7 +280,7 @@ class cls_mysql
         {
             $logfilename = $this->root_path . DATA_DIR . '/mysql_query_' . $this->dbhash . '_' . date('Y_m_d') . '.log';
             $str = $sql . "\n\n";
-
+            print_r($logfilename); exit;
             if (PHP_VERSION >= '5.0')
             {
                 file_put_contents($logfilename, $str, FILE_APPEND);

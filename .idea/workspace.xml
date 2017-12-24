@@ -74,13 +74,13 @@
       <file leaf-file-name="cls_mysql.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/cls_mysql.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44190475">
-              <caret line="475" column="28" selection-start-line="475" selection-start-column="28" selection-end-line="475" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.45904762">
+              <caret line="282" column="40" selection-start-line="282" selection-start-column="40" selection-end-line="282" selection-end-column="40" />
               <folding>
-                <marker date="1514090142461" expanded="true" signature="16947:17046" placeholder="INSERT INTO ${$table}... " />
-                <marker date="1514090142461" expanded="true" signature="19010:19109" placeholder="INSERT INTO ${$table}... " />
-                <marker date="1514090142461" expanded="true" signature="19299:19398" placeholder="INSERT INTO ${$table}... " />
-                <marker date="1514090142461" expanded="true" signature="20370:20404" placeholder="SELECT COUNT... ${$table}" />
+                <marker date="1514090271160" expanded="true" signature="16987:17086" placeholder="INSERT INTO ${$table}... " />
+                <marker date="1514090271160" expanded="true" signature="19050:19149" placeholder="INSERT INTO ${$table}... " />
+                <marker date="1514090271160" expanded="true" signature="19339:19438" placeholder="INSERT INTO ${$table}... " />
+                <marker date="1514090271160" expanded="true" signature="20410:20444" placeholder="SELECT COUNT... ${$table}" />
               </folding>
             </state>
           </provider>
@@ -468,13 +468,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/cls_mysql.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44190475">
-          <caret line="475" column="28" selection-start-line="475" selection-start-column="28" selection-end-line="475" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.45904762">
+          <caret line="282" column="40" selection-start-line="282" selection-start-column="40" selection-end-line="282" selection-end-column="40" />
           <folding>
-            <marker date="1514090142461" expanded="true" signature="16947:17046" placeholder="INSERT INTO ${$table}... " />
-            <marker date="1514090142461" expanded="true" signature="19010:19109" placeholder="INSERT INTO ${$table}... " />
-            <marker date="1514090142461" expanded="true" signature="19299:19398" placeholder="INSERT INTO ${$table}... " />
-            <marker date="1514090142461" expanded="true" signature="20370:20404" placeholder="SELECT COUNT... ${$table}" />
+            <marker date="1514090271160" expanded="true" signature="16987:17086" placeholder="INSERT INTO ${$table}... " />
+            <marker date="1514090271160" expanded="true" signature="19050:19149" placeholder="INSERT INTO ${$table}... " />
+            <marker date="1514090271160" expanded="true" signature="19339:19438" placeholder="INSERT INTO ${$table}... " />
+            <marker date="1514090271160" expanded="true" signature="20410:20444" placeholder="SELECT COUNT... ${$table}" />
           </folding>
         </state>
       </provider>
