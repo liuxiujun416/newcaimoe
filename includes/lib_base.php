@@ -1248,8 +1248,8 @@ function read_static_cache($cache_name)
     {
         return $result[$cache_name];
     }
+    print_r($result); exit;
     $cache_file_path = ROOT_PATH . '/temp/static_caches/' . $cache_name . '.php';
-    print_r($cache_name); exit;
     if (file_exists($cache_file_path))
     {
         include_once($cache_file_path);
