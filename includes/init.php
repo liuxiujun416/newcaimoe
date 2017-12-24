@@ -27,7 +27,7 @@ if (__FILE__ == '')
 
 /* 取得当前ecshop所在的根目录 */
 define('ROOT_PATH', str_replace('includes/init.php', '', str_replace('\\', '/', __FILE__)));
-echo 'eee'; exit;
+
 
 if (!file_exists(ROOT_PATH . 'data/install.lock') && !file_exists(ROOT_PATH . 'includes/install.lock')
     && !defined('NO_CHECK_INSTALL'))
@@ -36,7 +36,7 @@ if (!file_exists(ROOT_PATH . 'data/install.lock') && !file_exists(ROOT_PATH . 'i
 
     exit;
 }
-
+echo 'eeee'; exit;
 /* 初始化设置 */
 @ini_set('memory_limit',          '64M');
 @ini_set('session.cache_expire',  180);
