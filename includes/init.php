@@ -117,7 +117,7 @@ $db_host = $db_user = $db_pass = $db_name = NULL;
 
 /* 创建错误处理对象 */
 $err = new ecs_error('message.dwt');
-echo 'ccc'; exit;
+
 /* 载入系统参数 */
 $_CFG = load_config();
 
