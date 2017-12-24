@@ -617,7 +617,7 @@ function load_config()
         $sql = 'SELECT code, value FROM ' . $GLOBALS['ecs']->table('shop_config') . ' WHERE parent_id > 0';
 
         $res = $GLOBALS['db']->getAll($sql);
-
+        echo 'eeee'; exit;
         foreach ($res AS $row)
         {
             $arr[$row['code']] = $row['value'];
@@ -655,7 +655,7 @@ function load_config()
         $arr['invoice_type']         = empty($arr['invoice_type']) ? array('type' => array(), 'rate' => array()) : unserialize($arr['invoice_type']);
         $arr['show_order_type']      = isset($arr['show_order_type']) ? $arr['show_order_type'] : 0;    // 显示方式默认为列表方式
         $arr['help_open']            = isset($arr['help_open']) ? $arr['help_open'] : 1;    // 显示方式默认为列表方式
-        echo 'eeee'; exit;
+
         if (!isset($GLOBALS['_CFG']['ecs_version']))
         {
             /* 如果没有版本号则默认为2.0.5 */
