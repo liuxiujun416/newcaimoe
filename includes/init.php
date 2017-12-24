@@ -73,7 +73,7 @@ if ('/' == substr($php_self, -1))
     $php_self .= 'index.php';
 }
 define('PHP_SELF', $php_self);
-echo 'eeeeeee'; exit;
+
 require(ROOT_PATH . 'includes/inc_constant.php');
 require(ROOT_PATH . 'includes/cls_ecshop.php');
 require(ROOT_PATH . 'includes/cls_error.php');
@@ -84,7 +84,7 @@ require(ROOT_PATH . 'includes/lib_main.php');
 require(ROOT_PATH . 'includes/lib_insert.php');
 require(ROOT_PATH . 'includes/lib_goods.php');
 require(ROOT_PATH . 'includes/lib_article.php');
-
+echo 'eeeeeeeee'; exit;
 /* 对用户传入的变量进行转义操作。*/
 if (!get_magic_quotes_gpc())
 {
