@@ -76,32 +76,32 @@
         <entry file="file://$PROJECT_DIR$/includes/lib_common.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.06846847">
-              <caret line="613" column="4" selection-start-line="613" selection-start-column="4" selection-end-line="613" selection-end-column="4" />
+              <caret line="613" column="26" selection-start-line="613" selection-start-column="26" selection-end-line="613" selection-end-column="26" />
               <folding>
-                <marker date="1514088899238" expanded="true" signature="5271:5412" placeholder="SELECT regio... ${$GLOBALS['ecs']-&gt;table('region')}" />
-                <marker date="1514088899238" expanded="true" signature="5652:5757" placeholder="SELECT confi... ${$GLOBALS['ecs']-&gt;table('shipping_area')}" />
-                <marker date="1514088899238" expanded="true" signature="16147:16236" placeholder="SELECT code,... ${$GLOBALS['ecs']-&gt;table('shop_config')}" />
-                <marker date="1514088899238" expanded="true" signature="20220:20312" placeholder="SELECT brand... ${$GLOBALS['ecs']-&gt;table('brand')}" />
-                <marker date="1514088899238" expanded="true" signature="22285:22468" placeholder="SELECT act_i... ${$GLOBALS['ecs']-&gt;table('goods_activity')}" />
-                <marker date="1514088899238" expanded="true" signature="24979:25165" placeholder="SELECT act_i... ${$GLOBALS['ecs']-&gt;table('favourable_activity')}" />
-                <marker date="1514088899238" expanded="true" signature="25904:26011" placeholder="SELECT cat_i... ${$GLOBALS['ecs']-&gt;table('goods')}" />
-                <marker date="1514088899238" expanded="true" signature="30369:30507" placeholder="SELECT templ... ${$GLOBALS['ecs']-&gt;table('mail_templates')}" />
-                <marker date="1514088899238" expanded="true" signature="31119:31550" placeholder="INSERT INTO ${$GLOBALS['ecs']-&gt;table('order_action')}... " />
-                <marker date="1514088899238" expanded="true" signature="31315:31550" placeholder="SELECT order... ${$GLOBALS['ecs']-&gt;table('order_info')}" />
-                <marker date="1514088899238" expanded="true" signature="33150:33338" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('order_goods')}" />
-                <marker date="1514088899238" expanded="true" signature="33378:33636" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('order_goods')}" />
-                <marker date="1514088899238" expanded="true" signature="35542:35658" placeholder="SELECT COUNT... ${$GLOBALS['ecs']-&gt;table('virtual_card')}" />
-                <marker date="1514088899238" expanded="true" signature="35887:36051" placeholder="SELECT card_... ${$GLOBALS['ecs']-&gt;table('virtual_card')}" />
-                <marker date="1514088899238" expanded="true" signature="37652:37771" placeholder="SELECT order... ${$GLOBALS['ecs']-&gt;table('order_info')}" />
-                <marker date="1514088899238" expanded="true" signature="39610:39766" placeholder="SELECT card_... ${$GLOBALS['ecs']-&gt;table('virtual_card')}" />
-                <marker date="1514088899238" expanded="true" signature="41614:41793" placeholder="SELECT ext_i... ${$GLOBALS['ecs']-&gt;table('goods_activity')}" />
-                <marker date="1514088899238" expanded="true" signature="71359:71728" placeholder="SELECT a.att... ${$GLOBALS['ecs']-&gt;table('attribute')}" />
-                <marker date="1514088899238" expanded="true" signature="72299:72668" placeholder="SELECT a.att... ${$GLOBALS['ecs']-&gt;table('attribute')}" />
-                <marker date="1514088899238" expanded="true" signature="76220:76638" placeholder="SELECT pg.go... ${$GLOBALS['ecs']-&gt;table('package_goods')}" />
-                <marker date="1514088899238" expanded="true" signature="77574:77692" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
-                <marker date="1514088899238" expanded="true" signature="79243:79315" placeholder="SELECT * FRO... ${$GLOBALS['ecs']-&gt;table('products')}" />
-                <marker date="1514088899238" expanded="true" signature="79411:79498" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
-                <marker date="1514088899238" expanded="true" signature="80906:81179" placeholder="SELECT ga.go... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
+                <marker date="1514089013854" expanded="true" signature="5271:5412" placeholder="SELECT regio... ${$GLOBALS['ecs']-&gt;table('region')}" />
+                <marker date="1514089013854" expanded="true" signature="5652:5757" placeholder="SELECT confi... ${$GLOBALS['ecs']-&gt;table('shipping_area')}" />
+                <marker date="1514089013854" expanded="true" signature="16169:16258" placeholder="SELECT code,... ${$GLOBALS['ecs']-&gt;table('shop_config')}" />
+                <marker date="1514089013854" expanded="true" signature="20242:20334" placeholder="SELECT brand... ${$GLOBALS['ecs']-&gt;table('brand')}" />
+                <marker date="1514089013854" expanded="true" signature="22307:22490" placeholder="SELECT act_i... ${$GLOBALS['ecs']-&gt;table('goods_activity')}" />
+                <marker date="1514089013854" expanded="true" signature="25001:25187" placeholder="SELECT act_i... ${$GLOBALS['ecs']-&gt;table('favourable_activity')}" />
+                <marker date="1514089013854" expanded="true" signature="25926:26033" placeholder="SELECT cat_i... ${$GLOBALS['ecs']-&gt;table('goods')}" />
+                <marker date="1514089013854" expanded="true" signature="30391:30529" placeholder="SELECT templ... ${$GLOBALS['ecs']-&gt;table('mail_templates')}" />
+                <marker date="1514089013854" expanded="true" signature="31141:31572" placeholder="INSERT INTO ${$GLOBALS['ecs']-&gt;table('order_action')}... " />
+                <marker date="1514089013854" expanded="true" signature="31337:31572" placeholder="SELECT order... ${$GLOBALS['ecs']-&gt;table('order_info')}" />
+                <marker date="1514089013854" expanded="true" signature="33172:33360" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('order_goods')}" />
+                <marker date="1514089013854" expanded="true" signature="33400:33658" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('order_goods')}" />
+                <marker date="1514089013854" expanded="true" signature="35564:35680" placeholder="SELECT COUNT... ${$GLOBALS['ecs']-&gt;table('virtual_card')}" />
+                <marker date="1514089013854" expanded="true" signature="35909:36073" placeholder="SELECT card_... ${$GLOBALS['ecs']-&gt;table('virtual_card')}" />
+                <marker date="1514089013854" expanded="true" signature="37674:37793" placeholder="SELECT order... ${$GLOBALS['ecs']-&gt;table('order_info')}" />
+                <marker date="1514089013854" expanded="true" signature="39632:39788" placeholder="SELECT card_... ${$GLOBALS['ecs']-&gt;table('virtual_card')}" />
+                <marker date="1514089013854" expanded="true" signature="41636:41815" placeholder="SELECT ext_i... ${$GLOBALS['ecs']-&gt;table('goods_activity')}" />
+                <marker date="1514089013854" expanded="true" signature="71381:71750" placeholder="SELECT a.att... ${$GLOBALS['ecs']-&gt;table('attribute')}" />
+                <marker date="1514089013854" expanded="true" signature="72321:72690" placeholder="SELECT a.att... ${$GLOBALS['ecs']-&gt;table('attribute')}" />
+                <marker date="1514089013854" expanded="true" signature="76242:76660" placeholder="SELECT pg.go... ${$GLOBALS['ecs']-&gt;table('package_goods')}" />
+                <marker date="1514089013854" expanded="true" signature="77596:77714" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
+                <marker date="1514089013854" expanded="true" signature="79265:79337" placeholder="SELECT * FRO... ${$GLOBALS['ecs']-&gt;table('products')}" />
+                <marker date="1514089013854" expanded="true" signature="79433:79520" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
+                <marker date="1514089013854" expanded="true" signature="80928:81201" placeholder="SELECT ga.go... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
               </folding>
             </state>
           </provider>
@@ -110,8 +110,8 @@
       <file leaf-file-name="lib_base.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/lib_base.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.107142">
-              <caret line="1245" column="0" selection-start-line="1245" selection-start-column="0" selection-end-line="1245" selection-end-column="0" />
+            <state vertical-scroll-proportion="-8.75">
+              <caret line="1243" column="7" selection-start-line="1243" selection-start-column="7" selection-end-line="1243" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -357,30 +357,30 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="612" column="23" selection-start-line="612" selection-start-column="23" selection-end-line="612" selection-end-column="23" />
           <folding>
-            <marker date="1514088899238" expanded="true" signature="5271:5412" placeholder="SELECT regio... ${$GLOBALS['ecs']-&gt;table('region')}" />
-            <marker date="1514088899238" expanded="true" signature="5652:5757" placeholder="SELECT confi... ${$GLOBALS['ecs']-&gt;table('shipping_area')}" />
-            <marker date="1514088899238" expanded="true" signature="16147:16236" placeholder="SELECT code,... ${$GLOBALS['ecs']-&gt;table('shop_config')}" />
-            <marker date="1514088899238" expanded="true" signature="20220:20312" placeholder="SELECT brand... ${$GLOBALS['ecs']-&gt;table('brand')}" />
-            <marker date="1514088899238" expanded="true" signature="22285:22468" placeholder="SELECT act_i... ${$GLOBALS['ecs']-&gt;table('goods_activity')}" />
-            <marker date="1514088899238" expanded="true" signature="24979:25165" placeholder="SELECT act_i... ${$GLOBALS['ecs']-&gt;table('favourable_activity')}" />
-            <marker date="1514088899238" expanded="true" signature="25904:26011" placeholder="SELECT cat_i... ${$GLOBALS['ecs']-&gt;table('goods')}" />
-            <marker date="1514088899238" expanded="true" signature="30369:30507" placeholder="SELECT templ... ${$GLOBALS['ecs']-&gt;table('mail_templates')}" />
-            <marker date="1514088899238" expanded="true" signature="31119:31550" placeholder="INSERT INTO ${$GLOBALS['ecs']-&gt;table('order_action')}... " />
-            <marker date="1514088899238" expanded="true" signature="31315:31550" placeholder="SELECT order... ${$GLOBALS['ecs']-&gt;table('order_info')}" />
-            <marker date="1514088899238" expanded="true" signature="33150:33338" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('order_goods')}" />
-            <marker date="1514088899238" expanded="true" signature="33378:33636" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('order_goods')}" />
-            <marker date="1514088899238" expanded="true" signature="35542:35658" placeholder="SELECT COUNT... ${$GLOBALS['ecs']-&gt;table('virtual_card')}" />
-            <marker date="1514088899238" expanded="true" signature="35887:36051" placeholder="SELECT card_... ${$GLOBALS['ecs']-&gt;table('virtual_card')}" />
-            <marker date="1514088899238" expanded="true" signature="37652:37771" placeholder="SELECT order... ${$GLOBALS['ecs']-&gt;table('order_info')}" />
-            <marker date="1514088899238" expanded="true" signature="39610:39766" placeholder="SELECT card_... ${$GLOBALS['ecs']-&gt;table('virtual_card')}" />
-            <marker date="1514088899238" expanded="true" signature="41614:41793" placeholder="SELECT ext_i... ${$GLOBALS['ecs']-&gt;table('goods_activity')}" />
-            <marker date="1514088899238" expanded="true" signature="71359:71728" placeholder="SELECT a.att... ${$GLOBALS['ecs']-&gt;table('attribute')}" />
-            <marker date="1514088899238" expanded="true" signature="72299:72668" placeholder="SELECT a.att... ${$GLOBALS['ecs']-&gt;table('attribute')}" />
-            <marker date="1514088899238" expanded="true" signature="76220:76638" placeholder="SELECT pg.go... ${$GLOBALS['ecs']-&gt;table('package_goods')}" />
-            <marker date="1514088899238" expanded="true" signature="77574:77692" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
-            <marker date="1514088899238" expanded="true" signature="79243:79315" placeholder="SELECT * FRO... ${$GLOBALS['ecs']-&gt;table('products')}" />
-            <marker date="1514088899238" expanded="true" signature="79411:79498" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
-            <marker date="1514088899238" expanded="true" signature="80906:81179" placeholder="SELECT ga.go... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
+            <marker date="1514089013854" expanded="true" signature="5271:5412" placeholder="SELECT regio... ${$GLOBALS['ecs']-&gt;table('region')}" />
+            <marker date="1514089013854" expanded="true" signature="5652:5757" placeholder="SELECT confi... ${$GLOBALS['ecs']-&gt;table('shipping_area')}" />
+            <marker date="1514089013854" expanded="true" signature="16169:16258" placeholder="SELECT code,... ${$GLOBALS['ecs']-&gt;table('shop_config')}" />
+            <marker date="1514089013854" expanded="true" signature="20242:20334" placeholder="SELECT brand... ${$GLOBALS['ecs']-&gt;table('brand')}" />
+            <marker date="1514089013854" expanded="true" signature="22307:22490" placeholder="SELECT act_i... ${$GLOBALS['ecs']-&gt;table('goods_activity')}" />
+            <marker date="1514089013854" expanded="true" signature="25001:25187" placeholder="SELECT act_i... ${$GLOBALS['ecs']-&gt;table('favourable_activity')}" />
+            <marker date="1514089013854" expanded="true" signature="25926:26033" placeholder="SELECT cat_i... ${$GLOBALS['ecs']-&gt;table('goods')}" />
+            <marker date="1514089013854" expanded="true" signature="30391:30529" placeholder="SELECT templ... ${$GLOBALS['ecs']-&gt;table('mail_templates')}" />
+            <marker date="1514089013854" expanded="true" signature="31141:31572" placeholder="INSERT INTO ${$GLOBALS['ecs']-&gt;table('order_action')}... " />
+            <marker date="1514089013854" expanded="true" signature="31337:31572" placeholder="SELECT order... ${$GLOBALS['ecs']-&gt;table('order_info')}" />
+            <marker date="1514089013854" expanded="true" signature="33172:33360" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('order_goods')}" />
+            <marker date="1514089013854" expanded="true" signature="33400:33658" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('order_goods')}" />
+            <marker date="1514089013854" expanded="true" signature="35564:35680" placeholder="SELECT COUNT... ${$GLOBALS['ecs']-&gt;table('virtual_card')}" />
+            <marker date="1514089013854" expanded="true" signature="35909:36073" placeholder="SELECT card_... ${$GLOBALS['ecs']-&gt;table('virtual_card')}" />
+            <marker date="1514089013854" expanded="true" signature="37674:37793" placeholder="SELECT order... ${$GLOBALS['ecs']-&gt;table('order_info')}" />
+            <marker date="1514089013854" expanded="true" signature="39632:39788" placeholder="SELECT card_... ${$GLOBALS['ecs']-&gt;table('virtual_card')}" />
+            <marker date="1514089013854" expanded="true" signature="41636:41815" placeholder="SELECT ext_i... ${$GLOBALS['ecs']-&gt;table('goods_activity')}" />
+            <marker date="1514089013854" expanded="true" signature="71381:71750" placeholder="SELECT a.att... ${$GLOBALS['ecs']-&gt;table('attribute')}" />
+            <marker date="1514089013854" expanded="true" signature="72321:72690" placeholder="SELECT a.att... ${$GLOBALS['ecs']-&gt;table('attribute')}" />
+            <marker date="1514089013854" expanded="true" signature="76242:76660" placeholder="SELECT pg.go... ${$GLOBALS['ecs']-&gt;table('package_goods')}" />
+            <marker date="1514089013854" expanded="true" signature="77596:77714" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
+            <marker date="1514089013854" expanded="true" signature="79265:79337" placeholder="SELECT * FRO... ${$GLOBALS['ecs']-&gt;table('products')}" />
+            <marker date="1514089013854" expanded="true" signature="79433:79520" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
+            <marker date="1514089013854" expanded="true" signature="80928:81201" placeholder="SELECT ga.go... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
           </folding>
         </state>
       </provider>
@@ -438,8 +438,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/lib_base.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.107142">
-          <caret line="1245" column="0" selection-start-line="1245" selection-start-column="0" selection-end-line="1245" selection-end-column="0" />
+        <state vertical-scroll-proportion="-8.75">
+          <caret line="1243" column="7" selection-start-line="1243" selection-start-column="7" selection-end-line="1243" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -447,32 +447,32 @@
     <entry file="file://$PROJECT_DIR$/includes/lib_common.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06846847">
-          <caret line="613" column="4" selection-start-line="613" selection-start-column="4" selection-end-line="613" selection-end-column="4" />
+          <caret line="613" column="26" selection-start-line="613" selection-start-column="26" selection-end-line="613" selection-end-column="26" />
           <folding>
-            <marker date="1514088899238" expanded="true" signature="5271:5412" placeholder="SELECT regio... ${$GLOBALS['ecs']-&gt;table('region')}" />
-            <marker date="1514088899238" expanded="true" signature="5652:5757" placeholder="SELECT confi... ${$GLOBALS['ecs']-&gt;table('shipping_area')}" />
-            <marker date="1514088899238" expanded="true" signature="16147:16236" placeholder="SELECT code,... ${$GLOBALS['ecs']-&gt;table('shop_config')}" />
-            <marker date="1514088899238" expanded="true" signature="20220:20312" placeholder="SELECT brand... ${$GLOBALS['ecs']-&gt;table('brand')}" />
-            <marker date="1514088899238" expanded="true" signature="22285:22468" placeholder="SELECT act_i... ${$GLOBALS['ecs']-&gt;table('goods_activity')}" />
-            <marker date="1514088899238" expanded="true" signature="24979:25165" placeholder="SELECT act_i... ${$GLOBALS['ecs']-&gt;table('favourable_activity')}" />
-            <marker date="1514088899238" expanded="true" signature="25904:26011" placeholder="SELECT cat_i... ${$GLOBALS['ecs']-&gt;table('goods')}" />
-            <marker date="1514088899238" expanded="true" signature="30369:30507" placeholder="SELECT templ... ${$GLOBALS['ecs']-&gt;table('mail_templates')}" />
-            <marker date="1514088899238" expanded="true" signature="31119:31550" placeholder="INSERT INTO ${$GLOBALS['ecs']-&gt;table('order_action')}... " />
-            <marker date="1514088899238" expanded="true" signature="31315:31550" placeholder="SELECT order... ${$GLOBALS['ecs']-&gt;table('order_info')}" />
-            <marker date="1514088899238" expanded="true" signature="33150:33338" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('order_goods')}" />
-            <marker date="1514088899238" expanded="true" signature="33378:33636" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('order_goods')}" />
-            <marker date="1514088899238" expanded="true" signature="35542:35658" placeholder="SELECT COUNT... ${$GLOBALS['ecs']-&gt;table('virtual_card')}" />
-            <marker date="1514088899238" expanded="true" signature="35887:36051" placeholder="SELECT card_... ${$GLOBALS['ecs']-&gt;table('virtual_card')}" />
-            <marker date="1514088899238" expanded="true" signature="37652:37771" placeholder="SELECT order... ${$GLOBALS['ecs']-&gt;table('order_info')}" />
-            <marker date="1514088899238" expanded="true" signature="39610:39766" placeholder="SELECT card_... ${$GLOBALS['ecs']-&gt;table('virtual_card')}" />
-            <marker date="1514088899238" expanded="true" signature="41614:41793" placeholder="SELECT ext_i... ${$GLOBALS['ecs']-&gt;table('goods_activity')}" />
-            <marker date="1514088899238" expanded="true" signature="71359:71728" placeholder="SELECT a.att... ${$GLOBALS['ecs']-&gt;table('attribute')}" />
-            <marker date="1514088899238" expanded="true" signature="72299:72668" placeholder="SELECT a.att... ${$GLOBALS['ecs']-&gt;table('attribute')}" />
-            <marker date="1514088899238" expanded="true" signature="76220:76638" placeholder="SELECT pg.go... ${$GLOBALS['ecs']-&gt;table('package_goods')}" />
-            <marker date="1514088899238" expanded="true" signature="77574:77692" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
-            <marker date="1514088899238" expanded="true" signature="79243:79315" placeholder="SELECT * FRO... ${$GLOBALS['ecs']-&gt;table('products')}" />
-            <marker date="1514088899238" expanded="true" signature="79411:79498" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
-            <marker date="1514088899238" expanded="true" signature="80906:81179" placeholder="SELECT ga.go... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
+            <marker date="1514089013854" expanded="true" signature="5271:5412" placeholder="SELECT regio... ${$GLOBALS['ecs']-&gt;table('region')}" />
+            <marker date="1514089013854" expanded="true" signature="5652:5757" placeholder="SELECT confi... ${$GLOBALS['ecs']-&gt;table('shipping_area')}" />
+            <marker date="1514089013854" expanded="true" signature="16169:16258" placeholder="SELECT code,... ${$GLOBALS['ecs']-&gt;table('shop_config')}" />
+            <marker date="1514089013854" expanded="true" signature="20242:20334" placeholder="SELECT brand... ${$GLOBALS['ecs']-&gt;table('brand')}" />
+            <marker date="1514089013854" expanded="true" signature="22307:22490" placeholder="SELECT act_i... ${$GLOBALS['ecs']-&gt;table('goods_activity')}" />
+            <marker date="1514089013854" expanded="true" signature="25001:25187" placeholder="SELECT act_i... ${$GLOBALS['ecs']-&gt;table('favourable_activity')}" />
+            <marker date="1514089013854" expanded="true" signature="25926:26033" placeholder="SELECT cat_i... ${$GLOBALS['ecs']-&gt;table('goods')}" />
+            <marker date="1514089013854" expanded="true" signature="30391:30529" placeholder="SELECT templ... ${$GLOBALS['ecs']-&gt;table('mail_templates')}" />
+            <marker date="1514089013854" expanded="true" signature="31141:31572" placeholder="INSERT INTO ${$GLOBALS['ecs']-&gt;table('order_action')}... " />
+            <marker date="1514089013854" expanded="true" signature="31337:31572" placeholder="SELECT order... ${$GLOBALS['ecs']-&gt;table('order_info')}" />
+            <marker date="1514089013854" expanded="true" signature="33172:33360" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('order_goods')}" />
+            <marker date="1514089013854" expanded="true" signature="33400:33658" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('order_goods')}" />
+            <marker date="1514089013854" expanded="true" signature="35564:35680" placeholder="SELECT COUNT... ${$GLOBALS['ecs']-&gt;table('virtual_card')}" />
+            <marker date="1514089013854" expanded="true" signature="35909:36073" placeholder="SELECT card_... ${$GLOBALS['ecs']-&gt;table('virtual_card')}" />
+            <marker date="1514089013854" expanded="true" signature="37674:37793" placeholder="SELECT order... ${$GLOBALS['ecs']-&gt;table('order_info')}" />
+            <marker date="1514089013854" expanded="true" signature="39632:39788" placeholder="SELECT card_... ${$GLOBALS['ecs']-&gt;table('virtual_card')}" />
+            <marker date="1514089013854" expanded="true" signature="41636:41815" placeholder="SELECT ext_i... ${$GLOBALS['ecs']-&gt;table('goods_activity')}" />
+            <marker date="1514089013854" expanded="true" signature="71381:71750" placeholder="SELECT a.att... ${$GLOBALS['ecs']-&gt;table('attribute')}" />
+            <marker date="1514089013854" expanded="true" signature="72321:72690" placeholder="SELECT a.att... ${$GLOBALS['ecs']-&gt;table('attribute')}" />
+            <marker date="1514089013854" expanded="true" signature="76242:76660" placeholder="SELECT pg.go... ${$GLOBALS['ecs']-&gt;table('package_goods')}" />
+            <marker date="1514089013854" expanded="true" signature="77596:77714" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
+            <marker date="1514089013854" expanded="true" signature="79265:79337" placeholder="SELECT * FRO... ${$GLOBALS['ecs']-&gt;table('products')}" />
+            <marker date="1514089013854" expanded="true" signature="79433:79520" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
+            <marker date="1514089013854" expanded="true" signature="80928:81201" placeholder="SELECT ga.go... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
           </folding>
         </state>
       </provider>
