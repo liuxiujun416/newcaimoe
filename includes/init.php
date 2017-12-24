@@ -24,7 +24,7 @@ if (__FILE__ == '')
 {
     die('Fatal error code: 0');
 }
-
+echo 'ttt'; exit;
 /* 取得当前ecshop所在的根目录 */
 define('ROOT_PATH', str_replace('includes/init.php', '', str_replace('\\', '/', __FILE__)));
 

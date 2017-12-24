@@ -1,7 +1,7 @@
 <?php
 // database host
 
-$db_host   = "localhost:3306";
+$db_host   = "39.106.51.37:3306";
 
 // database name
 $db_name   = "caimoeye";
@@ -33,6 +33,6 @@ define('OLD_AUTH_KEY', '');
 
 define('API_TIME', '2017-09-07 12:16:09');
 
-define('DEBUG_MODE',0);
+define('DEBUG_MODE',3);
 
 ?>

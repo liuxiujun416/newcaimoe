@@ -275,240 +275,6 @@ $data = array (
   ),
   21 => 
   array (
-    'cat_id' => '157',
-    'cat_name' => 'NEO新之目',
-    'measure_unit' => '',
-    'parent_id' => '59',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '5',
-  ),
-  22 => 
-  array (
-    'cat_id' => '268',
-    'cat_name' => 'NEO丝光系列',
-    'measure_unit' => '',
-    'parent_id' => '59',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '4',
-  ),
-  23 => 
-  array (
-    'cat_id' => '223',
-    'cat_name' => 'NEO日抛&周抛',
-    'measure_unit' => '',
-    'parent_id' => '59',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '3',
-  ),
-  24 => 
-  array (
-    'cat_id' => '151',
-    'cat_name' => 'NEO巧克力',
-    'measure_unit' => '',
-    'parent_id' => '59',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '4',
-  ),
-  25 => 
-  array (
-    'cat_id' => '145',
-    'cat_name' => 'NEO Heart心语',
-    'measure_unit' => '',
-    'parent_id' => '59',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '2',
-  ),
-  26 => 
-  array (
-    'cat_id' => '276',
-    'cat_name' => 'NEO巨目四代',
-    'measure_unit' => '',
-    'parent_id' => '59',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '2',
-  ),
-  27 => 
-  array (
-    'cat_id' => '142',
-    'cat_name' => 'NEO巨目双色',
-    'measure_unit' => '',
-    'parent_id' => '59',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '6',
-  ),
-  28 => 
-  array (
-    'cat_id' => '272',
-    'cat_name' => 'NEO混血自然',
-    'measure_unit' => '',
-    'parent_id' => '59',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '1',
-  ),
-  29 => 
-  array (
-    'cat_id' => '160',
-    'cat_name' => 'NEO舒娜丝滑',
-    'measure_unit' => '',
-    'parent_id' => '59',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '2',
-  ),
-  30 => 
-  array (
-    'cat_id' => '155',
-    'cat_name' => 'NEO孔雀三色',
-    'measure_unit' => '',
-    'parent_id' => '59',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '4',
-  ),
-  31 => 
-  array (
-    'cat_id' => '149',
-    'cat_name' => 'NEO Monet自然',
-    'measure_unit' => '',
-    'parent_id' => '59',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '2',
-  ),
-  32 => 
-  array (
-    'cat_id' => '146',
-    'cat_name' => 'NEO钻石双色',
-    'measure_unit' => '',
-    'parent_id' => '59',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '5',
-  ),
-  33 => 
-  array (
-    'cat_id' => '143',
-    'cat_name' => 'NEO巨目微光',
-    'measure_unit' => '',
-    'parent_id' => '59',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '5',
-  ),
-  34 => 
-  array (
-    'cat_id' => '140',
-    'cat_name' => 'NEO女皇四色',
-    'measure_unit' => '',
-    'parent_id' => '59',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '8',
-  ),
-  35 => 
-  array (
-    'cat_id' => '161',
-    'cat_name' => 'NEO八芒星',
-    'measure_unit' => '',
-    'parent_id' => '59',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '2',
-  ),
-  36 => 
-  array (
-    'cat_id' => '156',
-    'cat_name' => 'NEO公主三色',
-    'measure_unit' => '',
-    'parent_id' => '59',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '6',
-  ),
-  37 => 
-  array (
-    'cat_id' => '150',
-    'cat_name' => 'NEO玫瑰&黑环',
-    'measure_unit' => '',
-    'parent_id' => '59',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '3',
-  ),
-  38 => 
-  array (
-    'cat_id' => '159',
-    'cat_name' => 'NEO果冻系列',
-    'measure_unit' => '',
-    'parent_id' => '59',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '3',
-  ),
-  39 => 
-  array (
     'cat_id' => '144',
     'cat_name' => 'NEO巨目迷光',
     'measure_unit' => '',
@@ -520,7 +286,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '3',
   ),
-  40 => 
+  22 => 
   array (
     'cat_id' => '64',
     'cat_name' => 'NEO天使三色',
@@ -533,7 +299,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '7',
   ),
-  41 => 
+  23 => 
   array (
     'cat_id' => '141',
     'cat_name' => 'NEO幸运四色',
@@ -546,7 +312,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '3',
   ),
-  42 => 
+  24 => 
   array (
     'cat_id' => '162',
     'cat_name' => 'NEO暮色榛仁',
@@ -559,7 +325,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '1',
   ),
-  43 => 
+  25 => 
   array (
     'cat_id' => '261',
     'cat_name' => 'NEO冰凌系列',
@@ -572,51 +338,12 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '4',
   ),
-  44 => 
+  26 => 
   array (
-    'cat_id' => '69',
-    'cat_name' => 'GEO Cafe咖啡',
+    'cat_id' => '157',
+    'cat_name' => 'NEO新之目',
     'measure_unit' => '',
-    'parent_id' => '61',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '6',
-  ),
-  45 => 
-  array (
-    'cat_id' => '216',
-    'cat_name' => 'GEO Starimsh',
-    'measure_unit' => '',
-    'parent_id' => '61',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '2',
-  ),
-  46 => 
-  array (
-    'cat_id' => '71',
-    'cat_name' => 'GEO Marii金粉',
-    'measure_unit' => '',
-    'parent_id' => '61',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '4',
-  ),
-  47 => 
-  array (
-    'cat_id' => '65',
-    'cat_name' => 'GEO惑丽猫Ⅱ代',
-    'measure_unit' => '',
-    'parent_id' => '61',
+    'parent_id' => '59',
     'is_show' => '1',
     'show_in_nav' => '0',
     'grade' => '0',
@@ -624,51 +351,12 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '5',
   ),
-  48 => 
+  27 => 
   array (
-    'cat_id' => '267',
-    'cat_name' => 'GEO水凝系列',
+    'cat_id' => '268',
+    'cat_name' => 'NEO丝光系列',
     'measure_unit' => '',
-    'parent_id' => '61',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '1',
-  ),
-  49 => 
-  array (
-    'cat_id' => '67',
-    'cat_name' => 'GEO奶油三色',
-    'measure_unit' => '',
-    'parent_id' => '61',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '3',
-  ),
-  50 => 
-  array (
-    'cat_id' => '72',
-    'cat_name' => 'GEO混血三色',
-    'measure_unit' => '',
-    'parent_id' => '61',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '2',
-  ),
-  51 => 
-  array (
-    'cat_id' => '68',
-    'cat_name' => 'Prime Bambi',
-    'measure_unit' => '',
-    'parent_id' => '61',
+    'parent_id' => '59',
     'is_show' => '1',
     'show_in_nav' => '0',
     'grade' => '0',
@@ -676,7 +364,215 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '4',
   ),
-  52 => 
+  28 => 
+  array (
+    'cat_id' => '223',
+    'cat_name' => 'NEO日抛&周抛',
+    'measure_unit' => '',
+    'parent_id' => '59',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '3',
+  ),
+  29 => 
+  array (
+    'cat_id' => '151',
+    'cat_name' => 'NEO巧克力',
+    'measure_unit' => '',
+    'parent_id' => '59',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '4',
+  ),
+  30 => 
+  array (
+    'cat_id' => '145',
+    'cat_name' => 'NEO Heart心语',
+    'measure_unit' => '',
+    'parent_id' => '59',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '2',
+  ),
+  31 => 
+  array (
+    'cat_id' => '276',
+    'cat_name' => 'NEO巨目四代',
+    'measure_unit' => '',
+    'parent_id' => '59',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '2',
+  ),
+  32 => 
+  array (
+    'cat_id' => '142',
+    'cat_name' => 'NEO巨目双色',
+    'measure_unit' => '',
+    'parent_id' => '59',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '6',
+  ),
+  33 => 
+  array (
+    'cat_id' => '272',
+    'cat_name' => 'NEO混血自然',
+    'measure_unit' => '',
+    'parent_id' => '59',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '1',
+  ),
+  34 => 
+  array (
+    'cat_id' => '160',
+    'cat_name' => 'NEO舒娜丝滑',
+    'measure_unit' => '',
+    'parent_id' => '59',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '2',
+  ),
+  35 => 
+  array (
+    'cat_id' => '155',
+    'cat_name' => 'NEO孔雀三色',
+    'measure_unit' => '',
+    'parent_id' => '59',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '4',
+  ),
+  36 => 
+  array (
+    'cat_id' => '149',
+    'cat_name' => 'NEO Monet自然',
+    'measure_unit' => '',
+    'parent_id' => '59',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '2',
+  ),
+  37 => 
+  array (
+    'cat_id' => '146',
+    'cat_name' => 'NEO钻石双色',
+    'measure_unit' => '',
+    'parent_id' => '59',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '5',
+  ),
+  38 => 
+  array (
+    'cat_id' => '143',
+    'cat_name' => 'NEO巨目微光',
+    'measure_unit' => '',
+    'parent_id' => '59',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '5',
+  ),
+  39 => 
+  array (
+    'cat_id' => '140',
+    'cat_name' => 'NEO女皇四色',
+    'measure_unit' => '',
+    'parent_id' => '59',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '8',
+  ),
+  40 => 
+  array (
+    'cat_id' => '161',
+    'cat_name' => 'NEO八芒星',
+    'measure_unit' => '',
+    'parent_id' => '59',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '2',
+  ),
+  41 => 
+  array (
+    'cat_id' => '156',
+    'cat_name' => 'NEO公主三色',
+    'measure_unit' => '',
+    'parent_id' => '59',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '6',
+  ),
+  42 => 
+  array (
+    'cat_id' => '150',
+    'cat_name' => 'NEO玫瑰&黑环',
+    'measure_unit' => '',
+    'parent_id' => '59',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '3',
+  ),
+  43 => 
+  array (
+    'cat_id' => '159',
+    'cat_name' => 'NEO果冻系列',
+    'measure_unit' => '',
+    'parent_id' => '59',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '3',
+  ),
+  44 => 
   array (
     'cat_id' => '70',
     'cat_name' => 'GEO Grang奶茶',
@@ -689,7 +585,20 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '2',
   ),
-  53 => 
+  45 => 
+  array (
+    'cat_id' => '68',
+    'cat_name' => 'Prime Bambi',
+    'measure_unit' => '',
+    'parent_id' => '61',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '4',
+  ),
+  46 => 
   array (
     'cat_id' => '73',
     'cat_name' => 'GEO XTRA女神',
@@ -702,7 +611,111 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '3',
   ),
+  47 => 
+  array (
+    'cat_id' => '71',
+    'cat_name' => 'GEO Marii金粉',
+    'measure_unit' => '',
+    'parent_id' => '61',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '4',
+  ),
+  48 => 
+  array (
+    'cat_id' => '69',
+    'cat_name' => 'GEO Cafe咖啡',
+    'measure_unit' => '',
+    'parent_id' => '61',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '6',
+  ),
+  49 => 
+  array (
+    'cat_id' => '216',
+    'cat_name' => 'GEO Starimsh',
+    'measure_unit' => '',
+    'parent_id' => '61',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '2',
+  ),
+  50 => 
+  array (
+    'cat_id' => '65',
+    'cat_name' => 'GEO惑丽猫Ⅱ代',
+    'measure_unit' => '',
+    'parent_id' => '61',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '5',
+  ),
+  51 => 
+  array (
+    'cat_id' => '267',
+    'cat_name' => 'GEO水凝系列',
+    'measure_unit' => '',
+    'parent_id' => '61',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '1',
+  ),
+  52 => 
+  array (
+    'cat_id' => '67',
+    'cat_name' => 'GEO奶油三色',
+    'measure_unit' => '',
+    'parent_id' => '61',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '3',
+  ),
+  53 => 
+  array (
+    'cat_id' => '72',
+    'cat_name' => 'GEO混血三色',
+    'measure_unit' => '',
+    'parent_id' => '61',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '2',
+  ),
   54 => 
+  array (
+    'cat_id' => '203',
+    'cat_name' => 'DUEBA Very三色',
+    'measure_unit' => '',
+    'parent_id' => '62',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '5',
+  ),
+  55 => 
   array (
     'cat_id' => '200',
     'cat_name' => 'DUEBA大露珠',
@@ -715,7 +728,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '7',
   ),
-  55 => 
+  56 => 
   array (
     'cat_id' => '197',
     'cat_name' => 'DUEBA深咖啡',
@@ -728,7 +741,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '1',
   ),
-  56 => 
+  57 => 
   array (
     'cat_id' => '201',
     'cat_name' => 'DUEBA阳光少女',
@@ -741,7 +754,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '2',
   ),
-  57 => 
+  58 => 
   array (
     'cat_id' => '198',
     'cat_name' => 'DUEBA珍珠黑',
@@ -754,7 +767,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '2',
   ),
-  58 => 
+  59 => 
   array (
     'cat_id' => '202',
     'cat_name' => 'DUEBA思诺女皇',
@@ -767,7 +780,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '5',
   ),
-  59 => 
+  60 => 
   array (
     'cat_id' => '199',
     'cat_name' => 'DUEBA神秘黑',
@@ -780,7 +793,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  60 => 
+  61 => 
   array (
     'cat_id' => '196',
     'cat_name' => 'DUEBA巧克力',
@@ -792,19 +805,6 @@ $data = array (
     'sort_order' => '50',
     'has_children' => '0',
     'goods_num' => '1',
-  ),
-  61 => 
-  array (
-    'cat_id' => '203',
-    'cat_name' => 'DUEBA Very三色',
-    'measure_unit' => '',
-    'parent_id' => '62',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '5',
   ),
   62 => 
   array (
@@ -925,6 +925,19 @@ $data = array (
   ),
   71 => 
   array (
+    'cat_id' => '170',
+    'cat_name' => '7Modern唐纳滋',
+    'measure_unit' => '',
+    'parent_id' => '91',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '5',
+  ),
+  72 => 
+  array (
     'cat_id' => '174',
     'cat_name' => '7Modern雪莉双色',
     'measure_unit' => '',
@@ -936,7 +949,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '4',
   ),
-  72 => 
+  73 => 
   array (
     'cat_id' => '171',
     'cat_name' => '7Modern琥珀四色',
@@ -949,7 +962,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '4',
   ),
-  73 => 
+  74 => 
   array (
     'cat_id' => '175',
     'cat_name' => '7MODERN巧克力Ⅱ代',
@@ -962,7 +975,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '3',
   ),
-  74 => 
+  75 => 
   array (
     'cat_id' => '172',
     'cat_name' => '7Modern花漾甜心',
@@ -975,7 +988,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '3',
   ),
-  75 => 
+  76 => 
   array (
     'cat_id' => '173',
     'cat_name' => '7Modern巧克力多',
@@ -988,20 +1001,20 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '4',
   ),
-  76 => 
+  77 => 
   array (
-    'cat_id' => '170',
-    'cat_name' => '7Modern唐纳滋',
+    'cat_id' => '209',
+    'cat_name' => 'BESCON甜心双色',
     'measure_unit' => '',
-    'parent_id' => '91',
+    'parent_id' => '97',
     'is_show' => '1',
     'show_in_nav' => '0',
     'grade' => '0',
     'sort_order' => '50',
     'has_children' => '0',
-    'goods_num' => '5',
+    'goods_num' => '4',
   ),
-  77 => 
+  78 => 
   array (
     'cat_id' => '210',
     'cat_name' => 'BESCON双色钻石',
@@ -1014,7 +1027,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '7',
   ),
-  78 => 
+  79 => 
   array (
     'cat_id' => '206',
     'cat_name' => 'BESCON Tutti三色',
@@ -1027,7 +1040,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '4',
   ),
-  79 => 
+  80 => 
   array (
     'cat_id' => '258',
     'cat_name' => 'BESCON炫彩三色',
@@ -1040,7 +1053,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '4',
   ),
-  80 => 
+  81 => 
   array (
     'cat_id' => '211',
     'cat_name' => 'BESCON七代润彩',
@@ -1053,7 +1066,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '2',
   ),
-  81 => 
+  82 => 
   array (
     'cat_id' => '208',
     'cat_name' => 'BESCON自然系列',
@@ -1066,7 +1079,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '3',
   ),
-  82 => 
+  83 => 
   array (
     'cat_id' => '264',
     'cat_name' => 'BESCON热销',
@@ -1079,7 +1092,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  83 => 
+  84 => 
   array (
     'cat_id' => '260',
     'cat_name' => 'BESCON Classic',
@@ -1092,23 +1105,10 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 5,
   ),
-  84 => 
+  85 => 
   array (
     'cat_id' => '259',
     'cat_name' => 'BESCON Cir梦幻',
-    'measure_unit' => '',
-    'parent_id' => '97',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '4',
-  ),
-  85 => 
-  array (
-    'cat_id' => '209',
-    'cat_name' => 'BESCON甜心双色',
     'measure_unit' => '',
     'parent_id' => '97',
     'is_show' => '1',
@@ -1146,6 +1146,32 @@ $data = array (
   ),
   88 => 
   array (
+    'cat_id' => '190',
+    'cat_name' => 'Babycolr人气棕',
+    'measure_unit' => '',
+    'parent_id' => '110',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => 0,
+  ),
+  89 => 
+  array (
+    'cat_id' => '187',
+    'cat_name' => 'Babycolr恶魔宝贝',
+    'measure_unit' => '',
+    'parent_id' => '110',
+    'is_show' => '1',
+    'show_in_nav' => '0',
+    'grade' => '0',
+    'sort_order' => '50',
+    'has_children' => '0',
+    'goods_num' => '4',
+  ),
+  90 => 
+  array (
     'cat_id' => '194',
     'cat_name' => 'Babycolr大优格',
     'measure_unit' => '',
@@ -1157,7 +1183,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '4',
   ),
-  89 => 
+  91 => 
   array (
     'cat_id' => '191',
     'cat_name' => 'Babycolr哈咯蜜',
@@ -1170,7 +1196,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '2',
   ),
-  90 => 
+  92 => 
   array (
     'cat_id' => '188',
     'cat_name' => 'Babycolr摩卡宝贝',
@@ -1183,7 +1209,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => 0,
   ),
-  91 => 
+  93 => 
   array (
     'cat_id' => '195',
     'cat_name' => 'Babycolr迷萌系列',
@@ -1196,7 +1222,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '8',
   ),
-  92 => 
+  94 => 
   array (
     'cat_id' => '192',
     'cat_name' => 'Babycolr可可小姐',
@@ -1209,7 +1235,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '6',
   ),
-  93 => 
+  95 => 
   array (
     'cat_id' => '185',
     'cat_name' => 'Babycolr大钻石',
@@ -1222,7 +1248,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '7',
   ),
-  94 => 
+  96 => 
   array (
     'cat_id' => '189',
     'cat_name' => 'Babycolr大萝莉',
@@ -1235,7 +1261,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '7',
   ),
-  95 => 
+  97 => 
   array (
     'cat_id' => '186',
     'cat_name' => 'Babycolr彩虹糖',
@@ -1248,7 +1274,7 @@ $data = array (
     'has_children' => '0',
     'goods_num' => '4',
   ),
-  96 => 
+  98 => 
   array (
     'cat_id' => '193',
     'cat_name' => 'Babycolr混血女神',
@@ -1260,32 +1286,6 @@ $data = array (
     'sort_order' => '50',
     'has_children' => '0',
     'goods_num' => '5',
-  ),
-  97 => 
-  array (
-    'cat_id' => '190',
-    'cat_name' => 'Babycolr人气棕',
-    'measure_unit' => '',
-    'parent_id' => '110',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => 0,
-  ),
-  98 => 
-  array (
-    'cat_id' => '187',
-    'cat_name' => 'Babycolr恶魔宝贝',
-    'measure_unit' => '',
-    'parent_id' => '110',
-    'is_show' => '1',
-    'show_in_nav' => '0',
-    'grade' => '0',
-    'sort_order' => '50',
-    'has_children' => '0',
-    'goods_num' => '4',
   ),
   99 => 
   array (
@@ -1523,8 +1523,8 @@ $data = array (
   ),
   117 => 
   array (
-    'cat_id' => '274',
-    'cat_name' => 'Rinka梨花四色',
+    'cat_id' => '275',
+    'cat_name' => 'Foam泡沫单色',
     'measure_unit' => '',
     'parent_id' => '273',
     'is_show' => '1',
@@ -1536,8 +1536,8 @@ $data = array (
   ),
   118 => 
   array (
-    'cat_id' => '275',
-    'cat_name' => 'Foam泡沫单色',
+    'cat_id' => '274',
+    'cat_name' => 'Rinka梨花四色',
     'measure_unit' => '',
     'parent_id' => '273',
     'is_show' => '1',
