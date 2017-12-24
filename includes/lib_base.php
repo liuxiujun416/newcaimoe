@@ -1241,9 +1241,9 @@ function read_static_cache($cache_name)
 {
     if ((DEBUG_MODE & 2) == 2)
     {
-        return false;
+       // return false;
     }
-    print_r('eeee'); exit;
+    
     static $result = array();
     if (!empty($result[$cache_name]))
     {

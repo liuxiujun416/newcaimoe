@@ -110,7 +110,7 @@
         <entry file="file://$PROJECT_DIR$/includes/lib_base.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.5099099">
-              <caret line="1245" column="26" selection-start-line="1245" selection-start-column="26" selection-end-line="1245" selection-end-column="26" />
+              <caret line="1245" column="4" selection-start-line="1245" selection-start-column="4" selection-end-line="1245" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -471,7 +471,7 @@
     <entry file="file://$PROJECT_DIR$/includes/lib_base.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5099099">
-          <caret line="1245" column="26" selection-start-line="1245" selection-start-column="26" selection-end-line="1245" selection-end-column="26" />
+          <caret line="1245" column="4" selection-start-line="1245" selection-start-column="4" selection-end-line="1245" selection-end-column="4" />
           <folding />
         </state>
       </provider>
