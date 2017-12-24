@@ -241,7 +241,7 @@ class cls_mysql
             $this->connect($this->settings['dbhost'], $this->settings['dbuser'], $this->settings['dbpw'], $this->settings['dbname'], $this->settings['charset'], $this->settings['pconnect']);
             $this->settings = array();
         }
-        echo $sql; exit;
+
         if ($this->queryCount++ <= 99)
         {
             $this->queryLog[] = $sql;
@@ -472,8 +472,9 @@ class cls_mysql
 
     function getAll($sql)
     {
+        phpinfo(); exit;
         $res = $this->query($sql);
-        print_r($res); exit;
+
         if ($res !== false)
         {
             $arr = array();
