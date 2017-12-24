@@ -108,6 +108,7 @@ define('IMAGE_DIR', $ecs->image_dir());
 
 /* 初始化数据库类 */
 require(ROOT_PATH . 'includes/cls_mysql.php');
+echo 'ccc'; exit;
 $db = new cls_mysql($db_host, $db_user, $db_pass, $db_name);
 $db->set_disable_cache_tables(array($ecs->table('sessions'), $ecs->table('sessions_data'), $ecs->table('cart')));
 $db_host = $db_user = $db_pass = $db_name = NULL;
@@ -117,7 +118,7 @@ $err = new ecs_error('message.dwt');
 
 /* 载入系统参数 */
 $_CFG = load_config();
-echo 'ccc'; exit;
+
 /* 载入语言文件 */
 require(ROOT_PATH . 'languages/' . $_CFG['lang'] . '/common.php');
 
