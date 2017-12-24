@@ -615,7 +615,7 @@ function load_config()
     if ($data === false)
     {
         $sql = 'SELECT code, value FROM ' . $GLOBALS['ecs']->table('shop_config') . ' WHERE parent_id > 0';
-        echo $sql; exit;
+        print_r($GLOBALS['db']);exit;
         $res = $GLOBALS['db']->getAll($sql);
         print_r($res); exit;
         foreach ($res AS $row)
