@@ -1,7 +1,7 @@
 <?php
 // database host
 
-$db_host   = "39.106.51.37:3306";
+$db_host   = "127.0.0.1:3306";
 
 // database name
 $db_name   = "caimoeye";
