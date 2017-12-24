@@ -27,10 +27,10 @@
       <file leaf-file-name="init.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/init.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15523465">
-              <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.22382672">
+              <caret line="112" column="17" selection-start-line="112" selection-start-column="17" selection-end-line="112" selection-end-column="17" />
               <folding>
-                <marker date="1514087766971" expanded="true" signature="3314:3364" placeholder="..." />
+                <marker date="1514087818421" expanded="true" signature="3315:3365" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -170,10 +170,10 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/includes/init.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15523465">
-          <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.22382672">
+          <caret line="112" column="17" selection-start-line="112" selection-start-column="17" selection-end-line="112" selection-end-column="17" />
           <folding>
-            <marker date="1514087766971" expanded="true" signature="3314:3364" placeholder="..." />
+            <marker date="1514087818421" expanded="true" signature="3315:3365" placeholder="..." />
           </folding>
         </state>
       </provider>
