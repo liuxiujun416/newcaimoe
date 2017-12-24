@@ -611,9 +611,9 @@ function load_config()
     $arr = array();
 
     $data = read_static_cache('shop_config');
-     print_r($data); exit;
+
     if ($data === false)
-    {
+    {  echo 'eeeee'; exit;
         $sql = 'SELECT code, value FROM ' . $GLOBALS['ecs']->table('shop_config') . ' WHERE parent_id > 0';
         $res = $GLOBALS['db']->getAll($sql);
 
