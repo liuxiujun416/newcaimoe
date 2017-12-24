@@ -472,7 +472,7 @@ class cls_mysql
 
     function getAll($sql)
     {
-        phpinfo(); exit;
+        
         $res = $this->query($sql);
 
         if ($res !== false)
