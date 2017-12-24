@@ -1243,7 +1243,7 @@ function read_static_cache($cache_name)
     {
        // return false;
     }
-    
+
     static $result = array();
     if (!empty($result[$cache_name]))
     {
