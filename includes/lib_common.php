@@ -617,7 +617,7 @@ function load_config()
         $sql = 'SELECT code, value FROM ' . $GLOBALS['ecs']->table('shop_config') . ' WHERE parent_id > 0';
 
         $res = $GLOBALS['db']->getAll($sql);
-        echo 'eeee'; exit;
+
         foreach ($res AS $row)
         {
             $arr[$row['code']] = $row['value'];

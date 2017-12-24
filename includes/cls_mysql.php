@@ -471,7 +471,7 @@ class cls_mysql
     }
 
     function getAll($sql)
-    {
+    { echo $sql; exit;
         $res = $this->query($sql);
         if ($res !== false)
         {
