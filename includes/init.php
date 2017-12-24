@@ -61,7 +61,7 @@ if (defined('DEBUG_MODE') == false)
 {
     define('DEBUG_MODE', 0);
 }
-echo 'eebb'; exit;
+
 if (PHP_VERSION >= '5.1' && !empty($timezone))
 {
     date_default_timezone_set($timezone);
@@ -73,7 +73,7 @@ if ('/' == substr($php_self, -1))
     $php_self .= 'index.php';
 }
 define('PHP_SELF', $php_self);
-
+echo 'eeeeeee'; exit;
 require(ROOT_PATH . 'includes/inc_constant.php');
 require(ROOT_PATH . 'includes/cls_ecshop.php');
 require(ROOT_PATH . 'includes/cls_error.php');
