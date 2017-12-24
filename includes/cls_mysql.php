@@ -471,8 +471,9 @@ class cls_mysql
     }
 
     function getAll($sql)
-    { echo $sql; exit;
+    {
         $res = $this->query($sql);
+        print_r($res); exit;
         if ($res !== false)
         {
             $arr = array();

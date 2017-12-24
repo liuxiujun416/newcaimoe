@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a14c9281-1639-4cef-9d77-5e451b30e597" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/cls_mysql.php" afterPath="$PROJECT_DIR$/includes/cls_mysql.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/lib_common.php" afterPath="$PROJECT_DIR$/includes/lib_common.php" />
     </list>
     <ignored path="newcaimoe.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,13 +74,13 @@
       <file leaf-file-name="cls_mysql.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/cls_mysql.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36952382">
-              <caret line="473" column="22" selection-start-line="473" selection-start-column="22" selection-end-line="473" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.44190475">
+              <caret line="475" column="28" selection-start-line="475" selection-start-column="28" selection-end-line="475" selection-end-column="28" />
               <folding>
-                <marker date="1514090080258" expanded="true" signature="16935:17034" placeholder="INSERT INTO ${$table}... " />
-                <marker date="1514090080258" expanded="true" signature="18998:19097" placeholder="INSERT INTO ${$table}... " />
-                <marker date="1514090080258" expanded="true" signature="19287:19386" placeholder="INSERT INTO ${$table}... " />
-                <marker date="1514090080258" expanded="true" signature="20358:20392" placeholder="SELECT COUNT... ${$table}" />
+                <marker date="1514090142461" expanded="true" signature="16947:17046" placeholder="INSERT INTO ${$table}... " />
+                <marker date="1514090142461" expanded="true" signature="19010:19109" placeholder="INSERT INTO ${$table}... " />
+                <marker date="1514090142461" expanded="true" signature="19299:19398" placeholder="INSERT INTO ${$table}... " />
+                <marker date="1514090142461" expanded="true" signature="20370:20404" placeholder="SELECT COUNT... ${$table}" />
               </folding>
             </state>
           </provider>
@@ -469,13 +468,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/cls_mysql.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36952382">
-          <caret line="473" column="22" selection-start-line="473" selection-start-column="22" selection-end-line="473" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.44190475">
+          <caret line="475" column="28" selection-start-line="475" selection-start-column="28" selection-end-line="475" selection-end-column="28" />
           <folding>
-            <marker date="1514090080258" expanded="true" signature="16935:17034" placeholder="INSERT INTO ${$table}... " />
-            <marker date="1514090080258" expanded="true" signature="18998:19097" placeholder="INSERT INTO ${$table}... " />
-            <marker date="1514090080258" expanded="true" signature="19287:19386" placeholder="INSERT INTO ${$table}... " />
-            <marker date="1514090080258" expanded="true" signature="20358:20392" placeholder="SELECT COUNT... ${$table}" />
+            <marker date="1514090142461" expanded="true" signature="16947:17046" placeholder="INSERT INTO ${$table}... " />
+            <marker date="1514090142461" expanded="true" signature="19010:19109" placeholder="INSERT INTO ${$table}... " />
+            <marker date="1514090142461" expanded="true" signature="19299:19398" placeholder="INSERT INTO ${$table}... " />
+            <marker date="1514090142461" expanded="true" signature="20370:20404" placeholder="SELECT COUNT... ${$table}" />
           </folding>
         </state>
       </provider>
