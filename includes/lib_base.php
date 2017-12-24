@@ -1245,10 +1245,10 @@ function read_static_cache($cache_name)
     }
     static $result = array();
     if (!empty($result[$cache_name]))
-    {
+    { print_r($result); exit;
         return $result[$cache_name];
     }
-    print_r($result); exit;
+
     $cache_file_path = ROOT_PATH . '/temp/static_caches/' . $cache_name . '.php';
     if (file_exists($cache_file_path))
     {
