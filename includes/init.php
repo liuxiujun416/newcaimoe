@@ -36,7 +36,7 @@ if (!file_exists(ROOT_PATH . 'data/install.lock') && !file_exists(ROOT_PATH . 'i
 
     exit;
 }
-echo 'eeee'; exit;
+
 /* 初始化设置 */
 @ini_set('memory_limit',          '64M');
 @ini_set('session.cache_expire',  180);
@@ -61,7 +61,7 @@ if (defined('DEBUG_MODE') == false)
 {
     define('DEBUG_MODE', 0);
 }
-
+echo 'eebb'; exit;
 if (PHP_VERSION >= '5.1' && !empty($timezone))
 {
     date_default_timezone_set($timezone);
