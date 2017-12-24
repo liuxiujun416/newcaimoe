@@ -84,7 +84,7 @@ require(ROOT_PATH . 'includes/lib_main.php');
 require(ROOT_PATH . 'includes/lib_insert.php');
 require(ROOT_PATH . 'includes/lib_goods.php');
 require(ROOT_PATH . 'includes/lib_article.php');
-echo 'eeeeeeeee'; exit;
+
 /* 对用户传入的变量进行转义操作。*/
 if (!get_magic_quotes_gpc())
 {
@@ -117,7 +117,7 @@ $err = new ecs_error('message.dwt');
 
 /* 载入系统参数 */
 $_CFG = load_config();
-
+echo 'ccc'; exit;
 /* 载入语言文件 */
 require(ROOT_PATH . 'languages/' . $_CFG['lang'] . '/common.php');
 
