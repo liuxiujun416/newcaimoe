@@ -39,8 +39,8 @@
       <file leaf-file-name="lib_common.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/lib_common.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.464286">
-              <caret line="618" column="31" selection-start-line="618" selection-start-column="31" selection-end-line="618" selection-end-column="37" />
+            <state vertical-scroll-proportion="-7.142857">
+              <caret line="619" column="0" selection-start-line="619" selection-start-column="0" selection-end-line="619" selection-end-column="0" />
               <folding>
                 <marker date="1514090080289" expanded="true" signature="5271:5412" placeholder="SELECT regio... ${$GLOBALS['ecs']-&gt;table('region')}" />
                 <marker date="1514090080289" expanded="true" signature="5652:5757" placeholder="SELECT confi... ${$GLOBALS['ecs']-&gt;table('shipping_area')}" />
@@ -74,13 +74,13 @@
       <file leaf-file-name="cls_mysql.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/cls_mysql.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45904762">
-              <caret line="282" column="40" selection-start-line="282" selection-start-column="40" selection-end-line="282" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.40190476">
+              <caret line="243" column="24" selection-start-line="243" selection-start-column="24" selection-end-line="243" selection-end-column="24" />
               <folding>
-                <marker date="1514090271160" expanded="true" signature="16987:17086" placeholder="INSERT INTO ${$table}... " />
-                <marker date="1514090271160" expanded="true" signature="19050:19149" placeholder="INSERT INTO ${$table}... " />
-                <marker date="1514090271160" expanded="true" signature="19339:19438" placeholder="INSERT INTO ${$table}... " />
-                <marker date="1514090271160" expanded="true" signature="20410:20444" placeholder="SELECT COUNT... ${$table}" />
+                <marker date="1514090360547" expanded="true" signature="16971:17070" placeholder="INSERT INTO ${$table}... " />
+                <marker date="1514090360547" expanded="true" signature="19034:19133" placeholder="INSERT INTO ${$table}... " />
+                <marker date="1514090360547" expanded="true" signature="19323:19422" placeholder="INSERT INTO ${$table}... " />
+                <marker date="1514090360547" expanded="true" signature="20394:20428" placeholder="SELECT COUNT... ${$table}" />
               </folding>
             </state>
           </provider>
@@ -435,8 +435,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/lib_common.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.464286">
-          <caret line="618" column="31" selection-start-line="618" selection-start-column="31" selection-end-line="618" selection-end-column="37" />
+        <state vertical-scroll-proportion="-7.142857">
+          <caret line="619" column="0" selection-start-line="619" selection-start-column="0" selection-end-line="619" selection-end-column="0" />
           <folding>
             <marker date="1514090080289" expanded="true" signature="5271:5412" placeholder="SELECT regio... ${$GLOBALS['ecs']-&gt;table('region')}" />
             <marker date="1514090080289" expanded="true" signature="5652:5757" placeholder="SELECT confi... ${$GLOBALS['ecs']-&gt;table('shipping_area')}" />
@@ -468,13 +468,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/cls_mysql.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45904762">
-          <caret line="282" column="40" selection-start-line="282" selection-start-column="40" selection-end-line="282" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.40190476">
+          <caret line="243" column="24" selection-start-line="243" selection-start-column="24" selection-end-line="243" selection-end-column="24" />
           <folding>
-            <marker date="1514090271160" expanded="true" signature="16987:17086" placeholder="INSERT INTO ${$table}... " />
-            <marker date="1514090271160" expanded="true" signature="19050:19149" placeholder="INSERT INTO ${$table}... " />
-            <marker date="1514090271160" expanded="true" signature="19339:19438" placeholder="INSERT INTO ${$table}... " />
-            <marker date="1514090271160" expanded="true" signature="20410:20444" placeholder="SELECT COUNT... ${$table}" />
+            <marker date="1514090360547" expanded="true" signature="16971:17070" placeholder="INSERT INTO ${$table}... " />
+            <marker date="1514090360547" expanded="true" signature="19034:19133" placeholder="INSERT INTO ${$table}... " />
+            <marker date="1514090360547" expanded="true" signature="19323:19422" placeholder="INSERT INTO ${$table}... " />
+            <marker date="1514090360547" expanded="true" signature="20394:20428" placeholder="SELECT COUNT... ${$table}" />
           </folding>
         </state>
       </provider>
