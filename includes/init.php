@@ -119,7 +119,7 @@ $db_host = $db_user = $db_pass = $db_name = NULL;
 $err = new ecs_error('message.dwt');
 
 /* 载入系统参数 */
-$_CFG = load_config();
+ $_CFG = load_config();
 
 /* 载入语言文件 */
 require(ROOT_PATH . 'languages/' . $_CFG['lang'] . '/common.php');
@@ -323,6 +323,8 @@ if (is_temps())
 }
 function is_temps()
 {
+	global $_CFG;
+	
     if(time()-$_CFG['last_clear_time']<10000)
     {
         return(false);

@@ -138,6 +138,8 @@ function get_child_tree($tree_id = 0)
 */
 function get_index_topsale($catid = ''){
 
+    $where = '';
+	
 	if(!empty($catid)){
 		$where = ' AND cat_id = ' . $cat_id;
 	}
